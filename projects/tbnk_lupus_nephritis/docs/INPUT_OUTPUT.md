@@ -1,0 +1,56 @@
+# Input and output specification
+
+## Input CSV
+
+The analysis script expects a de-identified CSV file with one row per patient-first TBNK test.
+
+Required columns:
+
+| Column | Description |
+|---|---|
+| `analysis_group` | Disease group. Allowed values: `LN`, `NS`, `MN`, `IgAN`, `AAV`. |
+| `year` | Test year used for temporal holdout when possible. |
+| `cd3_pct` | CD3+ T-cell percentage. |
+| `cd4_pct` | CD4+ T-cell percentage. |
+| `cd8_pct` | CD8+ T-cell percentage. |
+| `b_pct` | B-cell percentage. |
+| `nk_pct` | NK-cell percentage. |
+| `lymph_abs` | Lymphocyte absolute count. |
+| `cd3_abs` | CD3+ T-cell absolute count. |
+| `cd4_abs` | CD4+ T-cell absolute count. |
+| `cd8_abs` | CD8+ T-cell absolute count. |
+| `b_abs` | B-cell absolute count. |
+| `nk_abs` | NK-cell absolute count. |
+| `cd4_cd8_ratio` | CD4/CD8 ratio. |
+
+Optional columns such as `record_id` may be present in synthetic or de-identified files but are not required by the analysis.
+
+## Data that must not be committed
+
+Do not commit:
+
+- patient names
+- hospital IDs
+- sample numbers
+- visit numbers
+- phone numbers
+- exact addresses
+- sample identifier mapping tables
+- raw clinical tables
+- raw instrument exports
+- ethics documents
+- manuscript submission materials
+
+## Output files
+
+`src/run_analysis.py` writes the following files:
+
+| Output | Description |
+|---|---|
+| `cohort_summary.csv` | Group-level medians and IQRs for TBNK features. |
+| `ln_vs_nonln_tests.csv` | Mann-Whitney U tests and FDR-adjusted q values for LN versus non-LN groups. |
+| `model_comparison.csv` | Cross-validated ROC-AUC, average precision, and balanced accuracy for TBNK-only models. |
+| `permutation_importance.csv` | Feature permutation importance for the primary logistic model. |
+| `temporal_holdout.csv` | Year-based temporal holdout metrics when enough year structure is available. |
+
+Runtime outputs are ignored by Git by default.

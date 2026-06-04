@@ -42,6 +42,14 @@ results/
 models/
 checkpoints/
 logs/
+
+# Public-safe example data and placeholder for the TBNK lupus nephritis project.
+!projects/tbnk_lupus_nephritis/data/
+!projects/tbnk_lupus_nephritis/data/example/
+!projects/tbnk_lupus_nephritis/data/example/synthetic_tbnk_example.csv
+!projects/tbnk_lupus_nephritis/outputs/
+!projects/tbnk_lupus_nephritis/outputs/.gitkeep
+
 *.h5ad
 *.h5
 *.loom
@@ -72,4 +80,3 @@ logs/
 *.xlsx
 *.xls
 *.pdf
-

@@ -1,0 +1,80 @@
+# Routine TBNK profiling in lupus nephritis
+
+This project contains reproducible analysis code for a real-world routine TBNK lymphocyte subset profiling study of lupus nephritis (LN) versus other immune-mediated nephropathies.
+
+Remote project path:
+
+`https://github.com/chanucy97/Fan_LAB/tree/main/projects/tbnk_lupus_nephritis`
+
+## What is included
+
+- Reusable Python analysis code.
+- A synthetic, non-patient example dataset.
+- Configuration template.
+- Run instructions.
+- Input/output file descriptions.
+- Pre-commit sensitive-information checklist.
+- Manuscript-ready Data Availability and Code Availability wording.
+
+## What is not included
+
+This repository does not include patient-level data, clinical tables, sample identifier mapping files, raw instrument exports, sequencing data, whole-slide images, model weights, submission packages, manuscript drafts, reviewer materials, compressed archives, passwords, tokens, or server paths.
+
+## Repository layout
+
+```text
+tbnk_lupus_nephritis/
+  README.md
+  requirements.txt
+  .gitignore
+  configs/
+    config.example.yaml
+  data/
+    example/
+      synthetic_tbnk_example.csv
+  docs/
+    RUNNING.md
+    INPUT_OUTPUT.md
+    SENSITIVE_CHECKLIST.md
+    DATA_CODE_AVAILABILITY.md
+  src/
+    make_example_data.py
+    run_analysis.py
+  outputs/
+    .gitkeep
+```
+
+## Quick start
+
+Create an environment and install dependencies:
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+Run the synthetic example:
+
+```bash
+python src/make_example_data.py --output data/example/synthetic_tbnk_example.csv
+python src/run_analysis.py --input data/example/synthetic_tbnk_example.csv --outdir outputs/example_run
+```
+
+Expected output files:
+
+- `cohort_summary.csv`
+- `ln_vs_nonln_tests.csv`
+- `model_comparison.csv`
+- `permutation_importance.csv`
+- `temporal_holdout.csv`
+
+## Data availability principle
+
+Raw patient-level and clinical data are not publicly uploaded. Due to patient privacy, ethics restrictions, and collaborating-institution data governance requirements, de-identified data may be made available only upon reasonable request, subject to approval by the corresponding authors, ethics/institutional review, and/or a data-use agreement.
+
+## Code availability principle
+
+The public analysis code is maintained in the Fan_LAB GitHub repository under:
+
+`projects/tbnk_lupus_nephritis`

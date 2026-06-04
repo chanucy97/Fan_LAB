@@ -1,0 +1,46 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Runtime outputs
+outputs/*
+!outputs/.gitkeep
+
+# Real or sensitive data should never be committed
+data/raw/
+data/private/
+data/clinical/
+data/patient/
+data/identifiers/
+data/mapping/
+data/**/*patient*
+data/**/*clinical*
+data/**/*mapping*
+data/**/*raw*
+
+# Submission and manuscript materials
+*.zip
+*.7z
+*.rar
+*.tar
+*.gz
+*submission*
+*manuscript*
+*cover_letter*
+*ICMJE*
+*ethics*
+*.doc
+*.docx
+*.pdf
+*.ppt
+*.pptx
+
+# Secrets and local config
+.env
+*.env
+secrets.*
+*token*
+*password*
+*credential*
+config.local.*

@@ -1,0 +1,30 @@
+input_csv: data/example/synthetic_tbnk_example.csv
+output_dir: outputs/example_run
+random_state: 42
+
+required_columns:
+  - analysis_group
+  - year
+  - cd3_pct
+  - cd4_pct
+  - cd8_pct
+  - b_pct
+  - nk_pct
+  - lymph_abs
+  - cd3_abs
+  - cd4_abs
+  - cd8_abs
+  - b_abs
+  - nk_abs
+  - cd4_cd8_ratio
+
+allowed_groups:
+  - LN
+  - NS
+  - MN
+  - IgAN
+  - AAV
+
+privacy_note: >
+  Do not replace this example configuration with paths to patient-level data
+  before committing. Keep real clinical data outside the Git repository.
