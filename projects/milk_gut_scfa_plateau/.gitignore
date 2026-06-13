@@ -1,0 +1,20 @@
+# Keep project-local controlled data and generated manuscript artifacts out of git.
+final_manuscript_planning_20260605/
+direction1_publication_figures/
+direction3_multiomics_blueprint/
+p0_multiomics_extension/
+p1_clinical_modifiers/
+p2_bridge_analyses/
+*.csv
+*.xlsx
+*.xls
+*.pdf
+*.docx
+*.pptx
+*.zip
+*.png
+*.tif
+*.tiff
+*.svg
+*.log
+*.html
