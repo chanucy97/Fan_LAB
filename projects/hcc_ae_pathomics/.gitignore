@@ -1,0 +1,44 @@
+# Controlled inputs and generated outputs for the HCC-AE pathomics project.
+# Keep this public repository code-only.
+
+data/
+controlled_data/
+controlled_manuscript/
+outputs/
+hcc_ae_submission_final_*/
+hcc_ae_submission_package*/
+paper_rewriting_output/
+results_summary/
+source_data/
+figures/
+qa_pdf_pages/
+.pdf_render_lib/
+__pycache__/
+*.pyc
+
+# Do not commit manuscript packages, clinical tables, feature matrices, WSI files,
+# rendered QA pages, or large image assets.
+*.svs
+*.ndpi
+*.tif
+*.tiff
+*.h5
+*.hdf5
+*.pt
+*.pth
+*.npy
+*.npz
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.docx
+*.doc
+*.pdf
+*.zip
+*.tar
+*.tar.gz
+*.png
+*.jpg
+*.jpeg
+*.webp
