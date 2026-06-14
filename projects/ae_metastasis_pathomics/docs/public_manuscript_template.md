@@ -1,4 +1,4 @@
-# HCC-AE pathomics manuscript template
+# AE metastasis prediction manuscript template
 
 ## Public Safety Note
 
@@ -32,7 +32,7 @@ This is a placeholder template. The unpublished manuscript text, author informat
 
 ## Methods
 
-### Study Design And Data Sources
+### Study Design, Endpoint Audit, And Data Sources
 
 [Describe the study design after confirming the release boundary for data provenance.]
 
@@ -40,11 +40,11 @@ This is a placeholder template. The unpublished manuscript text, author informat
 
 [Describe public methods without exposing private file paths or identifiers.]
 
-### Multiple-Instance Learning Models
+### Non-Local Metastasis Prediction Models
 
 [Describe model families, features, split policy, and evaluation metrics.]
 
-### Error Review
+### Linkage And Error Review
 
 [Describe the review workflow without disclosing private slide identifiers.]
 

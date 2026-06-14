@@ -10,9 +10,9 @@ from pathlib import Path
 from PIL import Image, ImageDraw
 
 
-ROOT = Path(os.environ.get("HCC_AE_ROOT", Path.cwd())).resolve()
-DEFAULT_DOCX = ROOT / "hcc_ae_submission_package" / "HCC_AE_submission.docx"
-DEFAULT_OUT = ROOT / "hcc_ae_submission_package" / "qa_pdf_pages"
+ROOT = Path(os.environ.get("AE_METASTASIS_ROOT", Path.cwd())).resolve()
+DEFAULT_DOCX = ROOT / "ae_metastasis_submission_package" / "AE_metastasis_submission.docx"
+DEFAULT_OUT = ROOT / "ae_metastasis_submission_package" / "qa_pdf_pages"
 SOFFICE = Path(
     os.environ.get(
         "LIBREOFFICE_SOFFICE",
@@ -177,7 +177,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--install-pdfium",
         action="store_true",
-        help="Install pypdfium2 into a local cache under HCC_AE_ROOT if missing.",
+        help="Install pypdfium2 into a local cache under AE_METASTASIS_ROOT if missing.",
     )
     return parser.parse_args()
 

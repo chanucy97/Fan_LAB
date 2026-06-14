@@ -1,6 +1,6 @@
 # Sensitive-Content Checklist
 
-Run this checklist before every public commit that touches `projects/hcc_ae_pathomics/`.
+Run this checklist before every public commit that touches `projects/ae_metastasis_pathomics/`.
 
 ## Files That Must Not Be Added
 
@@ -23,7 +23,7 @@ Run this checklist before every public commit that touches `projects/hcc_ae_path
 ## Suggested Local Scan
 
 ```powershell
-rg -n -i "C:\\Users|Administrator|New project 5|[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}|ethic|irb|grant|fund|patient|TCGA-|\\.svs|\\.docx|\\.pdf|\\.zip|password|token|secret|api[_-]?key" projects\hcc_ae_pathomics
+rg -n -i "C:\\Users|Administrator|New project 5|[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}|ethic|irb|grant|fund|patient|TCGA-|\\.svs|\\.docx|\\.pdf|\\.zip|password|token|secret|api[_-]?key" projects\ae_metastasis_pathomics
 ```
 
 Some checklist and documentation hits are expected. Investigate any hit that contains real identifiers, private paths, unpublished text, or credentials.

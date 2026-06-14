@@ -1,12 +1,12 @@
-# HCC-AE Pathomics
+# AE Metastasis Pathomics
 
-Public code skeleton for a whole-slide-image pathomics study that distinguishes hepatocellular carcinoma (HCC) from hepatic alveolar echinococcosis (AE).
+Public code skeleton for a whole-slide-image pathomics study of non-local metastasis prediction in hepatic alveolar echinococcosis (AE).
 
-This directory intentionally contains code and documentation only. The private manuscript text, author contact details, ethics and funding text, whole-slide images, feature files, source data tables, patient-level clinical data, final submission packages, QA screenshots, and large rendered figures are not included.
+This project is for audited AE metastasis modeling, not for a diagnostic differential-classification task. It keeps code and documentation public while the private manuscript text, author contact details, ethics and funding text, whole-slide images, feature files, source data tables, patient-level clinical data, final submission packages, QA screenshots, and large rendered figures remain controlled outside Git.
 
 ## What Is Included
 
-- `scripts/build_hcc_ae_submission_package.py`: public-safe manuscript/package builder that reads controlled local inputs at runtime.
+- `scripts/build_ae_metastasis_submission_package.py`: public-safe manuscript/package builder that reads controlled local inputs at runtime.
 - `scripts/render_review_docx_windows.py`: Windows DOCX-to-PDF QA renderer with configurable local paths.
 - `docs/public_manuscript_template.md`: placeholder manuscript structure without unpublished text.
 - `docs/RUNNING.md`: setup and execution notes.
@@ -24,29 +24,29 @@ This directory intentionally contains code and documentation only. The private m
 
 ## Runtime Root
 
-Set `HCC_AE_ROOT` to a controlled local directory that contains private inputs and receives generated outputs:
+Set `AE_METASTASIS_ROOT` to a controlled local directory that contains private inputs and receives generated outputs:
 
 ```powershell
-$env:HCC_AE_ROOT = "D:\controlled\hcc_ae_pathomics"
+$env:AE_METASTASIS_ROOT = "D:\controlled\ae_metastasis_pathomics"
 ```
 
-If `HCC_AE_ROOT` is not set, scripts use the current working directory. Generated outputs are ignored by Git.
+If `AE_METASTASIS_ROOT` is not set, scripts use the current working directory. Generated outputs are ignored by Git.
 
 ## Quick Start
 
 ```powershell
-cd projects\hcc_ae_pathomics
+cd projects\ae_metastasis_pathomics
 python -m venv .venv
 .\.venv\Scripts\python -m pip install -r requirements.txt
-.\.venv\Scripts\python scripts\build_hcc_ae_submission_package.py --write-example-tables
+.\.venv\Scripts\python scripts\build_ae_metastasis_submission_package.py --write-example-tables
 ```
 
 For real manuscript assembly, pass a controlled manuscript markdown file that lives outside the public repository:
 
 ```powershell
-.\.venv\Scripts\python scripts\build_hcc_ae_submission_package.py `
-  --manuscript "$env:HCC_AE_ROOT\controlled_manuscript\HCC_AE_submission_final.md" `
-  --out "$env:HCC_AE_ROOT\hcc_ae_submission_package"
+.\.venv\Scripts\python scripts\build_ae_metastasis_submission_package.py `
+  --manuscript "$env:AE_METASTASIS_ROOT\controlled_manuscript\ae_metastasis_submission_final.md" `
+  --out "$env:AE_METASTASIS_ROOT\ae_metastasis_submission_package"
 ```
 
 ## Public-Safety Rule

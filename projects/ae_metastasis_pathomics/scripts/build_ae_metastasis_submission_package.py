@@ -14,9 +14,9 @@ from docx.shared import Inches, Pt
 
 
 PROJECT_DIR = Path(__file__).resolve().parents[1]
-CONTROLLED_ROOT = Path(os.environ.get("HCC_AE_ROOT", Path.cwd())).resolve()
+CONTROLLED_ROOT = Path(os.environ.get("AE_METASTASIS_ROOT", Path.cwd())).resolve()
 DEFAULT_MANUSCRIPT = PROJECT_DIR / "docs" / "public_manuscript_template.md"
-DEFAULT_OUT = CONTROLLED_ROOT / "hcc_ae_submission_package"
+DEFAULT_OUT = CONTROLLED_ROOT / "ae_metastasis_submission_package"
 FIGURE_SUFFIXES = {".png", ".jpg", ".jpeg", ".tif", ".tiff"}
 
 
@@ -195,7 +195,7 @@ def write_manifest(
 ) -> Path:
     manifest = out_dir / "build_manifest.txt"
     lines = [
-        "HCC-AE public-safe package build",
+        "AE metastasis public-safe package build",
         "",
         f"CONTROLLED_ROOT: {CONTROLLED_ROOT}",
         f"MANUSCRIPT_INPUT: {manuscript}",
@@ -228,14 +228,14 @@ def build_docx(markdown: str, out_dir: Path, figures_dir: Path | None, embed_fig
         if figures_dir is None:
             raise ValueError("--embed-figures requires --figures-dir")
         embedded_figures = add_figures(doc, figures_dir)
-    docx_path = out_dir / "HCC_AE_submission.docx"
+    docx_path = out_dir / "AE_metastasis_submission.docx"
     doc.save(docx_path)
     return docx_path, embedded_figures
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Build a public-safe HCC-AE manuscript package from controlled local inputs."
+        description="Build a public-safe AE metastasis manuscript package from controlled local inputs."
     )
     parser.add_argument(
         "--manuscript",
@@ -245,7 +245,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--out",
         default=str(DEFAULT_OUT),
-        help="Output directory. Prefer a private directory under HCC_AE_ROOT.",
+        help="Output directory. Prefer a private directory under AE_METASTASIS_ROOT.",
     )
     parser.add_argument(
         "--figures-dir",

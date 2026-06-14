@@ -36,7 +36,7 @@ The QA renderer can create:
 - A contact sheet.
 - A render manifest.
 
-These outputs should remain under `HCC_AE_ROOT` or another private working directory. They are not intended for public Git commits.
+These outputs should remain under `AE_METASTASIS_ROOT` or another private working directory. They are not intended for public Git commits.
 
 ## Release Boundary
 

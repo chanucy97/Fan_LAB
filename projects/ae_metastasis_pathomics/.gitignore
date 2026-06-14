@@ -1,12 +1,12 @@
-# Controlled inputs and generated outputs for the HCC-AE pathomics project.
+# Controlled inputs and generated outputs for the AE metastasis pathomics project.
 # Keep this public repository code-only.
 
 data/
 controlled_data/
 controlled_manuscript/
 outputs/
-hcc_ae_submission_final_*/
-hcc_ae_submission_package*/
+ae_metastasis_submission_final_*/
+ae_metastasis_submission_package*/
 paper_rewriting_output/
 results_summary/
 source_data/

@@ -2,7 +2,7 @@
 
 ## Code
 
-The public code skeleton is available in this repository under `projects/hcc_ae_pathomics/`. It documents the packaging workflow and provides reusable scripts for controlled local execution.
+The public code skeleton is available in this repository under `projects/ae_metastasis_pathomics/`. It documents the packaging workflow and provides reusable scripts for controlled local execution for an AE non-local metastasis prediction study.
 
 ## Data
 
@@ -14,4 +14,4 @@ The complete unpublished manuscript, author correspondence details, ethics state
 
 ## Reproduction Boundary
 
-This repository supports reproduction of the packaging logic after an approved user supplies controlled inputs locally through `HCC_AE_ROOT`. It does not claim to reproduce model training or clinical validation without the controlled dataset and approved analysis environment.
+This repository supports reproduction of the packaging logic after an approved user supplies controlled inputs locally through `AE_METASTASIS_ROOT`. It does not claim to reproduce model training or clinical validation without the controlled dataset and approved analysis environment.
