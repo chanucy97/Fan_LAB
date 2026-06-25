@@ -1,0 +1,14 @@
+data/
+outputs/
+results/
+*.pt
+*.pth
+*.svs
+*.tif
+*.tiff
+*.ndpi
+*.mrxs
+*.h5
+*.hdf5
+__pycache__/
+.Rhistory

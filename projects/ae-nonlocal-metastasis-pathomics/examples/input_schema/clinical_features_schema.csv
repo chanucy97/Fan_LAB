@@ -1,0 +1,3 @@
+patient_id,label,Age,Gender,Nationalities,Address,Therapy,TB,DB,AST,ALT,HBsAg,Lesions,Vascular_Invasion_binary
+P001,1,55,F,example,example,example,10.0,3.0,22.0,18.0,negative,6.2,1
+P002,0,48,M,example,example,example,8.0,2.1,20.0,16.0,negative,4.4,0

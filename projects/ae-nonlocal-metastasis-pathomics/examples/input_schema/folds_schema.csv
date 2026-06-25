@@ -1,0 +1,4 @@
+patient_id,label,fold,group
+P001,1,1,train
+P002,0,1,test
+P003,0,1,train
