@@ -13,6 +13,10 @@ The bundle is designed for manuscript review and method transparency. It does no
 - `configs/cpathsoftware_clam_sb_conch_example.yaml`: path-free example of the CPathSoftWare CLAM-SB + CONCH configuration used as a template.
 - `examples/input_schema/*.csv`: column schemas for required inputs.
 
+## Dependencies
+
+Python dependencies are listed in `requirements.txt`. R dependencies for the ROC plotting script are listed in `r-packages.txt`.
+
 ## Data access
 
 Raw WSIs and patient-level clinical data are controlled by the Affiliated Hospital of Qinghai University and are not publicly distributed because they may contain identifiable medical information. To run the scripts, users must provide de-identified tables following the schemas in `examples/input_schema/`.
