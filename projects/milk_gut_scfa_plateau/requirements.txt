@@ -1,5 +1,0 @@
-pillow
-pymupdf
-pypdf
-python-docx
-reportlab
