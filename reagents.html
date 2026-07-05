@@ -3,8 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>试剂耗材 | 樊海宁课题组</title>
-    <meta name="description" content="樊海宁课题组试剂耗材台账，用于内部查看抗体、贵重试剂和耗材状态。" />
+    <title>试剂耗材与仪器台账 | 樊海宁课题组</title>
+    <meta
+      name="description"
+      content="樊海宁课题组试剂耗材与仪器台账摘要，展示仪器设备、抗体、试剂、耗材、细胞与动物等内部管理框架。"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -30,147 +33,88 @@
         <div>
           <a class="back-link" href="index.html">返回首页</a>
           <p class="eyebrow">Lab Inventory</p>
-          <h1>试剂耗材台账</h1>
+          <h1>试剂耗材与仪器台账</h1>
           <p class="lead">
-            面向课题组内部使用，集中查看抗体、贵重试剂和常用耗材的库存状态、存放地址、负责人和补货优先级。正式公开部署前，建议隐藏价格、库存精确数量和采购渠道等内部信息。
+            课题组已将现有清单整理为分层台账：仪器设备、抗体库存、试剂库存、耗材库存、细胞与动物信息分别维护。公开页面只展示管理框架和摘要，含存放位置、负责人和精确库存的 Excel 台账在课题组内部流转。
           </p>
-          <div class="inventory-actions">
-            <button class="button primary" id="showAddForm" type="button">添加记录</button>
-            <button class="button secondary" id="exportInventory" type="button">导出 JSON</button>
-          </div>
         </div>
         <div class="inventory-summary">
-          <article><strong id="antibodyCount">0</strong><span>抗体记录</span></article>
-          <article><strong id="reagentCount">0</strong><span>贵重试剂</span></article>
-          <article><strong id="consumableCount">0</strong><span>耗材记录</span></article>
+          <article><strong>6</strong><span>仪器设备</span></article>
+          <article><strong>16</strong><span>抗体记录</span></article>
+          <article><strong>44</strong><span>试剂耗材</span></article>
+          <article><strong>6</strong><span>细胞与动物</span></article>
         </div>
-      </section>
-
-      <section class="section inventory-form-section" id="inventoryFormSection" hidden>
-        <div class="section-heading">
-          <p class="eyebrow">Add Item</p>
-          <h2>添加试剂耗材记录</h2>
-          <p>填写后会保存在当前浏览器本地。以后如果需要多人共享，可以把这里的数据导出后整理成 Excel 或接入后台。</p>
-        </div>
-        <form class="inventory-form" id="inventoryForm">
-          <label>
-            <span>分类</span>
-            <select name="category" required>
-              <option value="antibody">抗体</option>
-              <option value="reagent">贵重试剂</option>
-              <option value="consumable">常用耗材</option>
-            </select>
-          </label>
-          <label>
-            <span>名称/靶标</span>
-            <input name="name" placeholder="如 CDT1 antibody / Matrigel / 枪头" required />
-          </label>
-          <label>
-            <span>用途/应用</span>
-            <input name="purpose" placeholder="如 WB、IHC、细胞培养、动物实验" />
-          </label>
-          <label>
-            <span>品牌/货号</span>
-            <input name="brand" placeholder="品牌、货号或供应商" />
-          </label>
-          <label>
-            <span>规格/批号</span>
-            <input name="spec" placeholder="规格、批号、克隆号等" />
-          </label>
-          <label>
-            <span>存放地址</span>
-            <input name="storage" placeholder="如 -20℃冰箱2层A盒 / 4℃冰箱门架 / 试剂柜B3" />
-          </label>
-          <label>
-            <span>库存/剩余量</span>
-            <input name="quantity" placeholder="如 1支、约50 μL、3盒、偏低" />
-          </label>
-          <label>
-            <span>价格等级</span>
-            <select name="priceLevel">
-              <option value="待确认">待确认</option>
-              <option value="普通">普通</option>
-              <option value="贵重">贵重</option>
-              <option value="极贵重">极贵重</option>
-            </select>
-          </label>
-          <label>
-            <span>负责人</span>
-            <input name="owner" placeholder="负责人或登记人" />
-          </label>
-          <label>
-            <span>状态</span>
-            <select name="status">
-              <option value="充足">充足</option>
-              <option value="偏低">偏低</option>
-              <option value="待采购">待采购</option>
-              <option value="即将过期">即将过期</option>
-              <option value="已用完">已用完</option>
-            </select>
-          </label>
-          <label class="wide-field">
-            <span>备注</span>
-            <textarea name="note" rows="3" placeholder="补货建议、开封日期、保存注意事项、采购审批等"></textarea>
-          </label>
-          <div class="form-actions">
-            <button class="button primary" type="submit">保存到台账</button>
-            <button class="button text-button" id="cancelAddForm" type="button">取消</button>
-            <button class="button text-button" id="clearInventory" type="button">清空本地记录</button>
-          </div>
-        </form>
       </section>
 
       <section class="section inventory-section">
+        <div class="section-heading">
+          <p class="eyebrow">Overview</p>
+          <h2>台账结构</h2>
+          <p>根据“清单.docx”整理，原始清单共 42 条，结构化后形成 5 类资产记录。尚未在原始清单中出现的信息统一标记为待确认。</p>
+        </div>
+        <div class="inventory-teaser-grid inventory-stat-grid">
+          <article>
+            <strong>仪器设备</strong>
+            <span>制胶架、电源、电泳机器、转膜机器、解剖器械等。</span>
+          </article>
+          <article>
+            <strong>抗体库存</strong>
+            <span>常规抗体、流式抗体和博士得过期抗体分开记录。</span>
+          </article>
+          <article>
+            <strong>试剂库存</strong>
+            <span>培养基、试剂盒、染色/固定液、酶、引物、基质胶等。</span>
+          </article>
+          <article>
+            <strong>耗材库存</strong>
+            <span>EP管、枪头、培养板、离心管、手套、口罩等。</span>
+          </article>
+          <article>
+            <strong>细胞与动物</strong>
+            <span>THLE-2、HuH7、HEPG2、MHCC-97H、PLC1；实验动物当前暂无。</span>
+          </article>
+          <article>
+            <strong>内部字段</strong>
+            <span>存放地址、负责人、保存条件、补货建议在内部 Excel 中维护。</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section inventory-section alt">
         <div class="section-heading">
           <p class="eyebrow">Antibodies</p>
-          <h2>抗体库存</h2>
-          <p>建议优先登记一抗、二抗、流式抗体和免疫荧光常用抗体；同一靶标不同批号单独记录。</p>
+          <h2>抗体摘要</h2>
+          <p>抗体页签共 16 条。清单中标注“过期”的博士得抗体已在台账中单独标记，便于后续清理或替换。</p>
         </div>
         <div class="table-wrap">
-          <table class="inventory-table">
+          <table class="inventory-table inventory-mini-table">
             <thead>
               <tr>
-                <th>名称/靶标</th>
-                <th>应用</th>
-                <th>品牌/货号</th>
-                <th>规格/批号</th>
-                <th>存放地址</th>
-                <th>剩余量</th>
-                <th>负责人</th>
+                <th>类别</th>
+                <th>代表项目</th>
                 <th>状态</th>
-                <th>备注</th>
+                <th>维护重点</th>
               </tr>
             </thead>
-            <tbody id="antibodyRows">
-              <tr class="empty-row"><td colspan="9">暂无记录。点击“添加记录”录入抗体信息。</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <section class="section inventory-section alt">
-        <div class="section-heading">
-          <p class="eyebrow">High-value Reagents</p>
-          <h2>贵重试剂</h2>
-          <p>用于记录价格较高、保存条件严格、采购周期长或多人共用的关键试剂。</p>
-        </div>
-        <div class="table-wrap">
-          <table class="inventory-table">
-            <thead>
+            <tbody>
               <tr>
-                <th>试剂名称</th>
-                <th>用途</th>
-                <th>品牌/货号</th>
-                <th>规格/批号</th>
-                <th>价格等级</th>
-                <th>存放地址</th>
-                <th>库存状态</th>
-                <th>负责人</th>
-                <th>备注/补货建议</th>
+                <td>常规抗体</td>
+                <td>Anti Mouse Ly-6G/Ly-6C、PDL1/B7-H1、ARE BIO NKG2A</td>
+                <td><span class="status-pill pending">待确认</span></td>
+                <td>补充宿主、克隆号、规格、存放地址和负责人。</td>
               </tr>
-            </thead>
-            <tbody id="reagentRows">
-              <tr class="empty-row"><td colspan="9">暂无记录。点击“添加记录”录入贵重试剂信息。</td></tr>
+              <tr>
+                <td>流式抗体</td>
+                <td>NK1.1、NKG2AB6、CD3c、CD11b、CD206</td>
+                <td><span class="status-pill pending">待确认</span></td>
+                <td>核对通道、品牌、批号和剩余量。</td>
+              </tr>
+              <tr>
+                <td>博士得抗体</td>
+                <td>IFNG、ICAMI、CD8A、CXCR2、LY6E、CD4、KLRC1、CD95</td>
+                <td><span class="status-pill warning">已过期</span></td>
+                <td>建议集中确认是否废弃、替换或仅保留记录。</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -178,41 +122,39 @@
 
       <section class="section inventory-section">
         <div class="section-heading">
-          <p class="eyebrow">Consumables</p>
-          <h2>常用耗材与采购提醒</h2>
-          <p>用于快速查看枪头、离心管、培养板、冻存管、滤膜、手套等高频耗材的消耗情况。</p>
-        </div>
-        <div class="inventory-cards">
-          <article>
-            <h3>低库存</h3>
-            <p class="empty">系统会把状态为“偏低”“待采购”“已用完”的记录视为优先补货项。</p>
-          </article>
-          <article>
-            <h3>即将过期</h3>
-            <p class="empty">状态选择“即将过期”后，可在备注中写明到期时间和处理建议。</p>
-          </article>
-          <article>
-            <h3>采购中</h3>
-            <p class="empty">可在备注中记录已申请、已下单、待到货等采购状态。</p>
-          </article>
+          <p class="eyebrow">Reagents</p>
+          <h2>试剂与耗材摘要</h2>
+          <p>试剂库存 25 条，耗材库存 19 条。公开页只呈现类别，具体库存数量和存放地址以内部 Excel 为准。</p>
         </div>
         <div class="table-wrap">
-          <table class="inventory-table">
+          <table class="inventory-table inventory-mini-table">
             <thead>
               <tr>
-                <th>耗材名称</th>
-                <th>用途</th>
-                <th>品牌/货号</th>
-                <th>规格</th>
-                <th>存放地址</th>
-                <th>当前库存</th>
-                <th>负责人</th>
-                <th>状态</th>
-                <th>备注/补货建议</th>
+                <th>模块</th>
+                <th>记录数</th>
+                <th>代表内容</th>
+                <th>下一步维护</th>
               </tr>
             </thead>
-            <tbody id="consumableRows">
-              <tr class="empty-row"><td colspan="9">暂无记录。点击“添加记录”录入耗材信息。</td></tr>
+            <tbody>
+              <tr>
+                <td>细胞培养与功能实验试剂</td>
+                <td>9</td>
+                <td>专培、CCK8、冻存液、胰酶、双抗、基质胶等。</td>
+                <td>补充保存条件、开封日期和负责人。</td>
+              </tr>
+              <tr>
+                <td>分子与染色试剂</td>
+                <td>10</td>
+                <td>反转录、荧光定量、RNA提取、染色/固定液、引物等。</td>
+                <td>核对品牌、批号和剩余量。</td>
+              </tr>
+              <tr>
+                <td>常用耗材</td>
+                <td>19</td>
+                <td>EP管、枪头、培养板、离心管、Transwell小室、手套口罩等。</td>
+                <td>建立最低库存线，低于阈值时提醒补货。</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -220,158 +162,30 @@
 
       <section class="section inventory-section alt">
         <div class="section-heading">
-          <p class="eyebrow">Template</p>
-          <h2>登记字段建议</h2>
+          <p class="eyebrow">Internal Workflow</p>
+          <h2>内部维护规则</h2>
         </div>
-        <ul class="detail-list compact-list">
-          <li>抗体：靶标、宿主、克隆号、应用、品牌、货号、批号、稀释比例、存放地址、开封日期、负责人。</li>
-          <li>贵重试剂：名称、用途、品牌、货号、规格、单价/预算、保存条件、存放地址、当前库存、采购周期、负责人。</li>
-          <li>耗材：名称、规格、存放地址、最低库存线、当前状态、补货负责人、最近更新时间。</li>
-        </ul>
+        <div class="inventory-note">
+          <p>
+            当前公开网站用于展示课题组管理框架；真实台账请使用内部 Excel 文件维护。建议每次更新时同步补充：存放地址、保存条件、负责人、最近更新时间、是否偏低或待采购。
+          </p>
+          <p>
+            不建议在公开网页直接发布精确库存、采购价格、存放位置和可操作的库存文件。若后续需要多人在线编辑，可改为 GitHub 私有仓库、Google Sheet 权限共享，或部署带登录权限的后台。
+          </p>
+        </div>
       </section>
     </main>
 
-    <script>
-      const storageKey = "fanLabInventoryRecords";
-      const formSection = document.querySelector("#inventoryFormSection");
-      const form = document.querySelector("#inventoryForm");
-      const rowTargets = {
-        antibody: document.querySelector("#antibodyRows"),
-        reagent: document.querySelector("#reagentRows"),
-        consumable: document.querySelector("#consumableRows"),
-      };
-      const counters = {
-        antibody: document.querySelector("#antibodyCount"),
-        reagent: document.querySelector("#reagentCount"),
-        consumable: document.querySelector("#consumableCount"),
-      };
-
-      function loadRecords() {
-        try {
-          return JSON.parse(localStorage.getItem(storageKey) || "[]");
-        } catch (error) {
-          return [];
-        }
-      }
-
-      function saveRecords(records) {
-        localStorage.setItem(storageKey, JSON.stringify(records));
-      }
-
-      function text(value) {
-        return value && value.trim() ? value.trim() : "待补充";
-      }
-
-      function makeCell(value) {
-        const td = document.createElement("td");
-        td.textContent = text(value);
-        return td;
-      }
-
-      function renderRows() {
-        const records = loadRecords();
-        Object.values(rowTargets).forEach((tbody) => (tbody.innerHTML = ""));
-
-        const grouped = {
-          antibody: records.filter((item) => item.category === "antibody"),
-          reagent: records.filter((item) => item.category === "reagent"),
-          consumable: records.filter((item) => item.category === "consumable"),
-        };
-
-        Object.entries(grouped).forEach(([category, items]) => {
-          counters[category].textContent = items.length;
-          if (!items.length) {
-            const emptyRow = document.createElement("tr");
-            emptyRow.className = "empty-row";
-            const cell = document.createElement("td");
-            cell.colSpan = 9;
-            cell.textContent =
-              category === "antibody"
-                ? "暂无记录。点击“添加记录”录入抗体信息。"
-                : category === "reagent"
-                  ? "暂无记录。点击“添加记录”录入贵重试剂信息。"
-                  : "暂无记录。点击“添加记录”录入耗材信息。";
-            emptyRow.appendChild(cell);
-            rowTargets[category].appendChild(emptyRow);
-            return;
-          }
-
-          items.forEach((item) => {
-            const row = document.createElement("tr");
-            if (category === "reagent") {
-              [
-                item.name,
-                item.purpose,
-                item.brand,
-                item.spec,
-                item.priceLevel,
-                item.storage,
-                item.status,
-                item.owner,
-                item.note,
-              ].forEach((value) => row.appendChild(makeCell(value)));
-            } else {
-              [
-                item.name,
-                item.purpose,
-                item.brand,
-                item.spec,
-                item.storage,
-                item.quantity,
-                item.owner,
-                item.status,
-                item.note,
-              ].forEach((value) => row.appendChild(makeCell(value)));
-            }
-            rowTargets[category].appendChild(row);
-          });
-        });
-      }
-
-      document.querySelector("#showAddForm").addEventListener("click", () => {
-        formSection.hidden = false;
-        form.querySelector("[name='category']").focus();
-      });
-
-      document.querySelector("#cancelAddForm").addEventListener("click", () => {
-        form.reset();
-        formSection.hidden = true;
-      });
-
-      document.querySelector("#clearInventory").addEventListener("click", () => {
-        if (confirm("确认清空当前浏览器保存的试剂耗材记录？")) {
-          saveRecords([]);
-          renderRows();
-          form.reset();
-        }
-      });
-
-      document.querySelector("#exportInventory").addEventListener("click", () => {
-        const blob = new Blob([JSON.stringify(loadRecords(), null, 2)], { type: "application/json" });
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement("a");
-        link.href = url;
-        link.download = "fan-lab-inventory.json";
-        link.click();
-        URL.revokeObjectURL(url);
-      });
-
-      form.addEventListener("submit", (event) => {
-        event.preventDefault();
-        const data = Object.fromEntries(new FormData(form).entries());
-        const records = loadRecords();
-        records.push({
-          id: window.crypto && crypto.randomUUID ? crypto.randomUUID() : String(Date.now()),
-          createdAt: new Date().toISOString(),
-          ...data,
-        });
-        saveRecords(records);
-        renderRows();
-        form.reset();
-        formSection.hidden = true;
-      });
-
-      renderRows();
-    </script>
+    <footer class="site-footer">
+      <div>
+        <h2>联系课题组</h2>
+        <p>欢迎围绕包虫病防治、肝胆胰疾病、高原医学、医学人工智能和临床转化研究开展合作。</p>
+      </div>
+      <address>
+        <span>樊海宁课题组 · Fan Lab</span>
+        <span>依托单位：青海大学附属医院</span>
+        <span>联系邮箱：待补充</span>
+      </address>
+    </footer>
   </body>
 </html>

@@ -763,6 +763,27 @@ a {
   color: var(--muted);
 }
 
+.inventory-stat-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.inventory-note {
+  max-width: 1050px;
+  padding: 24px;
+  color: #273244;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.inventory-note p {
+  margin: 0;
+}
+
+.inventory-note p + p {
+  margin-top: 12px;
+}
+
 .text-button {
   color: var(--blue-deep);
   background: var(--white);
@@ -916,6 +937,31 @@ a {
 
 .inventory-table tbody tr:last-child td {
   border-bottom: 0;
+}
+
+.inventory-mini-table {
+  min-width: 760px;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 850;
+  white-space: nowrap;
+}
+
+.status-pill.pending {
+  color: #155fa8;
+  background: #edf4fb;
+}
+
+.status-pill.warning {
+  color: #8a4b00;
+  background: #fff1d6;
 }
 
 .empty-row td {
