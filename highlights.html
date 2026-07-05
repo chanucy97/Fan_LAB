@@ -64,33 +64,48 @@
           <h2>奖项滑动展示</h2>
           <p>横向滑动查看代表性奖励。奖项名称、年度和排名来自申报材料整理。</p>
         </div>
-        <div class="award-strip" aria-label="代表性奖项横向滑动列表">
+        <div class="award-strip" aria-label="代表性奖项横向滑动列表" data-auto-scroll="true">
           <article class="award-card featured">
             <span>省部级 · 2024</span>
+            <figure class="award-media">
+              <img src="assets/awards/tech-progress-first-nomination-2024.jpg" alt="青海省科学技术奖提名书材料截图" />
+            </figure>
             <h3>青海省科学技术进步奖一等奖</h3>
             <p>“青海省包虫病基础与临床创新研究应用”获2023年度青海省科学技术进步奖一等奖，本人排名1/15。</p>
             <b>授奖单位：青海省人民政府</b>
           </article>
           <article class="award-card">
             <span>国家级 · 2020</span>
+            <figure class="award-media">
+              <img src="assets/awards/innovation-award-2020.jpg" alt="全国创新争先奖状" />
+            </figure>
             <h3>第二届全国创新争先奖状</h3>
             <p>科技志愿服务相关奖励，本人排名1。</p>
             <b>授奖单位：人社部、中国科协、科技部、国务院国资委</b>
           </article>
           <article class="award-card">
             <span>省部级 · 2017</span>
+            <figure class="award-media">
+              <img src="assets/awards/tech-progress-third-2017.jpg" alt="青海省科技进步奖三等奖证书" />
+            </figure>
             <h3>青海省科技进步奖三等奖</h3>
             <p>“硫化氢对大鼠肝星状细胞氧化应激影响分子机制研究”获奖，本人排名1/7。</p>
             <b>授奖单位：青海省人民政府</b>
           </article>
           <article class="award-card">
             <span>省级论文奖 · 2016</span>
+            <figure class="award-media landscape">
+              <img src="assets/awards/natural-paper-2016.jpg" alt="青海省自然科学优秀学术论文奖证书" />
+            </figure>
             <h3>青海省自然科学优秀学术论文奖二等奖</h3>
             <p>Protective effects of hydrogen sulfide 相关论文获2013-2014年度优秀学术论文奖，本人排名1/4。</p>
             <b>代表方向：肝纤维化与氧化应激</b>
           </article>
           <article class="award-card">
             <span>系统成果 · 2016</span>
+            <figure class="award-media landscape">
+              <img src="assets/awards/health-system-first-2016.jpg" alt="青海省医药卫生系统优秀科研成果一等奖荣誉证书" />
+            </figure>
             <h3>青海省医药卫生系统优秀科研成果一等奖</h3>
             <p>“硫化氢对大鼠肝星状细胞氧化应激分子机制研究”入选“十二五”期间优秀科研成果，本人排名1/7。</p>
             <b>代表方向：肝星状细胞机制研究</b>
@@ -189,7 +204,7 @@
             <span>国家自然科学基金 · 82550124</span>
             <h3>基于多海拔人群队列的青藏高原呼吸道病原微生物传播与致病机制研究</h3>
             <p>国家自然科学基金指南引导类原创探索项目，聚焦多海拔人群队列下呼吸道病原微生物传播规律与致病机制。</p>
-            <b>项目编号：82550124</b>
+            <b>项目编号：82550124 · 经费：100万元</b>
           </article>
         </div>
       </section>
@@ -319,5 +334,39 @@
         <span>地址：青海省西宁市宁大路251号</span>
       </address>
     </footer>
+    <script>
+      (() => {
+        const strips = document.querySelectorAll("[data-auto-scroll='true']");
+        strips.forEach((strip) => {
+          let paused = false;
+          const pause = () => {
+            paused = true;
+          };
+          const resume = () => {
+            paused = false;
+          };
+          strip.addEventListener("mouseenter", pause);
+          strip.addEventListener("mouseleave", resume);
+          strip.addEventListener("focusin", pause);
+          strip.addEventListener("focusout", resume);
+          strip.addEventListener("touchstart", pause, { passive: true });
+          strip.addEventListener("touchend", resume, { passive: true });
+
+          let last = performance.now();
+          const tick = (now) => {
+            const elapsed = now - last;
+            last = now;
+            if (!paused && strip.scrollWidth > strip.clientWidth) {
+              strip.scrollLeft += elapsed * 0.035;
+              if (strip.scrollLeft + strip.clientWidth >= strip.scrollWidth - 2) {
+                strip.scrollLeft = 0;
+              }
+            }
+            requestAnimationFrame(tick);
+          };
+          requestAnimationFrame(tick);
+        });
+      })();
+    </script>
   </body>
 </html>
