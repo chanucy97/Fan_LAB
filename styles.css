@@ -1158,7 +1158,7 @@ a {
   display: grid;
   align-content: start;
   gap: 14px;
-  min-height: 320px;
+  min-height: 470px;
   padding: 26px;
   background: var(--white);
   border: 1px solid var(--line);
@@ -1204,6 +1204,29 @@ a {
 .award-card b {
   color: var(--blue-deep);
   font-size: 14px;
+}
+
+.award-media {
+  overflow: hidden;
+  height: 190px;
+  margin: 0;
+  background: #f8fafc;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.award-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.award-media.landscape img {
+  object-fit: contain;
+  padding: 8px;
+  background: #fff;
 }
 
 .platform-grid,
