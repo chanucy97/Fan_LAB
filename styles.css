@@ -24,6 +24,7 @@ body {
   margin: 0;
   color: var(--ink);
   background: var(--soft);
+  overflow-x: hidden;
   font-family:
     "Microsoft YaHei",
     "PingFang SC",
@@ -373,6 +374,10 @@ a {
   display: grid;
   gap: 16px;
   max-width: 1120px;
+}
+
+.highlight-list + .button {
+  margin-top: 18px;
 }
 
 .highlight-list article {
@@ -970,6 +975,318 @@ a {
   border-bottom: 0;
 }
 
+.achievement-page {
+  background: var(--soft);
+}
+
+.achievement-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 430px;
+  gap: clamp(30px, 5vw, 76px);
+  align-items: end;
+  padding: clamp(56px, 8vw, 96px) clamp(18px, 5vw, 64px);
+  color: var(--white);
+  background:
+    linear-gradient(100deg, rgba(11, 37, 68, 0.96), rgba(21, 95, 168, 0.76)),
+    linear-gradient(135deg, #102843, #17656d);
+}
+
+.achievement-hero > *,
+.achievement-hero-panel {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.achievement-hero .lead {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.achievement-hero h1 {
+  margin: 0;
+  font-size: clamp(46px, 7vw, 80px);
+  line-height: 1.05;
+}
+
+.achievement-hero-panel {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.achievement-hero-panel article {
+  display: grid;
+  gap: 8px;
+  min-height: 128px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 8px;
+}
+
+.achievement-hero-panel strong {
+  color: var(--white);
+  font-size: 46px;
+  line-height: 1;
+}
+
+.achievement-hero-panel span {
+  color: rgba(255, 255, 255, 0.82);
+  font-weight: 800;
+}
+
+.achievement-jump {
+  position: sticky;
+  top: 73px;
+  z-index: 10;
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 12px clamp(18px, 5vw, 64px);
+  background: rgba(248, 250, 252, 0.94);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(12px);
+}
+
+.achievement-jump a {
+  flex: 0 0 auto;
+  padding: 8px 12px;
+  color: var(--blue-deep);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 850;
+}
+
+.achievement-jump a:hover {
+  border-color: var(--blue);
+  background: #edf4fb;
+}
+
+.achievement-section {
+  background: var(--white);
+}
+
+.achievement-section.alt {
+  background: #f8fafc;
+}
+
+.award-strip {
+  display: grid;
+  grid-auto-columns: minmax(310px, 420px);
+  grid-auto-flow: column;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 4px 4px 18px;
+  scroll-snap-type: x mandatory;
+}
+
+.award-card {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+  min-height: 320px;
+  padding: 26px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  scroll-snap-align: start;
+}
+
+.award-card.featured {
+  color: var(--white);
+  background:
+    linear-gradient(135deg, rgba(13, 55, 104, 0.98), rgba(22, 117, 111, 0.95)),
+    var(--blue-deep);
+  border-color: transparent;
+}
+
+.award-card span {
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.award-card.featured span {
+  color: #f4c979;
+}
+
+.award-card h3 {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+.award-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.award-card.featured p,
+.award-card.featured b {
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.award-card b {
+  color: var(--blue-deep);
+  font-size: 14px;
+}
+
+.platform-grid,
+.direction-grid,
+.patent-grid,
+.translation-panel {
+  display: grid;
+  gap: 16px;
+}
+
+.platform-grid,
+.direction-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.platform-grid article,
+.direction-grid article,
+.patent-grid article,
+.translation-panel article {
+  padding: 24px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.platform-grid article {
+  min-height: 250px;
+}
+
+.platform-grid span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 22px;
+  color: var(--white);
+  background: var(--teal);
+  border-radius: 8px;
+  font-weight: 850;
+}
+
+.platform-grid h3,
+.direction-grid h3,
+.translation-panel h3 {
+  margin: 0 0 12px;
+  color: var(--blue-deep);
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.platform-grid p,
+.direction-grid p,
+.translation-panel p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.achievement-table td:first-child {
+  min-width: 300px;
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.paper-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: papers;
+}
+
+.paper-list li {
+  position: relative;
+  min-height: 130px;
+  padding: 22px 22px 22px 70px;
+  background: #f8fafc;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  counter-increment: papers;
+}
+
+.paper-list li::before {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  color: var(--white);
+  background: var(--blue);
+  border-radius: 6px;
+  content: counter(papers);
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.paper-list strong,
+.paper-list span {
+  display: block;
+}
+
+.paper-list strong {
+  color: var(--ink);
+  line-height: 1.45;
+}
+
+.paper-list span {
+  margin-top: 10px;
+  color: var(--teal);
+  font-size: 14px;
+  font-weight: 850;
+}
+
+.patent-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.patent-grid article {
+  display: grid;
+  gap: 8px;
+}
+
+.patent-grid strong {
+  color: var(--blue-deep);
+  line-height: 1.35;
+}
+
+.patent-grid span {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.translation-panel {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 18px;
+}
+
+.translation-panel article {
+  background: var(--blue-deep);
+  border-color: var(--blue-deep);
+}
+
+.translation-panel h3,
+.translation-panel p {
+  color: var(--white);
+}
+
+.translation-panel p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
 .inventory-mini-table {
   min-width: 760px;
 }
@@ -1032,6 +1349,7 @@ a {
 
 @media (max-width: 1080px) {
   .hero,
+  .achievement-hero,
   .inventory-hero,
   .profile-card,
   .student-profile-hero,
@@ -1041,6 +1359,11 @@ a {
   }
 
   .research-grid,
+  .platform-grid,
+  .direction-grid,
+  .paper-list,
+  .patent-grid,
+  .translation-panel,
   .impact-grid,
   .training-dashboard,
   .source-grid,
@@ -1073,11 +1396,45 @@ a {
     padding-top: 56px;
   }
 
+  .achievement-jump {
+    position: static;
+  }
+
+  .achievement-hero {
+    display: block;
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  .achievement-hero-panel {
+    margin-top: 28px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .achievement-hero-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .achievement-hero-panel article,
+  .achievement-hero .lead {
+    max-width: 100%;
+  }
+
+  .award-strip {
+    grid-auto-columns: minmax(270px, 88vw);
+  }
+
   .hero h1 {
     font-size: 38px;
   }
 
   .research-grid,
+  .platform-grid,
+  .direction-grid,
+  .paper-list,
+  .patent-grid,
+  .translation-panel,
   .impact-grid,
   .training-dashboard,
   .source-grid,
