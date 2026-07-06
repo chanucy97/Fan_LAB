@@ -6,7 +6,7 @@
     <title>试剂耗材与仪器台账 | 樊海宁课题组</title>
     <meta
       name="description"
-      content="樊海宁课题组试剂耗材与仪器台账摘要，展示仪器设备、抗体、试剂、耗材、细胞与动物等内部管理框架。"
+      content="樊海宁课题组试剂耗材与仪器台账，展示仪器设备、抗体、试剂、耗材、细胞与动物的名称、数量、状态、存放地址和备注。"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -33,145 +33,134 @@
       <section class="inventory-hero">
         <div>
           <a class="back-link" href="index.html">返回首页</a>
-          <p class="eyebrow">Lab Inventory</p>
+          <p class="eyebrow">Lab Inventory · Updated 2026-07-06</p>
           <h1>试剂耗材与仪器台账</h1>
           <p class="lead">
-            课题组已将现有清单整理为分层台账：仪器设备、抗体库存、试剂库存、耗材库存、细胞与动物信息分别维护。公开页面只展示管理框架和摘要，含存放位置、负责人和精确库存的 Excel 台账在课题组内部流转。
+            这页改为同学可直接查看的物资清单：仪器设备、抗体、试剂、耗材、细胞与动物逐条列出。数量、状态和备注来自“清单.docx / inventory.xlsx”；存放地址、负责人等未提供字段先保留为“待补充”，后续盘点时直接补齐。
           </p>
+          <div class="inventory-actions">
+            <a class="button primary" href="#ledger">查看明细</a>
+            <a class="button secondary" href="assets/inventory.xlsx">下载 Excel 台账</a>
+          </div>
         </div>
         <div class="inventory-summary">
+          <article><strong>72</strong><span>总记录</span></article>
+          <article><strong>16</strong><span>抗体</span></article>
+          <article><strong>25</strong><span>试剂</span></article>
+          <article><strong>19</strong><span>耗材</span></article>
           <article><strong>6</strong><span>仪器设备</span></article>
-          <article><strong>16</strong><span>抗体记录</span></article>
-          <article><strong>44</strong><span>试剂耗材</span></article>
           <article><strong>6</strong><span>细胞与动物</span></article>
         </div>
       </section>
 
       <section class="section inventory-section">
         <div class="section-heading">
-          <p class="eyebrow">Overview</p>
-          <h2>台账结构</h2>
-          <p>根据“清单.docx”整理，原始清单共 42 条，结构化后形成 5 类资产记录。尚未在原始清单中出现的信息统一标记为待确认。</p>
+          <p class="eyebrow">At A Glance</p>
+          <h2>当前物资概览</h2>
+          <p>网页展示的是可查阅台账，不是采购审批表。价格、供应商合同、精确采购记录仍应在内部文件中单独维护。</p>
         </div>
         <div class="inventory-teaser-grid inventory-stat-grid">
           <article>
             <strong>仪器设备</strong>
-            <span>制胶架、电源、电泳机器、转膜机器、解剖器械等。</span>
+            <span>制胶架、伯乐电源、WB电泳机器、转膜机器、库房未使用仪器、老鼠解剖器械。</span>
           </article>
           <article>
-            <strong>抗体库存</strong>
-            <span>常规抗体、流式抗体和博士得过期抗体分开记录。</span>
+            <strong>重点抗体</strong>
+            <span>Ly-6G/Ly-6C、PDL1/B7-H1、NK1.1、CD11b、CD206、NKG2A等；博士得过期抗体单独标注。</span>
           </article>
           <article>
-            <strong>试剂库存</strong>
-            <span>培养基、试剂盒、染色/固定液、酶、引物、基质胶等。</span>
+            <strong>贵重/重点试剂</strong>
+            <span>细胞凋亡试剂盒、Biolegend Zombie NIR、CCK8、基质胶、Takara反转录/荧光定量、RNA提取试剂盒。</span>
           </article>
           <article>
-            <strong>耗材库存</strong>
-            <span>EP管、枪头、培养板、离心管、手套、口罩等。</span>
+            <strong>细胞培养</strong>
+            <span>PLC1、MHCC97H、THLE-2、NK细胞专培，另有双抗、胰酶、冻存液等配套试剂。</span>
           </article>
           <article>
-            <strong>细胞与动物</strong>
-            <span>THLE-2、HuH7、HEPG2、MHCC-97H、PLC1；实验动物当前暂无。</span>
+            <strong>常用耗材</strong>
+            <span>EP管、枪头、培养板、T25瓶、离心管、Transwell小室、手套、口罩等。</span>
           </article>
           <article>
-            <strong>内部字段</strong>
-            <span>存放地址、负责人、保存条件、补货建议在内部 Excel 中维护。</span>
+            <strong>待补齐字段</strong>
+            <span>存放地址、负责人、批号、开封日期、保存条件和最低库存线仍需下一轮实物盘点补充。</span>
           </article>
         </div>
       </section>
 
-      <section class="section inventory-section alt">
+      <section id="ledger" class="section inventory-section alt">
         <div class="section-heading">
-          <p class="eyebrow">Antibodies</p>
-          <h2>抗体摘要</h2>
-          <p>抗体页签共 16 条。清单中标注“过期”的博士得抗体已在台账中单独标记，便于后续清理或替换。</p>
+          <p class="eyebrow">Searchable Ledger</p>
+          <h2>物资明细查询</h2>
+          <p>可按名称、编号、品牌、备注、数量、存放地址搜索；也可按类别筛选。状态中“已过期”优先处理，“待确认”表示需要实物盘点。</p>
         </div>
-        <div class="table-wrap">
-          <table class="inventory-table inventory-mini-table">
+
+        <div class="inventory-controls" aria-label="台账筛选控件">
+          <label>
+            <span>搜索物资</span>
+            <input id="inventorySearch" type="search" placeholder="输入 CCK8、CD206、基质胶、Transwell、THLE-2..." />
+          </label>
+          <label>
+            <span>状态</span>
+            <select id="inventoryStatus">
+              <option value="all">全部状态</option>
+              <option value="待确认">待确认</option>
+              <option value="已过期">已过期</option>
+              <option value="无需采购">无需采购</option>
+            </select>
+          </label>
+          <label>
+            <span>关注级别</span>
+            <select id="inventoryPriority">
+              <option value="all">全部</option>
+              <option value="重点">重点/贵重</option>
+              <option value="常规">常规</option>
+              <option value="待补充">待补充</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="inventory-filter-tabs" aria-label="类别筛选">
+          <button type="button" class="active" data-filter="all">全部 <span>72</span></button>
+          <button type="button" data-filter="仪器设备">仪器设备 <span>6</span></button>
+          <button type="button" data-filter="抗体库存">抗体 <span>16</span></button>
+          <button type="button" data-filter="试剂库存">试剂 <span>25</span></button>
+          <button type="button" data-filter="耗材库存">耗材 <span>19</span></button>
+          <button type="button" data-filter="细胞与动物">细胞/动物 <span>6</span></button>
+        </div>
+
+        <div class="ledger-count" id="ledgerCount">显示 72 条记录</div>
+        <div class="table-wrap ledger-wrap">
+          <table class="inventory-table inventory-ledger-table">
             <thead>
               <tr>
+                <th>编号</th>
                 <th>类别</th>
-                <th>代表项目</th>
+                <th>名称</th>
+                <th>规格/用途</th>
+                <th>品牌/来源</th>
+                <th>当前数量</th>
+                <th>存放地址</th>
                 <th>状态</th>
-                <th>维护重点</th>
+                <th>关注</th>
+                <th>负责人</th>
+                <th>更新时间</th>
+                <th>备注</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>常规抗体</td>
-                <td>Anti Mouse Ly-6G/Ly-6C、PDL1/B7-H1、ARE BIO NKG2A</td>
-                <td><span class="status-pill pending">待确认</span></td>
-                <td>补充宿主、克隆号、规格、存放地址和负责人。</td>
-              </tr>
-              <tr>
-                <td>流式抗体</td>
-                <td>NK1.1、NKG2AB6、CD3c、CD11b、CD206</td>
-                <td><span class="status-pill pending">待确认</span></td>
-                <td>核对通道、品牌、批号和剩余量。</td>
-              </tr>
-              <tr>
-                <td>博士得抗体</td>
-                <td>IFNG、ICAMI、CD8A、CXCR2、LY6E、CD4、KLRC1、CD95</td>
-                <td><span class="status-pill warning">已过期</span></td>
-                <td>建议集中确认是否废弃、替换或仅保留记录。</td>
-              </tr>
-            </tbody>
+            <tbody id="inventoryRows"></tbody>
           </table>
         </div>
       </section>
 
       <section class="section inventory-section">
         <div class="section-heading">
-          <p class="eyebrow">Reagents</p>
-          <h2>试剂与耗材摘要</h2>
-          <p>试剂库存 25 条，耗材库存 19 条。公开页只呈现类别，具体库存数量和存放地址以内部 Excel 为准。</p>
-        </div>
-        <div class="table-wrap">
-          <table class="inventory-table inventory-mini-table">
-            <thead>
-              <tr>
-                <th>模块</th>
-                <th>记录数</th>
-                <th>代表内容</th>
-                <th>下一步维护</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>细胞培养与功能实验试剂</td>
-                <td>9</td>
-                <td>专培、CCK8、冻存液、胰酶、双抗、基质胶等。</td>
-                <td>补充保存条件、开封日期和负责人。</td>
-              </tr>
-              <tr>
-                <td>分子与染色试剂</td>
-                <td>10</td>
-                <td>反转录、荧光定量、RNA提取、染色/固定液、引物等。</td>
-                <td>核对品牌、批号和剩余量。</td>
-              </tr>
-              <tr>
-                <td>常用耗材</td>
-                <td>19</td>
-                <td>EP管、枪头、培养板、离心管、Transwell小室、手套口罩等。</td>
-                <td>建立最低库存线，低于阈值时提醒补货。</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <section class="section inventory-section alt">
-        <div class="section-heading">
-          <p class="eyebrow">Internal Workflow</p>
-          <h2>内部维护规则</h2>
+          <p class="eyebrow">Raw List</p>
+          <h2>原始清单拆分说明</h2>
+          <p>本页明细由原始清单拆分为结构化记录，例如“一行里多个耗材”的条目已经拆成独立记录，便于搜索和盘点。</p>
         </div>
         <div class="inventory-note">
           <p>
-            当前公开网站用于展示课题组管理框架；真实台账请使用内部 Excel 文件维护。建议每次更新时同步补充：存放地址、保存条件、负责人、最近更新时间、是否偏低或待采购。
-          </p>
-          <p>
-            不建议在公开网页直接发布精确库存、采购价格、存放位置和可操作的库存文件。若后续需要多人在线编辑，可改为 GitHub 私有仓库、Google Sheet 权限共享，或部署带登录权限的后台。
+            下一轮建议现场补充：具体冰箱/柜号/抽屉号、保存温度、负责人、批号、开封日期、是否偏低、最低库存线。补齐后网页就能从“能看见有什么”升级到“能判断该不该采购”。
           </p>
         </div>
       </section>
@@ -188,5 +177,158 @@
         <span>联系邮箱：待补充</span>
       </address>
     </footer>
+
+    <script>
+      const inventoryData = [
+        { id: "EQ-001", category: "仪器设备", name: "制胶架", spec: "2X", brand: "", quantity: "3个", location: "待补充", status: "待确认", priority: "常规", owner: "待补充", updated: "2026-07-05", note: "来自清单" },
+        { id: "EQ-002", category: "仪器设备", name: "伯乐电源", spec: "", brand: "Bio-Rad/伯乐", quantity: "1个", location: "待补充", status: "待确认", priority: "常规", owner: "待补充", updated: "2026-07-05", note: "来自清单" },
+        { id: "EQ-003", category: "仪器设备", name: "WB电泳机器（伯乐）", spec: "WB电泳", brand: "Bio-Rad/伯乐", quantity: "2个", location: "待补充", status: "待确认", priority: "常规", owner: "待补充", updated: "2026-07-05", note: "来自清单" },
+        { id: "EQ-004", category: "仪器设备", name: "转膜机器", spec: "四板国产机器1个；伯乐转膜机器1个", brand: "国产/Bio-Rad", quantity: "2个", location: "待补充", status: "待确认", priority: "常规", owner: "待补充", updated: "2026-07-05", note: "来自清单" },
+        { id: "EQ-005", category: "仪器设备", name: "库房未使用仪器", spec: "伯乐电泳机器1个；2板转膜1个；2板转膜槽1个", brand: "Bio-Rad/国产", quantity: "3件", location: "库房", status: "待确认", priority: "常规", owner: "待补充", updated: "2026-07-05", note: "需核对是否可用" },
+        { id: "EQ-006", category: "仪器设备", name: "老鼠解剖器械", spec: "动物实验器械", brand: "", quantity: "1套", location: "待补充", status: "待确认", priority: "常规", owner: "待补充", updated: "2026-07-05", note: "来自清单" },
+
+        { id: "AB-001", category: "抗体库存", name: "Anti Mouse Ly-6G/Ly-6C", spec: "RB6-8C5；流式/免疫实验", brand: "", quantity: "待补充", location: "待补充", status: "待确认", priority: "重点", owner: "待补充", updated: "2026-07-05", note: "清单原文：Anti Mouse Ly-6G/Ly-6C（RB6-8C5）" },
+        { id: "AB-002", category: "抗体库存", name: "PDL1/B7-H1 Antibody", spec: "29E2A3；免疫实验", brand: "", quantity: "待补充", location: "待补充", status: "待确认", priority: "重点", owner: "待补充", updated: "2026-07-05", note: "清单原文拼写为 Antiboby，台账按 Antibody 记录" },
+        { id: "AB-003", category: "抗体库存", name: "NK1.1", spec: "流式抗体", brand: "", quantity: "待补充", location: "待补充", status: "待确认", priority: "重点", owner: "待补充", updated: "2026-07-05", note: "流式抗体组合之一" },
+        { id: "AB-004", category: "抗体库存", name: "NKG2AB6", spec: "流式抗体", brand: "", quantity: "待补充", location: "待补充", status: "待确认", priority: "重点", owner: "待补充", updated: "2026-07-05", note: "按清单原样记录，后续核对是否为 NKG2A/B6" },
+        { id: "AB-005", category: "抗体库存", name: "CD3c", spec: "流式抗体", brand: "", quantity: "待补充", location: "待补充", status: "待确认", priority: "重点", owner: "待补充", updated: "2026-07-05", note: "按清单原样记录" },
+        { id: "AB-006", category: "抗体库存", name: "CD11b", spec: "流式抗体", brand: "", quantity: "待补充", location: "待补充", status: "待确认", priority: "重点", owner: "待补充", updated: "2026-07-05", note: "流式抗体组合之一" },
+        { id: "AB-007", category: "抗体库存", name: "CD206", spec: "流式抗体", brand: "", quantity: "待补充", location: "待补充", status: "待确认", priority: "重点", owner: "待补充", updated: "2026-07-05", note: "流式抗体组合之一" },
+        { id: "AB-008", category: "抗体库存", name: "IFNG", spec: "博士得抗体", brand: "博士得", quantity: "待补充", location: "待补充", status: "已过期", priority: "重点", owner: "待补充", updated: "2026-07-05", note: "过期，建议确认是否废弃或替换" },
+        { id: "AB-009", category: "抗体库存", name: "ICAMI", spec: "博士得抗体", brand: "博士得", quantity: "待补充", location: "待补充", status: "已过期", priority: "重点", owner: "待补充", updated: "2026-07-05", note: "过期；后续核对是否为 ICAM1" },
+        { id: "AB-010", category: "抗体库存", name: "CD8A", spec: "博士得抗体", brand: "博士得", quantity: "待补充", location: "待补充", status: "已过期", priority: "重点", owner: "待补充", updated: "2026-07-05", note: "过期" },
+        { id: "AB-011", category: "抗体库存", name: "CXCR2", spec: "博士得抗体", brand: "博士得", quantity: "待补充", location: "待补充", status: "已过期", priority: "重点", owner: "待补充", updated: "2026-07-05", note: "过期" },
+        { id: "AB-012", category: "抗体库存", name: "LY6E", spec: "博士得抗体", brand: "博士得", quantity: "待补充", location: "待补充", status: "已过期", priority: "重点", owner: "待补充", updated: "2026-07-05", note: "过期" },
+        { id: "AB-013", category: "抗体库存", name: "CD4", spec: "博士得抗体", brand: "博士得", quantity: "待补充", location: "待补充", status: "已过期", priority: "重点", owner: "待补充", updated: "2026-07-05", note: "过期" },
+        { id: "AB-014", category: "抗体库存", name: "KLRC1", spec: "博士得抗体", brand: "博士得", quantity: "20 ul", location: "待补充", status: "已过期", priority: "重点", owner: "待补充", updated: "2026-07-05", note: "过期；清单记录剩余20 ul" },
+        { id: "AB-015", category: "抗体库存", name: "CD95", spec: "博士得抗体", brand: "博士得", quantity: "待补充", location: "待补充", status: "已过期", priority: "重点", owner: "待补充", updated: "2026-07-05", note: "过期" },
+        { id: "AB-016", category: "抗体库存", name: "NKG2A外用型抗体", spec: "1 ml", brand: "ARE BIO", quantity: "1 ml", location: "待补充", status: "待确认", priority: "重点", owner: "待补充", updated: "2026-07-05", note: "来自清单" },
+
+        { id: "RG-001", category: "试剂库存", name: "细胞凋亡试剂盒", spec: "细胞功能实验", brand: "凯基", quantity: "2盒", location: "待补充", status: "待确认", priority: "重点", owner: "待补充", updated: "2026-07-05", note: "另有 Elabscience 1盒" },
+        { id: "RG-002", category: "试剂库存", name: "细胞凋亡试剂盒", spec: "细胞功能实验", brand: "Elabscience", quantity: "1盒", location: "待补充", status: "待确认", priority: "重点", owner: "待补充", updated: "2026-07-05", note: "" },
+        { id: "RG-003", category: "试剂库存", name: "丽春红染色液", spec: "WB染色", brand: "", quantity: "2瓶", location: "待补充", status: "待确认", priority: "常规", owner: "待补充", updated: "2026-07-05", note: "" },
+        { id: "RG-004", category: "试剂库存", name: "电镜固定液", spec: "电镜样本固定", brand: "", quantity: "1瓶", location: "待补充", status: "待确认", priority: "重点", owner: "待补充", updated: "2026-07-05", note: "" },
+        { id: "RG-005", category: "试剂库存", name: "PLC1专培", spec: "细胞培养", brand: "", quantity: "1瓶", location: "待补充", status: "待确认", priority: "重点", owner: "待补充", updated: "2026-07-05", note: "" },
+        { id: "RG-006", category: "试剂库存", name: "MHCC97H专培", spec: "细胞培养", brand: "", quantity: "1瓶", location: "待补充", status: "待确认", priority: "重点", owner: "待补充", updated: "2026-07-05", note: "" },
+        { id: "RG-007", category: "试剂库存", name: "THLE-2专培", spec: "细胞培养", brand: "", quantity: "3瓶", location: "待补充", status: "待确认", priority: "重点", owner: "待补充", updated: "2026-07-05", note: "" },
+        { id: "RG-008", category: "试剂库存", name: "NK细胞专培", spec: "细胞培养", brand: "", quantity: "1瓶", location: "待补充", status: "待确认", priority: "重点", owner: "待补充", updated: "2026-07-05", note: "" },
+        { id: "RG-009", category: "试剂库存", name: "CCK8", spec: "细胞活性检测", brand: "信天翁", quantity: "1盒", location: "待补充", status: "待确认", priority: "重点", owner: "待补充", updated: "2026-07-05", note: "" },
+        { id: "RG-010", category: "试剂库存", name: "Biolegend Zombie NIR", spec: "流式固定死活细胞染色", brand: "Biolegend", quantity: "待补充", location: "待补充", status: "待确认", priority: "重点", owner: "待补充", updated: "2026-07-05", note: "清单原文：流式固定死活细胞液" },
+        { id: "RG-011", category: "试剂库存", name: "冻存液", spec: "细胞冻存", brand: "", quantity: "2瓶", location: "待补充", status: "待确认", priority: "常规", owner: "待补充", updated: "2026-07-05", note: "" },
+        { id: "RG-012", category: "试剂库存", name: "人外周血淋巴细胞分离液", spec: "PBMC分离", brand: "", quantity: "2瓶", location: "待补充", status: "待确认", priority: "重点", owner: "待补充", updated: "2026-07-05", note: "" },
+        { id: "RG-013", category: "试剂库存", name: "结晶紫染色", spec: "细胞染色", brand: "", quantity: "1瓶", location: "待补充", status: "待确认", priority: "常规", owner: "待补充", updated: "2026-07-05", note: "" },
+        { id: "RG-014", category: "试剂库存", name: "雅酶12.5%胶", spec: "蛋白电泳", brand: "雅酶", quantity: "1盒", location: "待补充", status: "待确认", priority: "常规", owner: "待补充", updated: "2026-07-05", note: "" },
+        { id: "RG-015", category: "试剂库存", name: "胰酶", spec: "细胞消化", brand: "", quantity: "4瓶", location: "待补充", status: "待确认", priority: "常规", owner: "待补充", updated: "2026-07-05", note: "" },
+        { id: "RG-016", category: "试剂库存", name: "STMN1小干扰", spec: "217；基因干扰", brand: "", quantity: "1盒", location: "待补充", status: "待确认", priority: "重点", owner: "待补充", updated: "2026-07-05", note: "" },
+        { id: "RG-017", category: "试剂库存", name: "CDT1、STMN1、DLC1引物", spec: "qPCR/分子实验", brand: "", quantity: "1套", location: "待补充", status: "待确认", priority: "重点", owner: "待补充", updated: "2026-07-05", note: "" },
+        { id: "RG-018", category: "试剂库存", name: "EM引物", spec: "qPCR/分子实验", brand: "", quantity: "1盒", location: "待补充", status: "待确认", priority: "重点", owner: "待补充", updated: "2026-07-05", note: "" },
+        { id: "RG-019", category: "试剂库存", name: "基质胶", spec: "细胞/侵袭迁移相关实验", brand: "", quantity: "1瓶", location: "待补充", status: "待确认", priority: "重点", owner: "待补充", updated: "2026-07-05", note: "" },
+        { id: "RG-020", category: "试剂库存", name: "双抗", spec: "细胞培养抗生素", brand: "", quantity: "1瓶", location: "待补充", status: "待确认", priority: "常规", owner: "待补充", updated: "2026-07-05", note: "青链霉素类双抗，非抗体" },
+        { id: "RG-021", category: "试剂库存", name: "反转录试剂", spec: "反转录", brand: "Takara", quantity: "1套", location: "待补充", status: "待确认", priority: "重点", owner: "待补充", updated: "2026-07-05", note: "清单写作 Takala，疑为 Takara，需核对" },
+        { id: "RG-022", category: "试剂库存", name: "荧光定量试剂", spec: "qPCR", brand: "Takara", quantity: "1套", location: "待补充", status: "待确认", priority: "重点", owner: "待补充", updated: "2026-07-05", note: "清单写作 Takala，疑为 Takara，需核对" },
+        { id: "RG-023", category: "试剂库存", name: "一步法提取RNA试剂盒", spec: "RNA提取", brand: "", quantity: "1盒", location: "待补充", status: "待确认", priority: "重点", owner: "待补充", updated: "2026-07-05", note: "" },
+        { id: "RG-024", category: "试剂库存", name: "组织固定液", spec: "组织固定", brand: "", quantity: "1瓶", location: "待补充", status: "待确认", priority: "常规", owner: "待补充", updated: "2026-07-05", note: "" },
+        { id: "RG-025", category: "试剂库存", name: "氯仿代替品", spec: "RNA提取/有机相替代", brand: "", quantity: "1瓶", location: "待补充", status: "待确认", priority: "重点", owner: "待补充", updated: "2026-07-05", note: "" },
+
+        { id: "CS-001", category: "耗材库存", name: "1.5 ml无酶EP管", spec: "500个/袋；离心/样本处理", brand: "", quantity: "2袋", location: "待补充", status: "待确认", priority: "常规", owner: "待补充", updated: "2026-07-05", note: "" },
+        { id: "CS-002", category: "耗材库存", name: "无菌无酶EP管", spec: "50个/袋；离心/样本处理", brand: "", quantity: "3袋", location: "待补充", status: "待确认", priority: "常规", owner: "待补充", updated: "2026-07-05", note: "" },
+        { id: "CS-003", category: "耗材库存", name: "5 ml无酶EP管", spec: "500个/袋；离心/样本处理", brand: "", quantity: "1袋", location: "待补充", status: "待确认", priority: "常规", owner: "待补充", updated: "2026-07-05", note: "" },
+        { id: "CS-004", category: "耗材库存", name: "细胞刮刀", spec: "细胞实验", brand: "", quantity: "半盒", location: "待补充", status: "待确认", priority: "常规", owner: "待补充", updated: "2026-07-05", note: "" },
+        { id: "CS-005", category: "耗材库存", name: "手套", spec: "防护耗材", brand: "", quantity: "2盒", location: "待补充", status: "待确认", priority: "常规", owner: "待补充", updated: "2026-07-05", note: "" },
+        { id: "CS-006", category: "耗材库存", name: "口罩", spec: "防护耗材", brand: "", quantity: "2盒", location: "待补充", status: "待确认", priority: "常规", owner: "待补充", updated: "2026-07-05", note: "" },
+        { id: "CS-007", category: "耗材库存", name: "大皿", spec: "细胞培养", brand: "", quantity: "5包", location: "待补充", status: "待确认", priority: "常规", owner: "待补充", updated: "2026-07-05", note: "" },
+        { id: "CS-008", category: "耗材库存", name: "巴氏吸管", spec: "移液/转移", brand: "", quantity: "1箱半", location: "待补充", status: "待确认", priority: "常规", owner: "待补充", updated: "2026-07-05", note: "" },
+        { id: "CS-009", category: "耗材库存", name: "T25瓶", spec: "细胞培养", brand: "", quantity: "5包", location: "待补充", status: "待确认", priority: "常规", owner: "待补充", updated: "2026-07-05", note: "" },
+        { id: "CS-010", category: "耗材库存", name: "15 ml离心管", spec: "离心/样本处理", brand: "", quantity: "半箱", location: "待补充", status: "待确认", priority: "常规", owner: "待补充", updated: "2026-07-05", note: "" },
+        { id: "CS-011", category: "耗材库存", name: "一次性胰岛素注射器", spec: "动物/细胞相关操作", brand: "", quantity: "1盒", location: "待补充", status: "待确认", priority: "常规", owner: "待补充", updated: "2026-07-05", note: "" },
+        { id: "CS-012", category: "耗材库存", name: "6孔板", spec: "细胞培养", brand: "", quantity: "1箱", location: "待补充", status: "待确认", priority: "常规", owner: "待补充", updated: "2026-07-05", note: "" },
+        { id: "CS-013", category: "耗材库存", name: "12孔板", spec: "细胞培养", brand: "", quantity: "1箱半", location: "待补充", status: "待确认", priority: "常规", owner: "待补充", updated: "2026-07-05", note: "" },
+        { id: "CS-014", category: "耗材库存", name: "96孔板", spec: "细胞实验", brand: "", quantity: "1箱", location: "待补充", status: "待确认", priority: "常规", owner: "待补充", updated: "2026-07-05", note: "" },
+        { id: "CS-015", category: "耗材库存", name: "24孔板", spec: "细胞培养", brand: "", quantity: "15个", location: "待补充", status: "待确认", priority: "常规", owner: "待补充", updated: "2026-07-05", note: "" },
+        { id: "CS-016", category: "耗材库存", name: "冻存管", spec: "细胞冻存", brand: "", quantity: "1袋", location: "待补充", status: "待确认", priority: "常规", owner: "待补充", updated: "2026-07-05", note: "" },
+        { id: "CS-017", category: "耗材库存", name: "8 um Transwell小室", spec: "迁移/侵袭实验", brand: "", quantity: "4板", location: "待补充", status: "待确认", priority: "重点", owner: "待补充", updated: "2026-07-05", note: "" },
+        { id: "CS-018", category: "耗材库存", name: "无菌无酶10 ul枪头", spec: "移液", brand: "", quantity: "4盒", location: "待补充", status: "待确认", priority: "常规", owner: "待补充", updated: "2026-07-05", note: "" },
+        { id: "CS-019", category: "耗材库存", name: "无菌无酶1 ml枪头", spec: "移液", brand: "", quantity: "2盒", location: "待补充", status: "待确认", priority: "常规", owner: "待补充", updated: "2026-07-05", note: "" },
+
+        { id: "BA-001", category: "细胞与动物", name: "THLE-2", spec: "细胞", brand: "", quantity: "清单列名，库存状态待核对", location: "待补充", status: "待确认", priority: "重点", owner: "待补充", updated: "2026-07-05", note: "需补充冻存位置、代次、复苏状态" },
+        { id: "BA-002", category: "细胞与动物", name: "HuH7", spec: "细胞", brand: "", quantity: "清单列名，库存状态待核对", location: "待补充", status: "待确认", priority: "重点", owner: "待补充", updated: "2026-07-05", note: "需补充冻存位置、代次、复苏状态" },
+        { id: "BA-003", category: "细胞与动物", name: "HEPG2", spec: "细胞", brand: "", quantity: "清单列名，库存状态待核对", location: "待补充", status: "待确认", priority: "重点", owner: "待补充", updated: "2026-07-05", note: "需补充冻存位置、代次、复苏状态" },
+        { id: "BA-004", category: "细胞与动物", name: "MHCC-97H", spec: "细胞", brand: "", quantity: "清单列名，库存状态待核对", location: "待补充", status: "待确认", priority: "重点", owner: "待补充", updated: "2026-07-05", note: "需补充冻存位置、代次、复苏状态" },
+        { id: "BA-005", category: "细胞与动物", name: "PLC1", spec: "细胞", brand: "", quantity: "清单列名，库存状态待核对", location: "待补充", status: "待确认", priority: "重点", owner: "待补充", updated: "2026-07-05", note: "需补充冻存位置、代次、复苏状态" },
+        { id: "BA-006", category: "细胞与动物", name: "实验动物", spec: "暂无", brand: "", quantity: "暂无", location: "不适用", status: "无需采购", priority: "待补充", owner: "待补充", updated: "2026-07-05", note: "当前清单记录为暂无" },
+      ];
+
+      const rowsEl = document.getElementById("inventoryRows");
+      const searchEl = document.getElementById("inventorySearch");
+      const statusEl = document.getElementById("inventoryStatus");
+      const priorityEl = document.getElementById("inventoryPriority");
+      const countEl = document.getElementById("ledgerCount");
+      const filterButtons = document.querySelectorAll("[data-filter]");
+      let activeCategory = "all";
+
+      const escapeHtml = (value) =>
+        String(value || "")
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;");
+
+      const pillClass = (status) => {
+        if (status === "已过期") return "expired";
+        if (status === "无需采购") return "ok";
+        return "pending";
+      };
+
+      const render = () => {
+        const keyword = searchEl.value.trim().toLowerCase();
+        const selectedStatus = statusEl.value;
+        const selectedPriority = priorityEl.value;
+        const filtered = inventoryData.filter((item) => {
+          const haystack = Object.values(item).join(" ").toLowerCase();
+          return (
+            (activeCategory === "all" || item.category === activeCategory) &&
+            (selectedStatus === "all" || item.status === selectedStatus) &&
+            (selectedPriority === "all" || item.priority === selectedPriority) &&
+            (!keyword || haystack.includes(keyword))
+          );
+        });
+
+        countEl.textContent = `显示 ${filtered.length} 条记录`;
+        rowsEl.innerHTML = filtered
+          .map(
+            (item) => `
+              <tr>
+                <td>${escapeHtml(item.id)}</td>
+                <td>${escapeHtml(item.category)}</td>
+                <td><strong>${escapeHtml(item.name)}</strong></td>
+                <td>${escapeHtml(item.spec || "待补充")}</td>
+                <td>${escapeHtml(item.brand || "待补充")}</td>
+                <td>${escapeHtml(item.quantity || "待补充")}</td>
+                <td>${escapeHtml(item.location || "待补充")}</td>
+                <td><span class="status-pill ${pillClass(item.status)}">${escapeHtml(item.status)}</span></td>
+                <td><span class="inventory-tag">${escapeHtml(item.priority)}</span></td>
+                <td>${escapeHtml(item.owner || "待补充")}</td>
+                <td>${escapeHtml(item.updated)}</td>
+                <td>${escapeHtml(item.note || "待补充")}</td>
+              </tr>
+            `
+          )
+          .join("");
+      };
+
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          filterButtons.forEach((btn) => btn.classList.remove("active"));
+          button.classList.add("active");
+          activeCategory = button.dataset.filter;
+          render();
+        });
+      });
+
+      searchEl.addEventListener("input", render);
+      statusEl.addEventListener("change", render);
+      priorityEl.addEventListener("change", render);
+      render();
+    </script>
   </body>
 </html>
