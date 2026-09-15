@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>泡型包虫病分析方法 | Fan Lab</title>
+    <meta name="description" content="Fan Lab 泡型包虫病单细胞与空间多组学分析方法文档和通用辅助函数，供研究者结合自己的输入数据使用。" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .methods-page { max-width: 1160px; margin: 0 auto; padding: 52px clamp(20px, 5vw, 64px) 72px; }
+      .methods-intro { padding-bottom: 36px; border-bottom: 1px solid var(--line); }
+      .methods-intro h1 { margin: 0 0 16px; font-size: clamp(30px, 4vw, 46px); line-height: 1.3; }
+      .methods-title-en { max-width: 850px; font-size: clamp(19px, 2.5vw, 25px); line-height: 1.45; }
+      .methods-muted { color: var(--muted); }
+      .methods-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+      .methods-actions .methods-primary { color: var(--white); background: var(--blue-deep); border-color: var(--blue-deep); }
+      .methods-section { padding-top: 32px; scroll-margin-top: 110px; }
+      .methods-section h2 { margin: 0 0 16px; font-size: 25px; line-height: 1.4; }
+      .methods-section h2 span { color: var(--muted); font-size: 17px; font-weight: 400; }
+      .methods-section p { max-width: 880px; }
+      .methods-page a:not(.button), .methods-footer a { color: var(--blue-deep); text-decoration: underline; text-underline-offset: 3px; }
+      .methods-docs { padding-left: 22px; }
+      .methods-docs li { margin-bottom: 12px; }
+      .methods-footer { padding: 25px clamp(20px, 5vw, 64px); border-top: 1px solid var(--line); background: var(--white); color: var(--muted); font-size: 14px; }
+      @media (max-width: 680px) {
+        .methods-page { padding-top: 32px; }
+        .methods-section h2 span { display: block; margin-top: 4px; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="樊海宁课题组首页">
+        <span class="brand-mark">FL</span>
+        <span><strong>樊海宁课题组</strong><em>Fan Lab</em></span>
+      </a>
+      <nav class="site-nav" aria-label="分析方法导航">
+        <a href="index.html">首页</a>
+        <a href="#scope">方法范围</a>
+        <a href="#use">使用说明</a>
+        <a href="#resources">方法文档</a>
+      </nav>
+    </header>
+
+    <main class="methods-page">
+      <section class="methods-intro" aria-labelledby="project-title">
+        <p class="eyebrow">Analysis Methods · Initial Version 2026-09-15</p>
+        <h1 id="project-title">泡型包虫病单细胞与空间多组学分析方法</h1>
+        <p class="methods-title-en" lang="en">Single-cell and spatial multi-omics analysis methods for alveolar echinococcosis</p>
+        <p>本页提供分析方法文档及少量通用辅助函数。使用者可根据说明准备自己的输入数据，并在适用的分析步骤中调用这些函数。</p>
+        <p class="methods-muted" lang="en">This resource provides analysis method descriptions and a small set of general-purpose helper functions. Researchers supply their own input data and use the functions in the relevant steps of their workflows.</p>
+        <div class="methods-actions">
+          <a class="button methods-primary" href="https://github.com/chanucy97/Fan_LAB/blob/main/projects/ae-single-cell-spatial/docs/METHODS.md">阅读方法 · Read methods</a>
+          <a class="button text-button" href="https://github.com/chanucy97/Fan_LAB/tree/main/projects/ae-single-cell-spatial">浏览仓库 · View repository</a>
+        </div>
+      </section>
+
+      <section id="scope" class="methods-section" aria-labelledby="scope-title">
+        <h2 id="scope-title">方法范围 <span lang="en">Scope</span></h2>
+        <p>公开内容限于通用方法说明和辅助函数，不包含研究结果、原始数据、源表或图表输出，也不构成完整原始分析及制图代码的存档。</p>
+        <p class="methods-muted" lang="en">The public resource is limited to general method descriptions and helper functions. It contains no study results, original data, source tables or figure outputs, and does not constitute an archive of the complete original analysis or figure-generation code.</p>
+      </section>
+
+      <section id="use" class="methods-section" aria-labelledby="use-title">
+        <h2 id="use-title">使用说明 <span lang="en">Using the methods</span></h2>
+        <p>先阅读 README 和方法文档，确认输入格式、软件依赖及函数适用范围。分析设计、参数选择与结果解释需由使用者结合自己的数据确定。</p>
+        <p class="methods-muted" lang="en">Start with the README and methods documentation to check input formats, dependencies and function scope. Users determine the analysis design, parameters and interpretation appropriate to their own data.</p>
+        <p>初始方法版本日期为 <time datetime="2026-09-15">2026-09-15</time>。使用或引用时，请记录对应的 Git 提交版本；当前无归档 DOI。</p>
+        <p class="methods-muted" lang="en">The initial methods version is dated 2026-09-15. Record the Git commit when using or citing the resource. No archival DOI is currently assigned.</p>
+      </section>
+
+      <section id="resources" class="methods-section" aria-labelledby="resources-title">
+        <h2 id="resources-title">方法文档 <span lang="en">Documentation</span></h2>
+        <ul class="methods-docs">
+          <li><a href="https://github.com/chanucy97/Fan_LAB/blob/main/projects/ae-single-cell-spatial/README.md">README</a> — 项目入口与使用准备 · <span lang="en">Project guide and setup</span></li>
+          <li><a href="https://github.com/chanucy97/Fan_LAB/blob/main/projects/ae-single-cell-spatial/docs/METHODS.md">METHODS.md</a> — 分析方法与辅助函数说明 · <span lang="en">Analysis methods and helper functions</span></li>
+          <li><a href="https://github.com/chanucy97/Fan_LAB/blob/main/projects/ae-single-cell-spatial/docs/CODE_AVAILABILITY.md">CODE_AVAILABILITY.md</a> — 公开代码范围与可用性说明 · <span lang="en">Scope and availability of the public code</span></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="methods-footer">
+      樊海宁课题组 · Fan Lab · 青海大学附属医院<br />
+      <a href="index.html">返回课题组首页 · Back to Fan Lab</a>
+    </footer>
+  </body>
+</html>
