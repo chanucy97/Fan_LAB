@@ -1,0 +1,8 @@
+# Exact local test versions; Linux torch CPU wheels may have platform-specific build suffixes.
+numpy==2.5.3
+pandas==2.3.3
+scipy==1.18.1
+scikit-learn==1.9.1
+lifelines==0.30.3
+torch==2.14.1+cpu
+joblib==1.6.0

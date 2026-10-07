@@ -1,0 +1,58 @@
+{
+  "project": "hae-recurrence-multimodal",
+  "version": "1.0.0",
+  "release_date": "2026-10-07",
+  "scope": "Source snapshot with documentation; original supplied code files preserved byte for byte.",
+  "files": [
+    {
+      "path": "code/analysis_core.py",
+      "bytes": 16881,
+      "sha256": "abd4732ebdd510a667b743dafef4f03197df675fd40e21ce396163ba4b67012c"
+    },
+    {
+      "path": "code/attention_core.py",
+      "bytes": 4874,
+      "sha256": "53a0f83911173863e869f46ca7f226ca4c85355586fce4f1832c4cf67c16bc5e"
+    },
+    {
+      "path": "code/clinical_schema.example.json",
+      "bytes": 169,
+      "sha256": "1214989d5bd56840f0ea97c647e90673e382794a47fa245590e2eb350bc0ca42"
+    },
+    {
+      "path": "code/clinical_schema.py",
+      "bytes": 3384,
+      "sha256": "ca5595a4ace2c14cb40ba2004c45946f73be843ab4fda13e4ed53d34a239abd7"
+    },
+    {
+      "path": "code/config.example.json",
+      "bytes": 1040,
+      "sha256": "0ad04fc19495836a34f03f3d1de0e7ab56266866ee2f2900a8e7f484415f99ea"
+    },
+    {
+      "path": "code/evaluate_survival.py",
+      "bytes": 11725,
+      "sha256": "3eaa4a22e35520f759570b8eea650e8d8014d0bc9f44eb190118bfd3d9c5c961"
+    },
+    {
+      "path": "code/README.md",
+      "bytes": 2871,
+      "sha256": "675217f7eb4cf627585a9e4d56aa619456842a8fd8047768216223e1456179f6"
+    },
+    {
+      "path": "code/requirements-tested-windows.txt",
+      "bytes": 214,
+      "sha256": "f2e9154ce9bbaa9593bd7f0092e3f601c9dfeb953a86964138e5534e8cbcd6f2"
+    },
+    {
+      "path": "code/requirements.txt",
+      "bytes": 117,
+      "sha256": "fa6fdc44e53bc3e7d1de77947bfba67e94bc688003825131697af3bdb4a0fe7c"
+    },
+    {
+      "path": "code/run_rigorous_analysis.py",
+      "bytes": 15365,
+      "sha256": "990f4e56d54998912088f3e9576cdb0a5b777bcd894316ad6ea6b989122f6503"
+    }
+  ]
+}

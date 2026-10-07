@@ -1,0 +1,1 @@
+﻿{"schema_version":"example-v1","variables":{"age":{"type":"continuous"},"marker_a":{"type":"continuous"},"category_a":{"type":"categorical","allowed_codes":[0,1]}}}

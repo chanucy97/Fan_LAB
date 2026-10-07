@@ -1,0 +1,21 @@
+# Research inputs and generated model outputs remain outside the public deposit.
+manifest.csv
+clinical.csv
+ct_global.csv
+mri_global.csv
+ct_habitat.csv
+mri_habitat.csv
+ct_deep.csv
+mri_deep.csv
+config.json
+clinical_schema.json
+*_used.csv
+predictions*.csv
+attention_weights.csv
+model_artifacts/
+code_snapshot/
+run_provenance.json
+RUN_COMPLETE.txt
+__pycache__/
+*.pyc
+.venv/

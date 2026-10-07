@@ -1,0 +1,2 @@
+# Preserve the deposited source snapshot byte for byte across Git platforms.
+code/** -text

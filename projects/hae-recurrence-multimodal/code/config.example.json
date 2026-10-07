@@ -1,0 +1,27 @@
+{
+  "development_group": "development",
+  "master_seed": 12345,
+  "outer_folds": 5,
+  "inner_folds": 4,
+  "final_seed_offset": 900,
+  "clinical_schema": "clinical_schema.example.json",
+  "attention_epochs_max": 400,
+  "attention_patience": 60,
+  "attention_learning_rate": 0.02,
+  "attention_weight_decay": 0.001,
+  "bootstrap_replicates": 2000,
+  "clinical_cap": 5,
+  "per_source_cap": 2,
+  "fusion_cap": 10,
+  "pnm_models": {},
+  "inputs": {
+    "manifest": {"location": "root", "relative_path": "manifest.csv"},
+    "clinical": {"location": "root", "relative_path": "clinical.csv"},
+    "ct_p_global": {"location": "root", "relative_path": "ct_global.csv"},
+    "t2wi_global": {"location": "root", "relative_path": "mri_global.csv"},
+    "ct_p_habitat": {"location": "root", "relative_path": "ct_habitat.csv"},
+    "t2wi_habitat": {"location": "root", "relative_path": "mri_habitat.csv"},
+    "ct_p_2p5d": {"location": "root", "relative_path": "ct_deep.csv"},
+    "t2wi_2p5d": {"location": "root", "relative_path": "mri_deep.csv"}
+  }
+}
