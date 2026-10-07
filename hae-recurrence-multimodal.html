@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>肝泡型包虫病术后复发：多模态生存建模 | Fan Lab</title>
+    <meta name="description" content="Fan Lab 肝泡型包虫病术后复发多模态生存建模资源：公开的建模与评估源码、示例输入配置及代码可用性说明。" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .survival-page { max-width: 1160px; margin: 0 auto; padding: 52px clamp(20px, 5vw, 64px) 72px; }
+      .survival-page a:not(.button), .survival-footer a { color: var(--blue-deep); text-decoration: underline; text-underline-offset: 3px; }
+      .survival-page a:focus-visible, .survival-page button:focus-visible, .survival-page textarea:focus-visible { outline: 3px solid var(--teal); outline-offset: 4px; }
+      .survival-intro { padding-bottom: 36px; border-bottom: 1px solid var(--line); }
+      .survival-intro h1 { max-width: 950px; margin: 0 0 16px; font-size: clamp(30px, 4vw, 46px); line-height: 1.3; }
+      .survival-title-en { max-width: 880px; margin: 0 0 24px; color: var(--blue-deep); font-size: clamp(19px, 2.5vw, 25px); line-height: 1.45; }
+      .survival-intro > p:not(.eyebrow) { max-width: 900px; }
+      .survival-muted { color: var(--muted); }
+      .survival-meta { display: flex; flex-wrap: wrap; gap: 8px 24px; margin: 22px 0 0; color: var(--muted); font-size: 14px; }
+      .survival-meta strong { margin-right: 6px; color: var(--ink); }
+      .survival-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+      .survival-actions .survival-primary { color: var(--white); background: var(--blue-deep); border-color: var(--blue-deep); }
+      .survival-section { padding-top: 36px; scroll-margin-top: 110px; }
+      .survival-section h2 { margin: 0 0 16px; font-size: 25px; line-height: 1.4; }
+      .survival-section h2 span { margin-left: 6px; color: var(--muted); font-size: 17px; font-weight: 400; }
+      .survival-section > p { max-width: 900px; }
+      .survival-workflow { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; margin: 24px 0 0; padding: 0; list-style: none; }
+      .survival-workflow li { position: relative; min-width: 0; padding: 20px 18px; background: var(--white); border: 1px solid var(--line); border-top: 3px solid var(--teal); border-radius: 6px; }
+      .survival-workflow li:not(:last-child)::after { position: absolute; top: 23px; right: -18px; color: var(--muted); content: "→"; }
+      .survival-step { color: var(--teal); font-size: 13px; font-weight: 800; }
+      .survival-workflow h3 { margin: 10px 0; color: var(--blue-deep); font-size: 18px; line-height: 1.45; }
+      .survival-workflow p { margin: 0; color: var(--muted); font-size: 14px; }
+      .survival-script-list { margin: 22px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+      .survival-script-list li { display: grid; grid-template-columns: minmax(240px, 0.95fr) minmax(0, 1.4fr); gap: 12px 28px; padding: 17px 0; border-bottom: 1px solid var(--line); }
+      .survival-script-list a { font-family: Consolas, "Courier New", monospace; font-size: 15px; overflow-wrap: anywhere; }
+      .survival-script-list span { color: var(--muted); }
+      .survival-use { padding-left: 23px; }
+      .survival-use li { margin-bottom: 10px; padding-left: 3px; }
+      .survival-citation { padding: 24px; background: var(--white); border: 1px solid var(--line); border-radius: 6px; }
+      .survival-citation label { display: block; margin-bottom: 12px; color: var(--blue-deep); font-weight: 800; }
+      .survival-citation textarea { display: block; width: 100%; min-height: 210px; padding: 14px; color: var(--ink); background: #f8fafc; border: 1px solid var(--line); border-radius: 4px; font: inherit; font-size: 15px; line-height: 1.65; resize: vertical; }
+      .survival-copy-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin-top: 14px; }
+      .survival-copy-row button { cursor: pointer; font: inherit; font-size: 14px; }
+      .survival-copy-row button[hidden] { display: none; }
+      .survival-copy-status { color: var(--muted); font-size: 14px; }
+      .survival-citation-note { margin: 18px 0 0; color: var(--muted); font-size: 14px; }
+      .survival-footer { padding: 25px clamp(20px, 5vw, 64px); border-top: 1px solid var(--line); background: var(--white); color: var(--muted); font-size: 14px; }
+      @media (max-width: 900px) {
+        .survival-workflow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .survival-workflow li:nth-child(2)::after { display: none; }
+      }
+      @media (max-width: 680px) {
+        .survival-page { padding-top: 32px; }
+        .survival-section { scroll-margin-top: 20px; }
+        .survival-section h2 span { display: block; margin: 4px 0 0; }
+        .survival-workflow { grid-template-columns: 1fr; gap: 16px; }
+        .survival-workflow li:not(:last-child)::after { display: block; top: auto; right: 20px; bottom: -19px; content: "↓"; }
+        .survival-script-list li { grid-template-columns: 1fr; gap: 6px; }
+        .survival-citation { padding: 18px; }
+        .survival-citation textarea { min-height: 330px; }
+      }
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="樊海宁课题组首页">
+        <span class="brand-mark">FL</span>
+        <span><strong>樊海宁课题组</strong><em>Fan Lab</em></span>
+      </a>
+      <nav class="site-nav" aria-label="生存建模资源导航">
+        <a href="index.html">首页</a>
+        <a href="#scope">分析范围</a>
+        <a href="#code">核心代码</a>
+        <a href="#citation">引用说明</a>
+      </nav>
+    </header>
+
+    <main class="survival-page">
+      <section class="survival-intro" aria-labelledby="project-title">
+        <p class="eyebrow" lang="en">Research Code · Survival Modelling</p>
+        <h1 id="project-title">肝泡型包虫病术后复发：多模态生存建模</h1>
+        <p class="survival-title-en" lang="en">Multimodal survival modelling for postoperative recurrence in hepatic alveolar echinococcosis</p>
+        <p>公开的生存建模与评估源码，连接临床、常规影像组学、生境影像组学和 2.5D 深度特征四个信息维度。研究者可使用自己的表格特征与结局数据，按照示例配置开展分析。</p>
+        <p class="survival-muted" lang="en">Public source code for survival modelling and evaluation using four dimensions of prepared tabular features, with example input configurations for researchers to adapt to their own data.</p>
+        <div class="survival-meta">
+          <span><strong>版本 · Version</strong> 1.0.0</span>
+          <span><strong>发布日期 · Released</strong> <time datetime="2026-10-07">2026-10-07</time></span>
+        </div>
+        <div class="survival-actions">
+          <a class="button survival-primary" href="https://github.com/chanucy97/Fan_LAB/tree/main/projects/hae-recurrence-multimodal">浏览代码 · Browse code</a>
+          <a class="button text-button" href="https://github.com/chanucy97/Fan_LAB/blob/main/projects/hae-recurrence-multimodal/docs/METHODS_AND_CODE_AVAILABILITY.md">作者引用说明 · Author guidance</a>
+        </div>
+      </section>
+
+      <section id="scope" class="survival-section" aria-labelledby="scope-title">
+        <h2 id="scope-title">分析范围 <span lang="en">Scope and workflow</span></h2>
+        <p>本资源从已准备的表格特征进入分析，公开内容包括生存建模、预测评估源码与示例输入配置。原始影像预处理、特征提取以及从原图到论文的完整分析流程不在本次发布范围内。</p>
+        <p class="survival-muted" lang="en">The release starts from prepared tabular features. It covers survival modelling, prediction evaluation and example input configurations; it does not provide image preprocessing, feature extraction or the complete image-to-publication workflow.</p>
+        <ol class="survival-workflow" aria-label="四步分析流程">
+          <li>
+            <span class="survival-step" aria-hidden="true">01 · INPUT</span>
+            <h3>四维表格特征</h3>
+            <p>临床、常规影像组学、生境影像组学、2.5D 深度特征。</p>
+          </li>
+          <li>
+            <span class="survival-step" aria-hidden="true">02 · TRAIN</span>
+            <h3>训练内筛选与嵌套交叉验证</h3>
+            <p>在相应训练分区内处理变量、筛选特征并拟合模型。</p>
+          </li>
+          <li>
+            <span class="survival-step" aria-hidden="true">03 · FUSE</span>
+            <h3>四种融合策略</h3>
+            <p>特征级、评分级、等权秩均值与门控注意力融合。</p>
+          </li>
+          <li>
+            <span class="survival-step" aria-hidden="true">04 · EVALUATE</span>
+            <h3>生存预测评估</h3>
+            <p>C-index、36 个月 AUC 与 Brier、分组校准和决策曲线。</p>
+          </li>
+        </ol>
+      </section>
+
+      <section id="code" class="survival-section" aria-labelledby="code-title">
+        <h2 id="code-title">核心代码 <span lang="en">Source files</span></h2>
+        <p>五个核心脚本位于项目的 <code>code/</code> 目录。输入约定、运行环境与配置方式见 <a href="https://github.com/chanucy97/Fan_LAB/blob/main/projects/hae-recurrence-multimodal/README.md">项目 README</a>。</p>
+        <ul class="survival-script-list">
+          <li><a href="https://github.com/chanucy97/Fan_LAB/blob/main/projects/hae-recurrence-multimodal/code/run_rigorous_analysis.py">run_rigorous_analysis.py</a><span>分析入口：输入检查、嵌套建模与结果导出。</span></li>
+          <li><a href="https://github.com/chanucy97/Fan_LAB/blob/main/projects/hae-recurrence-multimodal/code/analysis_core.py">analysis_core.py</a><span>表格特征处理、稀疏 Cox 模型与交叉拟合。</span></li>
+          <li><a href="https://github.com/chanucy97/Fan_LAB/blob/main/projects/hae-recurrence-multimodal/code/clinical_schema.py">clinical_schema.py</a><span>临床变量定义、类别编码与输入规则。</span></li>
+          <li><a href="https://github.com/chanucy97/Fan_LAB/blob/main/projects/hae-recurrence-multimodal/code/attention_core.py">attention_core.py</a><span>四维评分的门控注意力融合与生存概率映射。</span></li>
+          <li><a href="https://github.com/chanucy97/Fan_LAB/blob/main/projects/hae-recurrence-multimodal/code/evaluate_survival.py">evaluate_survival.py</a><span>生存预测评估、患者级自助抽样与汇总输出。</span></li>
+        </ul>
+      </section>
+
+      <section id="use" class="survival-section" aria-labelledby="use-title">
+        <h2 id="use-title">使用准备 <span lang="en">Getting started</span></h2>
+        <ol class="survival-use">
+          <li>阅读项目 README 与方法说明，确认所需依赖及各输入表的格式。</li>
+          <li>参照示例填写特征路径、临床变量定义、队列标识与固定分区，使用自己的研究数据。</li>
+          <li>先运行输入检查，再执行分析；保留配置、运行记录与使用的 Git 提交版本。</li>
+        </ol>
+      </section>
+
+      <section id="citation" class="survival-section" aria-labelledby="citation-title">
+        <h2 id="citation-title">作者引用说明 <span lang="en">Code availability</span></h2>
+        <p>下列英文可用于说明本资源的代码可用性。正式引用时，请同时记录实际使用的版本与 Git 提交标识。</p>
+        <div class="survival-citation">
+          <label for="availability-text" lang="en">Suggested code availability statement</label>
+          <textarea id="availability-text" lang="en" readonly spellcheck="false" aria-describedby="copy-status">The survival modelling and evaluation source code, together with example input configurations, is publicly available in the Fan Lab repository at https://github.com/chanucy97/Fan_LAB/tree/main/projects/hae-recurrence-multimodal. This release covers analyses of prepared tabular features; image preprocessing, feature extraction and the complete image-to-publication workflow are outside its scope.</textarea>
+          <div class="survival-copy-row">
+            <button id="copy-availability" class="button text-button" type="button" hidden>复制英文说明 · Copy statement</button>
+            <span id="copy-status" class="survival-copy-status" role="status" aria-live="polite">可选择上方文字复制。</span>
+          </div>
+          <p class="survival-citation-note">资源名称用于标识本代码项目；论文引用信息以正式发表记录为准。完整说明见 <a href="https://github.com/chanucy97/Fan_LAB/blob/main/projects/hae-recurrence-multimodal/docs/METHODS_AND_CODE_AVAILABILITY.md">方法与代码可用性文档</a>。</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="survival-footer">
+      樊海宁课题组 · Fan Lab · 青海大学附属医院<br />
+      <a href="index.html">返回课题组首页 · Back to Fan Lab</a>
+    </footer>
+    <script>
+      (() => {
+        const button = document.getElementById("copy-availability");
+        const text = document.getElementById("availability-text");
+        const status = document.getElementById("copy-status");
+        button.hidden = false;
+        button.addEventListener("click", async () => {
+          try {
+            if (!navigator.clipboard || !navigator.clipboard.writeText) throw new Error("Clipboard unavailable");
+            await navigator.clipboard.writeText(text.value);
+            status.textContent = "已复制英文说明。Statement copied.";
+          } catch {
+            text.focus();
+            text.select();
+            text.setSelectionRange(0, text.value.length);
+            status.textContent = "已选中文字，请按 Ctrl+C 或 ⌘C 复制。Text selected; copy manually.";
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
