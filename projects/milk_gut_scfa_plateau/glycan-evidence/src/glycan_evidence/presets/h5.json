@@ -1,0 +1,31 @@
+{
+  "schema_version": "glycan-evidence.structure-config/1",
+  "preset_id": "h5-blon2174-2178-defaultbest-v2",
+  "scope": "H5 locus only; queries must be coding-strand sequences with the specified Blon identifiers. This is not a general glycan-use classifier.",
+  "reference_orientation": "ATCC_15697_chromosomal_plus",
+  "anchors": [
+    {"id": "Blon_2174", "reference_order": 0, "reference_strand": "-"},
+    {"id": "Blon_2178", "reference_order": 1, "reference_strand": "-"}
+  ],
+  "max_inter_anchor_bp": 30000,
+  "anchor_screen": {"min_identity_percent": 85.0, "min_query_span_fraction": 0.9},
+  "blast": {"task": "blastn", "evalue": 1e-8, "word_size": 11},
+  "readback": {
+    "reporting_mode": "default_best",
+    "min_mapq": 20,
+    "min_baseq": 20,
+    "boundary_flank_bp": 20,
+    "window_bp": 50,
+    "breadth_depths": [1, 5],
+    "bowtie2_k": 5,
+    "max_fragment_bp": 1000
+  },
+  "decision_rule": "continuous_evidence_only_no_validated_classification",
+  "provenance": {
+    "origin": "Previously inspected cohort H5 exploratory assembly/readback audit, deep20261008; existing material is development evidence, not independent validation.",
+    "anchor_geometry": "Reference left anchor is Blon_2174 and right anchor is Blon_2178. Both coding queries are minus-strand relative to the reference; reversing a contig swaps physical left/right anchor labels.",
+    "quality_filters": "MAPQ/baseQ 20 and uninterrupted 20-bp flanks describe conditional read evidence. They do not establish species uniqueness, functional phenotype, or a calibrated positive/negative classifier.",
+    "mapping_version_change": "v2 uses Bowtie2 default best-alignment reporting, without -k or -a, and excludes unknown MAPQ255. Earlier k5 MAPQ>=20 summaries included 255; those are preserved separately and are not validated high-confidence mapping evidence. See h5_k5_audit_v1.json for explicit multialignment audit mode.",
+    "source": "https://samtools.github.io/hts-specs/SAMv1.pdf; https://raw.githubusercontent.com/BenLangmead/bowtie2/v2.5.4/unique.h"
+  }
+}

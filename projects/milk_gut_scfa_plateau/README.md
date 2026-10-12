@@ -2,6 +2,10 @@
 
 This project contains reproducible analysis and manuscript-delivery code for a Qinghai-Tibetan Plateau mother-infant cohort manuscript focused on human milk bioactive dynamics, infant gut Bifidobacterium succession, and fecal short-chain fatty acid (SCFA) maturation.
 
+## Current method source
+
+[GlycanEvidence 0.1.0.dev7](glycan-evidence/) provides the current Python implementation for separate marker and locus evidence, deterministic CDS replay and discrepancy-certificate verification. Its installation instructions, registered pilot rules and synthetic tests are included. The scripts below retain the historical June 2026 cohort-analysis version; they do not represent every later manuscript reanalysis or figure revision.
+
 ## Important data notice
 
 **No real participant-level clinical data, sequencing files, raw assay exports, sample mapping tables, or manuscript circulation packages are included in this repository.** The public repository contains code and documentation only. The scripts expect a controlled local analysis workspace that is not uploaded to GitHub.

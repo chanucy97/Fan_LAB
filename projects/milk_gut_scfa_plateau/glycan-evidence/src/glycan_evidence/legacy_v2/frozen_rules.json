@@ -1,0 +1,263 @@
+{
+  "version": "1.0.0",
+  "mode": "calibration",
+  "script_sha256": "92e6b871e173cfe91a5ac29481d50ec71fb5582834745e958242d9fcc255f3be",
+  "python_version": "3.12.14 (main, Sep  2 2026, 23:27:36) [GCC 15.3.0]",
+  "manifest_sha256": "168c8baad8b417fd87d43ba4b48aaf455e367f45400bef851e860a39e043bed6",
+  "metrics_file_sha256": {
+    "calibration__GCF_052446795.1__none__c0.05__e0.005": {
+      "gene_metrics_sha256": "e9f0d8dc4c896033a6df1a38727639d8e0615d2afdb81a165ae664a88280dad0",
+      "run_manifest_sha256": "575f4d27e4aaf0cadeeaa5a3f55d71863c477694b21f5df9a2cd778278d60ce7"
+    },
+    "calibration__GCF_052446795.1__none__c0.05__e0.01": {
+      "gene_metrics_sha256": "33c8a9d2427731f43113bdb4b2641bba7aaf61a7e70c691d5df1ddc673909e85",
+      "run_manifest_sha256": "e60116fb18efa0519a9e83dd750880f044f7b0ef132820a1f9b760f2f784ece2"
+    },
+    "calibration__GCF_052446795.1__none__c0.2__e0.005": {
+      "gene_metrics_sha256": "647004b8a06bd375f51b74a582f66a155f4de797058de76f85a69bd8a25d23f9",
+      "run_manifest_sha256": "d983a8336ed137c08a66188a9ed4ad621f72c62f21c81805f23a54674eeca952"
+    },
+    "calibration__GCF_052446795.1__none__c0.2__e0.01": {
+      "gene_metrics_sha256": "869a9d8e8a18f0b430110ad33a256c7291434cb9811415be89792edf3800a51d",
+      "run_manifest_sha256": "0d064e5c7aad9a281f24553e04abb09b6b6583ab0dbc97b6283fc49a3c2adac1"
+    },
+    "calibration__GCF_052446795.1__none__c1.0__e0.005": {
+      "gene_metrics_sha256": "d76b52711ce6e282e11e486fe6716b143c5743935ace0cab18565ecc7cc772ab",
+      "run_manifest_sha256": "5a5e65b57a4e9202677eaf9055d296bd1b93fd97725f0bd9ec374e0d1651f6f0"
+    },
+    "calibration__GCF_052446795.1__none__c1.0__e0.01": {
+      "gene_metrics_sha256": "6fbbafe7823a1d10d09e59cd6e3f9abb33d8c4fd3842d17211e359ef293c39b3",
+      "run_manifest_sha256": "d637d7ab73323d9d6a57c370918f029759cc593a0955e8cc9a41cb45d3213b3b"
+    },
+    "calibration__GCF_052446795.1__none__c5.0__e0.005": {
+      "gene_metrics_sha256": "703e7a6b1be99ef6a688644cbaab7d809c96487ea719aacfa2bdf04b36417717",
+      "run_manifest_sha256": "b71436be72731f2af6450c7a4498625385f42e80138c3f4532608a4a0087525e"
+    },
+    "calibration__GCF_052446795.1__none__c5.0__e0.01": {
+      "gene_metrics_sha256": "ba1560244c82d6eb289d34f6b9910f53f0fcd8f7ad77144e283fe22e217e386f",
+      "run_manifest_sha256": "fe889da0b7955618c7c2ee9f7c75f6252a800fa4547b062d5bdcde0a7ac9cf43"
+    },
+    "calibration__GCF_037100215.1__none__c0.05__e0.005": {
+      "gene_metrics_sha256": "84361438a84863844e4b592cce3745f98042c5af27fe066ab72cde4e7ecae866",
+      "run_manifest_sha256": "f5568b3e8ad1ad74836230b382cadc7313af37ed0e2f313a43decdc2df62410c"
+    },
+    "calibration__GCF_037100215.1__none__c0.05__e0.01": {
+      "gene_metrics_sha256": "bb36c6042b48423903862a6a55c6e6c96744ce31499ac169b393e909fb748778",
+      "run_manifest_sha256": "c6df272e6413d411feacc3ad38fe11f74e4c747fec0bbf7e811be6bed36060dc"
+    },
+    "calibration__GCF_037100215.1__none__c0.2__e0.005": {
+      "gene_metrics_sha256": "25df18e4614eb5dbc353c94dd3964659474f72f06c0324333890108b8360466c",
+      "run_manifest_sha256": "88b54d51ac07afad729d7a1285b321dae9550014437c5b7a1cfd949b45d89050"
+    },
+    "calibration__GCF_037100215.1__none__c0.2__e0.01": {
+      "gene_metrics_sha256": "e5c3899136b2a4b4335036e2b12643b89d8f7a1557c1f868c993a88bb6ae3db9",
+      "run_manifest_sha256": "b34da53bd77fd81a3255c2732e0ddfe006ef8c8096493a176e86736ce46f2366"
+    },
+    "calibration__GCF_037100215.1__none__c1.0__e0.005": {
+      "gene_metrics_sha256": "3235c7a03f44adc076b9ebaa8698237a0e3d974996c8dc3cbcb0f0dc79db789f",
+      "run_manifest_sha256": "dfd1eafd0d1ef15dfaac849945bfe045005d269abb47e2552b9d0f1b26c54010"
+    },
+    "calibration__GCF_037100215.1__none__c1.0__e0.01": {
+      "gene_metrics_sha256": "a3bf70eb061c21da8e773a93f50f951677677c5c270223f5337590b6a1bd9097",
+      "run_manifest_sha256": "c2ff0e76f9429b2eef85afe400fe1f68dc41ea3ee4538cdd5ddaa4dcb6b67ee6"
+    },
+    "calibration__GCF_037100215.1__none__c5.0__e0.005": {
+      "gene_metrics_sha256": "444a81a5a26d602e0a85f25f467deef1913bed574d39fb47480fe9b694c9453b",
+      "run_manifest_sha256": "10a7a92baed5d7bbd83500bd69701a8c6f46ec7c4a811a352c550c7b4cc10f87"
+    },
+    "calibration__GCF_037100215.1__none__c5.0__e0.01": {
+      "gene_metrics_sha256": "44bd2ed2d3b191c3c94fe77b936bebc25ad17ab4c2234aa533b74e9c8ffef1ed",
+      "run_manifest_sha256": "35e7bffd01212a8e5bb895978e5b45b3123889466b565bc9c69a23f21a4473dc"
+    }
+  },
+  "scope": "competitive_reference_panel; no sample-specific detectability or host-background validation",
+  "inference_unit": "source reference genomes; depth/error cases are technical conditions, not additional strains",
+  "benchmark_confusion_definition": "Binary detected vs not detected. FN/TN include insufficient-evidence outputs; they are not biological absence calls.",
+  "nondetection_policy": "insufficient_evidence; no not_detected call until sample-specific detectability is independently validated",
+  "freeze_plan_sha256": "f8d3b8740974e95bc899086ffaf21dd6cae6d419134b93de91a32cd993d915a1",
+  "feature_schema_sha256": "86ccc37dc7e40acf5719c7ba60ede63ba09357c265b0af1117becf49c3636f1d",
+  "mapping_contract_sha256": "ffdb76f743780546a8836033abd771f886ba91bcbd46679b4be9772ee340dae5",
+  "mapping_contract": {
+    "panel_metadata": {
+      "panel_contigs.tsv": "cf03635d26e18d910bca07bdac21cf73c088b5dce2225c8273eae6acb6d1e0eb",
+      "feature_manifest.tsv": "32532b15da5510658f7572daec6fae0f7788a7f1a127930f2f4a15fcb89edb5b",
+      "annotations.tsv": "61608a327c7f5c2e8f940db5e3ee0d8089d4007da5616e921dadd362f0fa0b58"
+    },
+    "panel_index_files": {
+      "features.1.bt2": "7e93132c29966236486b585f3d4c3376f7a04bb471e5860c9805673eaf4fd397",
+      "features.2.bt2": "a5318187e6e52f0d787fa86610aa0431551f654293c04865fd65816c32d22880",
+      "features.3.bt2": "e7234054b453f5ff867e4c2d5d6d500ec04ca1aff147d7a4c258bc2a36c895e7",
+      "features.4.bt2": "bce44ec8ae632009b672382c46bcc8bca589bb66bc5bed46a75aebeee2ceb57c",
+      "features.rev.1.bt2": "5d927af9aec5ff594d451a46f091904f66615e992dcff67f88759a2249fbcbe5",
+      "features.rev.2.bt2": "1879624239e732161c176ee44cc9437ebe2ad9923cd596a859ca8fd9a86b779f",
+      "genomes.1.bt2": "c2e4a00b23615f6b22e2e872a116b8b724fd3054e449b000c24bcd18ab756a0e",
+      "genomes.2.bt2": "bf8c5cb908521f296dbe464e1587837a384afef547b48d595f3545c4db8d4472",
+      "genomes.3.bt2": "14b25f8298fb0ad6376bd53ce9a5bc3b760dcbbbf4504fb490bee5f7912714a4",
+      "genomes.4.bt2": "66db72fe864dd8d37c97e29f45a4c5b434d80829b17e501fbaae451170a8aa90",
+      "genomes.rev.1.bt2": "ac8b91b727e1d966d8ef59d150e2529be63eb6717d642c8112b528806682570b",
+      "genomes.rev.2.bt2": "ce15acb03af81e098dba3f0eee8580ba16ae9d87d166ea539cb20280174a7b39"
+    },
+    "code": {
+      "run_sample.py": "cc92ec525246f2447a734028068fad512af6203a85e528c04a18917f4f033c4c",
+      "map_evidence.py": "ca081a202c66fefd0441ae0051c7d6d4fe11a0e8854ec66dddb2a9a696cb7afc"
+    },
+    "bowtie2_version": "2.5.4"
+  },
+  "source_genomes_n": 2,
+  "technical_cases_n": 16,
+  "source_accessions": [
+    "GCF_037100215.1",
+    "GCF_052446795.1"
+  ],
+  "lineage_independence_certified_by_this_program": false,
+  "selection": "Zero observed calibration cross-target false detections; maximize mean target positive sensitivity across all calibration depth/error cases; ties prefer marker count, breadth, fragments and margin, all descending.",
+  "grid_rules_n": 192,
+  "population_specificity_guarantee": false,
+  "status": "pilot_calibrated",
+  "targets": [
+    "infantis",
+    "longum"
+  ],
+  "metrics_margins": [
+    0,
+    6,
+    12,
+    18
+  ],
+  "selected_rule": {
+    "margin": 0,
+    "marker_breadth": 0.1,
+    "minimum_fragments_per_marker": 1,
+    "supported_identity_markers": 20
+  },
+  "selected_rule_id": "rule_016",
+  "balanced_target_positive_sensitivity": 1.0,
+  "observed_calibration_false_detections": 0,
+  "calibration_counts": [
+    {
+      "target": "infantis",
+      "cases_n": 16,
+      "source_genomes_n": 2,
+      "positive_cases_n": 8,
+      "negative_cases_n": 8,
+      "positive_source_genomes_n": 1,
+      "negative_source_genomes_n": 1,
+      "TP": 8,
+      "FP": 0,
+      "FN": 0,
+      "TN": 8,
+      "sensitivity": 1.0,
+      "observed_false_positive_fraction": 0.0,
+      "insufficient_cases_n": 8,
+      "call_fraction": 0.5
+    },
+    {
+      "target": "longum",
+      "cases_n": 16,
+      "source_genomes_n": 2,
+      "positive_cases_n": 8,
+      "negative_cases_n": 8,
+      "positive_source_genomes_n": 1,
+      "negative_source_genomes_n": 1,
+      "TP": 8,
+      "FP": 0,
+      "FN": 0,
+      "TN": 8,
+      "sensitivity": 1.0,
+      "observed_false_positive_fraction": 0.0,
+      "insufficient_cases_n": 8,
+      "call_fraction": 0.5
+    }
+  ],
+  "calibration_source_accessions": [
+    "GCF_037100215.1",
+    "GCF_052446795.1"
+  ],
+  "calibration_source_sha256": [
+    "0288e56a89e239dfc05836a018cdaca99df72b9f6cf084bfd5def359a3548c7c",
+    "04e3f1f66422a2f5c3df64c7043ec056aab4f392654edc81396281cb8151ae2a"
+  ],
+  "freeze_plan": {
+    "created": "2026-10-08",
+    "status": "prospective plan before cohort read screening",
+    "objective": "Separate subspecies identity from independently scored glycan-locus sequence evidence",
+    "published_marker_source": "Ennis et al. 2024; frozen public sequences, not new marker discovery",
+    "primary_identity_targets": [
+      "infantis",
+      "longum"
+    ],
+    "locus_targets": [
+      "ATCC15697 H1",
+      "ATCC15697 H3",
+      "ATCC15697 H4",
+      "ATCC15697 H5"
+    ],
+    "independence_rule": "exclude identity markers having any annotated genomic overlap with tested loci in the competitive panel",
+    "reference_annotation": {
+      "min_nucleotide_identity": 85,
+      "min_query_coverage": 0.8
+    },
+    "competition_margin_grid": [
+      0,
+      6,
+      12,
+      18
+    ],
+    "screen_baits": "All annotated index-genome copies, each extended by 200 bp on both sides; not original marker sequence alone",
+    "feature_support_minimum": "At least 50 actually sequenced, resolved bases per supporting mate; shared genomic positions with competing locus annotations do not support either locus",
+    "host_competition": "Complete verified UCSC hg38 initial assembly included in the common benchmark/cohort competitive index",
+    "near_clone_exclusion": {
+      "ANI_min": 99.9,
+      "query_matched_fraction_min": 0.8
+    },
+    "benchmark": {
+      "positive_target_depth_x": [
+        0.05,
+        0.2,
+        1,
+        5
+      ],
+      "substitution_rates": [
+        0.005,
+        0.01
+      ],
+      "read_length": 150,
+      "source": "simulated paired reads from public real reference genomes",
+      "roles": "calibration genomes select thresholds; prospective test genomes assessed once; index genomes only smoke/engineered fixtures",
+      "limitation": "small strain panel cannot certify population-wide sensitivity/specificity"
+    },
+    "candidate_detection_grid": {
+      "marker_breadth": [
+        0.05,
+        0.1,
+        0.2,
+        0.4
+      ],
+      "supported_identity_markers": [
+        3,
+        5,
+        10,
+        20
+      ],
+      "minimum_fragments_per_marker": [
+        1,
+        2,
+        3
+      ]
+    },
+    "selection_rule": "zero observed calibration cross-target detections, then maximize balanced target sensitivity across calibration depths, then prefer stricter marker-count and breadth rule; report actual denominators",
+    "nondetection_rule": "no biological absence from total reads or zero target counts; retain insufficient-evidence until sample-specific detectability and specificity are validated",
+    "cohort_primary_questions": [
+      "Do prior reference-level infantis annotations survive competitive independent-marker confirmation?",
+      "Which independent locus profiles are supported in samples with and without confirmed subspecies identity?",
+      "Does evidence-supported identity or locus coverage change within infant across observed visits?"
+    ],
+    "cohort_secondary_questions": [
+      "Associations with same-window HMO and organic acids, adjusted for repeated dyads and visit when estimable"
+    ],
+    "statistical_plan": "Report complete eligible sample denominators; paired or dyad-clustered analysis; all planned associations retained and BH-adjusted within the declared family; no outcome-driven sample/marker selection",
+    "sample_rules": "frozen BF76 eligibility; raw-accessible subset rechecked; keep ID22 with missing conflicted clinical data, exclude wrong ID60 and unresolved ID9; ID22-excluded sensitivity",
+    "claim_rule": "new findings require real output tables; computational fixtures are labelled simulated; no HMO consumption, flux, absolute abundance or causal inference"
+  },
+  "claim": "Pilot calibration on the listed reference genomes; not a guarantee of 99% specificity or population-wide sensitivity."
+}

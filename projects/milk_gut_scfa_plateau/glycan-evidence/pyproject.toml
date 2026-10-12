@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=80,<85"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "glycan-evidence"
+version = "0.1.0.dev7"
+description = "Auditable, separate identity and glycan-locus sequence evidence"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+
+[project.optional-dependencies]
+structure = ["pysam==0.24.1"]
+compatibility = ["numpy==2.5.3", "scipy==1.18.1"]
+discrepancy = ["numpy==2.5.3"]
+
+[project.scripts]
+glycan-evidence = "glycan_evidence.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+glycan_evidence = ["presets/*.json", "legacy_v2/*.json"]

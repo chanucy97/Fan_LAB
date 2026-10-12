@@ -1,0 +1,2 @@
+# Preserve the bytes required by the registered engine and rule hashes.
+glycan-evidence/** -text
