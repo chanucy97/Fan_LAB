@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GlycanEvidence · 母婴宏基因组方法 | Fan Lab</title>
+  <meta name="description" content="青藏高原母婴队列的 GlycanEvidence 方法源码、结构比较、序列与群体分析、运行说明和数据访问。" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .method-page {max-width:1160px;margin:0 auto;padding:48px clamp(20px,5vw,64px) 72px;}
+    .method-page h1 {font-size:clamp(32px,5vw,52px);line-height:1.15;margin:12px 0 16px;}
+    .method-page h2 {font-size:26px;margin:0 0 18px;}
+    .method-page h3 {font-size:19px;margin:0 0 12px;}
+    .method-page p {max-width:900px;}
+    .method-lead {font-size:21px;line-height:1.6;}
+    .method-intro {padding-bottom:34px;border-bottom:1px solid var(--line);}
+    .method-section {padding-top:36px;scroll-margin-top:110px;}
+    .method-actions {display:flex;flex-wrap:wrap;gap:12px;margin-top:24px;}
+    .method-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;}
+    .method-card {padding:23px;border:1px solid var(--line);border-radius:12px;background:var(--white);}
+    .method-step {color:var(--blue-deep);font-size:13px;font-weight:700;letter-spacing:.08em;margin-bottom:10px;}
+    .method-page a:not(.button) {color:var(--blue-deep);text-decoration:underline;text-underline-offset:3px;}
+    .method-page pre {overflow:auto;padding:20px;background:#102a43;color:#f1f7fb;border-radius:10px;line-height:1.6;font-size:13px;}
+    .method-note {color:var(--muted);font-size:15px;}
+    .method-footer {padding:24px;text-align:center;border-top:1px solid var(--line);font-size:14px;}
+    @media(max-width:700px){.method-grid{grid-template-columns:1fr}.method-page{padding-top:32px}.method-lead{font-size:18px}.method-page h2{font-size:23px}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="樊海宁课题组首页"><span class="brand-mark">FL</span><span><strong>樊海宁课题组</strong><em>Fan Lab</em></span></a>
+    <nav class="site-nav" aria-label="GlycanEvidence导航"><a href="index.html">首页</a><a href="#methods">方法</a><a href="#run">运行</a><a href="#access">数据与代码</a></nav>
+  </header>
+  <main class="method-page">
+    <section class="method-intro" aria-labelledby="title">
+      <p class="eyebrow">Qinghai–Tibetan Plateau · Mother–Infant Study</p>
+      <h1 id="title">GlycanEvidence</h1>
+      <p class="method-lead">将菌群身份、局部基因结构与读段支持连接成可核查的证据链。</p>
+      <p>本项目围绕青藏高原母婴纵向研究中的营养与肠道宏基因组数据，提供局部糖利用基因区域分析方法。GlycanEvidence 分别记录标记信号、锚点间结构、边界片段和碱基支持，使参考映射之外的局部结构具有明确的输入、判据和来源。</p>
+      <p class="method-note">公开版本 0.1.0.dev10 · 更新于 2026年10月22日 · 研究软件</p>
+      <div class="method-actions"><a class="button primary" href="https://github.com/chanucy97/Fan_LAB/tree/main/projects/milk_gut_scfa_plateau">浏览代码与文档</a><a class="button text-button" href="https://github.com/chanucy97/Fan_LAB/blob/main/projects/milk_gut_scfa_plateau/METHODS_CODE_MAP.md">方法与代码对应表</a></div>
+    </section>
+    <section id="methods" class="method-section" aria-labelledby="methods-title">
+      <h2 id="methods-title">四层方法证据</h2>
+      <div class="method-grid">
+        <article class="method-card"><div class="method-step">01 · MARKERS &amp; LOCI</div><h3>分别记录身份与基因区域</h3><p>冻结标记判据，保留覆盖、片段数和可检测性信息，将身份证据与局部基因区域信号分别输出。</p><a href="https://github.com/chanucy97/Fan_LAB/blob/main/projects/milk_gut_scfa_plateau/glycan-evidence/README_ENGINE.md">标记引擎与判据</a></article>
+        <article class="method-card"><div class="method-step">02 · LOCAL STRUCTURES</div><h3>恢复并比较局部结构</h3><p>结合候选参考结构、片段分配和普通组装区间，记录完整或部分锚点结构、参考差异及尚未解决的候选。</p><a href="https://github.com/chanucy97/Fan_LAB/blob/main/projects/milk_gut_scfa_plateau/glycan-evidence/README_STRUCTURE_RECOVERY.md">结构恢复接口</a></article>
+        <article class="method-card"><div class="method-step">03 · READ &amp; SEQUENCE SUPPORT</div><h3>检查边界与序列支持</h3><p>核对直接跨界片段、逐碱基支持与编码序列，保留支持不足、比对冲突和部分区间。</p><a href="https://github.com/chanucy97/Fan_LAB/blob/main/projects/milk_gut_scfa_plateau/glycan-evidence/README_BASES.md">碱基与片段核查</a></article>
+        <article class="method-card"><div class="method-step">04 · COMPARISON &amp; CONTEXT</div><h3>连接方法比较与群体背景</h3><p>在相同输入与明确判据下比较扩展参考和普通组装，并提供营养酶序列、可比较群体背景及预指定事件读回的分析组件。</p><a href="https://github.com/chanucy97/Fan_LAB/tree/main/projects/milk_gut_scfa_plateau/methods">比较与序列分析代码</a></article>
+      </div>
+    </section>
+    <section id="run" class="method-section" aria-labelledby="run-title">
+      <h2 id="run-title">安装与运行</h2>
+      <p>建议使用 Python 3.12 或更新版本。安装后可先运行合成测试，再按接口准备自己的数据、参考序列和来源清单。</p>
+      <pre><code>git clone https://github.com/chanucy97/Fan_LAB.git
+cd Fan_LAB
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install './projects/milk_gut_scfa_plateau/glycan-evidence[inference]'
+glycan-evidence --help
+cd projects/milk_gut_scfa_plateau/glycan-evidence
+python -m unittest discover -s tests -v</code></pre>
+      <p class="method-note">Windows 激活命令为 <code>.venv\Scripts\Activate.ps1</code>。BAM 分析另需 pysam；原始读段流程需 Linux 生物信息工具。不同模块的依赖、输入格式和命令见各自 README。</p>
+    </section>
+    <section id="evaluation" class="method-section" aria-labelledby="evaluation-title">
+      <h2 id="evaluation-title">评价范围</h2>
+      <p>本方法强调结构、序列和来源的可核查性。既有开发比较中，组装辅助规则识别23/35个正确结构类别、无额外类别，与普通组装的几何识别结果相同。组装已恢复的结构不计作优于组装的新增发现；局部序列证据也不单独确定菌株归属或营养利用功能。</p>
+      <p>代码保留原有科学判据；通用运行适配与原始研究代码的差异记录在各目录的来源文件中。队列专用输入与部分历史执行脚本另按数据访问流程提供。</p>
+    </section>
+    <section id="access" class="method-section" aria-labelledby="access-title">
+      <h2 id="access-title">数据与代码访问</h2>
+      <p>源码、安装说明、测试及方法对照表已放在本项目的 GitHub 目录。引用时请记录软件版本及具体提交或版本标签。</p>
+      <p>作者已报告将原始测序数据提交至 GSA-Human；正式登录号和访问方式将在核实后更新。其他受机构规定限制的研究数据由通讯作者贺春兰受理，预计10个工作日内初次回复。</p>
+      <div class="method-actions"><a class="button primary" href="https://github.com/chanucy97/Fan_LAB/blob/main/projects/milk_gut_scfa_plateau/CODE_AVAILABILITY.md">代码引用说明</a><a class="button text-button" href="https://github.com/chanucy97/Fan_LAB/blob/main/projects/milk_gut_scfa_plateau/docs/DATA_CODE_AVAILABILITY.md">数据访问说明</a></div>
+    </section>
+  </main>
+  <footer class="method-footer">樊海宁课题组 · 青海大学附属医院 · <a href="index.html">返回 Fan Lab</a></footer>
+</body>
+</html>
