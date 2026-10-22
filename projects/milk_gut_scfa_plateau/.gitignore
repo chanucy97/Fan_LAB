@@ -18,3 +18,12 @@ p2_bridge_analyses/
 *.svg
 *.log
 *.html
+
+# Generated Python build and test artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+.pytest_cache/

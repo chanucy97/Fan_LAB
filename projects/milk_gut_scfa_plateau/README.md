@@ -1,18 +1,21 @@
-# Human milk bioactives, infant gut succession, and SCFA maturation
+# Qinghai-Tibetan Plateau mother-infant study: GlycanEvidence and analysis methods
 
 This project contains reproducible analysis and manuscript-delivery code for a Qinghai-Tibetan Plateau mother-infant cohort manuscript focused on human milk bioactive dynamics, infant gut Bifidobacterium succession, and fecal short-chain fatty acid (SCFA) maturation.
 
 ## Current method source
 
-[GlycanEvidence 0.1.0.dev7](glycan-evidence/) provides the current Python implementation for separate marker and locus evidence, deterministic CDS replay and discrepancy-certificate verification. Its installation instructions, registered pilot rules and synthetic tests are included. The scripts below retain the historical June 2026 cohort-analysis version; they do not represent every later manuscript reanalysis or figure revision.
+[GlycanEvidence 0.1.0.dev10](glycan-evidence/) integrates separate marker/locus evidence with candidate-structure inference, joint fragment allocation, ordinary-assembly recovery and coding/base-level sequence checks. The public snapshot dated 22 October 2026 includes implementation, frozen rules, synthetic tests and detailed input/output contracts.
+
+Start with the [methods code map](METHODS_CODE_MAP.md), [structure comparison](methods/structure-comparison/) and [sequence/population analysis](methods/sequence-and-population/) modules. These provide the reusable method components behind the current manuscript. Their provenance records distinguish original implementation from portable public adapters. The `scripts/` directory below retains the historical June 2026 cohort-analysis version and is not the source for every later figure or reanalysis.
 
 ## Important data notice
 
-**No real participant-level clinical data, sequencing files, raw assay exports, sample mapping tables, or manuscript circulation packages are included in this repository.** The public repository contains code and documentation only. The scripts expect a controlled local analysis workspace that is not uploaded to GitHub.
+The repository contains method code, documentation, artificial test fixtures and selected aggregate regression records. Participant-level records, sequencing reads, assay exports and sample-identity tables follow the [study data-access route](docs/DATA_CODE_AVAILABILITY.md). Software users supply the inputs required by the documented interfaces.
 
 ## What is included
 
-- R scripts for Figure 1-7 redraws and lagged milk-to-SCFA sensitivity analysis.
+- GlycanEvidence dev10, method-comparison evaluators, sequence/population components and synthetic tests.
+- Historical R scripts for Figure 1-7 redraws and lagged milk-to-SCFA sensitivity analysis.
 - Node scripts for manuscript table and supplementary table workbook construction.
 - Python scripts for manuscript figure PDF assembly and Word/PDF delivery builds.
 - Running instructions, input/output descriptions, and data/code availability wording.

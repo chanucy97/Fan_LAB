@@ -1,13 +1,19 @@
-# Data And Code Availability
+# Data and code availability
 
-## Code availability
+Updated 22 October 2026.
 
-Analysis and manuscript-delivery code for the human milk bioactive, infant gut microbiome, and SCFA maturation project is available in the Fan_LAB GitHub repository:
+## Code
 
-`https://github.com/chanucy97/Fan_LAB/tree/main/projects/milk_gut_scfa_plateau`
+The public method source is [GlycanEvidence 0.1.0.dev10 and companion analysis components](../CODE_AVAILABILITY.md). The [method map](../METHODS_CODE_MAP.md) identifies interfaces, required inputs and scope. Code publication is separate from cohort-data release.
 
-## Data availability
+## Sequencing-data deposition
 
-Raw sequencing reads, raw assay exports, participant-level clinical records, and sample identifier mapping files are not publicly uploaded because of participant privacy, ethics approval boundaries, and collaborating-institution data governance requirements.
+The authors report that the raw sequencing data have been submitted to the Genome Sequence Archive for Human (GSA-Human), CNCB-NGDC, with submission tracking ID **subHRA032777**. This is a submission identifier. The assigned HRA accession, the archived sample/library coverage, and the release/access status are awaiting confirmation for the manuscript statement.
 
-Derived analysis tables may be made available from the corresponding authors upon reasonable request, subject to ethics/institutional approval and any required data-use agreement. Public reuse of the code does not imply public release of controlled source data.
+The [official GSA-Human submission guide](https://ngdc.cncb.ac.cn/gsa-human/document/GSA-Human_Submission_Guide_1.0.cn.pdf) distinguishes `subHRA` tracking numbers from the HRA accessions assigned after archival. No accession has been inferred by removing the prefix, and no unrestricted-download or release-date claim is made here. The public record link will be added when confirmed.
+
+## Other study data
+
+Institutional regulations restrict public distribution of participant-level clinical, dietary and assay records and their linkage information. Requests are handled by the corresponding author, **Chunlan He**, at **502435727@qq.com**, with an initial response within **10 working days**. Data provision is subject to the applicable institutional requirements. An initial response does not guarantee approval or delivery within that period.
+
+The accession and access route for the deposited sequencing data must follow the final repository record. This contact route does not replace any repository-controlled access procedure. Source tables and supplementary datasets should be cited by their final manuscript filenames when the submission package is assembled.

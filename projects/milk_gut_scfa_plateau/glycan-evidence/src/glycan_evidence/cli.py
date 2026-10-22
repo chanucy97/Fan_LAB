@@ -100,6 +100,15 @@ def parser():
     cr=s.add_parser('cds-replay',help='Replay coding-sequence checks from bound candidate sequences and saved HSPs')
     for k in ['input-manifest','expected-manifest-sha256','out']:
         cr.add_argument('--'+k,required=True)
+    si=s.add_parser('structure-infer',help='Fit experimental paired-fragment compatibility to explicit local candidate profiles')
+    for k in ['sam','candidates','profiles','config','out']:
+        si.add_argument('--'+k,required=True)
+    sa=s.add_parser('structure-assign',help='Fit experimental joint fragment/source assignment and boundary lower bounds')
+    for k in ['sam','candidates','profiles','config','out']:
+        sa.add_argument('--'+k,required=True)
+    sr=s.add_parser('structure-recover',help='Reconcile reference support and same-library assembly evidence from a bound roster')
+    for k in ['roster','case-id','expected-roster-sha256','out']:
+        sr.add_argument('--'+k,required=True)
     v=s.add_parser('verify',help='Verify the small-output integrity manifest')
     v.add_argument('--directory',required=True)
     return p
@@ -147,6 +156,15 @@ def execute(args):
         from .cds import run_cds_replay
         receipt=run_cds_replay(args.input_manifest,args.out,
                                expected_manifest_sha256=args.expected_manifest_sha256)
+    elif args.command=='structure-infer':
+        from .structure_inference_io import run_structure_inference
+        receipt=run_structure_inference(args.sam,args.candidates,args.profiles,args.config,args.out)
+    elif args.command=='structure-assign':
+        from .structure_inference_io import run_structure_assignment
+        receipt=run_structure_assignment(args.sam,args.candidates,args.profiles,args.config,args.out)
+    elif args.command=='structure-recover':
+        from .structure_recovery_io import run_structure_recovery
+        receipt=run_structure_recovery(args.roster,args.case_id,args.expected_roster_sha256,args.out)
     elif args.command=='run':
         from .identity import run_sample,apply_rules,load_rules
         # Validate a single sample with the same constraints as manifest samples.

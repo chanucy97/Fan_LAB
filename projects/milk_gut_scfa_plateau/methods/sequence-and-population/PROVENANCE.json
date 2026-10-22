@@ -1,0 +1,261 @@
+{
+  "schema": "public-adapter.v1",
+  "generated_utc": "2026-10-22T04:02:50.358487+00:00",
+  "source_policy": "Original workspace files read only; all source paths relative to original workspace. No original data copied.",
+  "source_files": [
+    {
+      "public_path": "comparison/compare_strains.py",
+      "original_workspace_relative_path": "outputs/20261016_strain_nutrition/comparison/compare_strains.py",
+      "original_sha256": "0b33778fe7eea740f1303e2a768b6f23079ff5782c38cdb9434df01b06b0d8cc",
+      "public_sha256": "0b33778fe7eea740f1303e2a768b6f23079ff5782c38cdb9434df01b06b0d8cc",
+      "public_bytes": 31728,
+      "byte_identical": true,
+      "adaptations": [],
+      "numeric_constants_order_preserved": true
+    },
+    {
+      "public_path": "comparison/test_compare_strains.py",
+      "original_workspace_relative_path": "outputs/20261016_strain_nutrition/comparison/test_compare_strains.py",
+      "original_sha256": "69627fb5e127444d75fa473342430ffddde1109bb1e2d4c8928775d5c20178d5",
+      "public_sha256": "f9da5d119884685e557d067e08606654a030a4ee385ec09e7942e0d7ffbc3ab6",
+      "public_bytes": 7089,
+      "byte_identical": false,
+      "adaptations": [
+        "Removed the scheduler-wrapper-only test because Slurm files are not part of this public method package."
+      ]
+    },
+    {
+      "public_path": "sequence_integrity/assembly_scan.py",
+      "original_workspace_relative_path": "outputs/20261016_strain_nutrition/sequence_integrity/assembly_scan.py",
+      "original_sha256": "300f96b130878a90901fe47733cd5fb6b309e4398b3ecc4d9702d5a351233b52",
+      "public_sha256": "300f96b130878a90901fe47733cd5fb6b309e4398b3ecc4d9702d5a351233b52",
+      "public_bytes": 38847,
+      "byte_identical": true,
+      "adaptations": [],
+      "numeric_constants_order_preserved": true
+    },
+    {
+      "public_path": "sequence_integrity/test_assembly_scan.py",
+      "original_workspace_relative_path": "outputs/20261016_strain_nutrition/sequence_integrity/test_assembly_scan.py",
+      "original_sha256": "fc172bbf5b5788bc2ea42b912accf1581ff8dfd78a63380a221de8c18e6daad9",
+      "public_sha256": "e436377702666cb694277e678e40683a2bb0358127ef682552283519c8a865e1",
+      "public_bytes": 12885,
+      "byte_identical": false,
+      "adaptations": [
+        "Removed the optional real-tool smoke fixture test; all 16 synthetic algorithm/integrity tests remain."
+      ]
+    },
+    {
+      "public_path": "sequence_integrity/ASSEMBLY_RULES.json",
+      "original_workspace_relative_path": "outputs/20261016_strain_nutrition/sequence_integrity/ASSEMBLY_RULES.json",
+      "original_sha256": "b4b92d3f20beb9fdbb6ae935474e15049d96418ee9ad6460d1558d7d3153c111",
+      "public_sha256": "2e8823921b154a623757f7e8d7178c9ff091c5744ddfa55ef06d9acfcd6fb8ca",
+      "public_bytes": 1994,
+      "byte_identical": false,
+      "adaptations": [
+        "Rebound only mapping_source_sha256 to the public map_traits.py copy after path-default sanitation; all numerical rules and external source/tool hash constraints unchanged."
+      ]
+    },
+    {
+      "public_path": "sequence_integrity/profile_sequence_audit.py",
+      "original_workspace_relative_path": "outputs/20261016_strain_nutrition/sequence_integrity/profile_sequence_audit.py",
+      "original_sha256": "1165db07370a6530610e7db55c96a039b529091212eb074da6c815f0cf95230e",
+      "public_sha256": "1165db07370a6530610e7db55c96a039b529091212eb074da6c815f0cf95230e",
+      "public_bytes": 45831,
+      "byte_identical": true,
+      "adaptations": [],
+      "numeric_constants_order_preserved": true
+    },
+    {
+      "public_path": "sequence_integrity/test_profile_sequence_audit.py",
+      "original_workspace_relative_path": "outputs/20261016_strain_nutrition/sequence_integrity/test_profile_sequence_audit.py",
+      "original_sha256": "87a8217cbad4bdf12b95a1b3fff36c9c3fef923e2763d0cf156dc9a540ba3aa7",
+      "public_sha256": "87a8217cbad4bdf12b95a1b3fff36c9c3fef923e2763d0cf156dc9a540ba3aa7",
+      "public_bytes": 15464,
+      "byte_identical": true,
+      "adaptations": []
+    },
+    {
+      "public_path": "sequence_integrity/PROFILE_RULES.json",
+      "original_workspace_relative_path": "outputs/20261016_strain_nutrition/sequence_integrity/PROFILE_RULES.json",
+      "original_sha256": "516bf70f35e15b18abc86361a34c2d01b8c07a935182ce0431637551315e7e48",
+      "public_sha256": "516bf70f35e15b18abc86361a34c2d01b8c07a935182ce0431637551315e7e48",
+      "public_bytes": 1364,
+      "byte_identical": true,
+      "adaptations": []
+    },
+    {
+      "public_path": "sequence_integrity/enzyme_context/core.py",
+      "original_workspace_relative_path": "outputs/20261016_strain_nutrition/sequence_integrity/enzyme_context/core.py",
+      "original_sha256": "811baf8ecf6eb2cdcfbc87337902996c1f487e786fae96736880768b30f15e89",
+      "public_sha256": "e995f6e7f2dabde3c777476360bc355f72160b25d40c37daa31e356fc3ce96d5",
+      "public_bytes": 31867,
+      "byte_identical": false,
+      "adaptations": [
+        "Rebound CONFIG_SHA to sanitized public config. Resolve executable names via PATH, hash resolved files, and execute the bound absolute paths in preparation and scoring; missing executables still fail. No scoring/gate change."
+      ],
+      "numeric_constants_order_preserved": true
+    },
+    {
+      "public_path": "sequence_integrity/enzyme_context/test_core.py",
+      "original_workspace_relative_path": "outputs/20261016_strain_nutrition/sequence_integrity/enzyme_context/test_core.py",
+      "original_sha256": "0491bb59f6a1d418bc3d5b7dec4a942577968f4daee6516e488c09e23ae71902",
+      "public_sha256": "7872542d94f2ba2bcba538bdb54f9f544467181a6e3cde30fc8485c876a54f84",
+      "public_bytes": 14387,
+      "byte_identical": false,
+      "adaptations": [
+        "Removed the true-cohort manifest fixture test. Added synthetic resolved-tool binding/missing-tool rejection test and command-path assertion."
+      ]
+    },
+    {
+      "public_path": "sequence_integrity/readback_stage2_deploy_v1/core.py",
+      "original_workspace_relative_path": "outputs/20261016_strain_nutrition/sequence_integrity/readback_stage2_deploy_v1/core.py",
+      "original_sha256": "25091150917234116794baf1c876429e73e2f4daca93a9abef95dddd85ee3243",
+      "public_sha256": "f5afaace56b712b61eb5e3ef54cbd606c5b3bd2585d1e24d42e2858ce137fb02",
+      "public_bytes": 21629,
+      "byte_identical": false,
+      "adaptations": [
+        "Module docstring updated to describe pre-specified candidate primitives; executable AST unchanged."
+      ],
+      "numeric_constants_order_preserved": true
+    },
+    {
+      "public_path": "sequence_integrity/readback_stage2_deploy_v1/driver.py",
+      "original_workspace_relative_path": "outputs/20261016_strain_nutrition/sequence_integrity/readback_stage2_deploy_v1/driver.py",
+      "original_sha256": "61290f7f4e3bd119671fb82e3e421bcc5d475c9618592a8ed1dd72dfbda303d0",
+      "public_sha256": "eaa32816dc39b8a86c55127a3e4610448c2d94ca3707074841de71e487560795",
+      "public_bytes": 14961,
+      "byte_identical": false,
+      "adaptations": [
+        "Replaced study-specific schema names with single-candidate public-adapter.v1 schemas. Replaced a hard-coded real sample identifier with a required nonempty string in reviewed rules. Retained candidate_count==1, frozen status, explicit flag, exact rules SHA, metadata identity, source/runtime verification, original split/coverage parity, QNAME deduplication and all technical gates."
+      ],
+      "numeric_constants_order_preserved": true
+    },
+    {
+      "public_path": "sequence_integrity/readback_stage2_deploy_v1/test_core.py",
+      "original_workspace_relative_path": "outputs/20261016_strain_nutrition/sequence_integrity/readback_stage2_deploy_v1/test_core.py",
+      "original_sha256": "b4616c3d4854642f8ee2cfce4ca7992ddfffd847cc8ff3b34735ba34c1bcf95f",
+      "public_sha256": "b4616c3d4854642f8ee2cfce4ca7992ddfffd847cc8ff3b34735ba34c1bcf95f",
+      "public_bytes": 9345,
+      "byte_identical": true,
+      "adaptations": []
+    },
+    {
+      "public_path": "sequence_integrity/readback_stage2_deploy_v1/test_driver.py",
+      "original_workspace_relative_path": "outputs/20261016_strain_nutrition/sequence_integrity/readback_stage2_deploy_v1/test_driver.py",
+      "original_sha256": "8c2279ea67d0402dfcf62de42b6e604d1c673a5db0acc8a74c24b6f483f7c4b5",
+      "public_sha256": "91f3d8aea25982ebf90343f0e9da4bb9f1eb83a1aaeaab5cd56860526710244f",
+      "public_bytes": 4633,
+      "byte_identical": false,
+      "adaptations": [
+        "Updated synthetic authorization fixtures to public schema and SYNTHETIC_SAMPLE. Added invalid identity/count/schema rejection test."
+      ]
+    },
+    {
+      "public_path": "trait_mapping/map_traits.py",
+      "original_workspace_relative_path": "outputs/20261016_strain_nutrition/trait_mapping/map_traits.py",
+      "original_sha256": "162c686b4527a42d2a6b172386b65b10dc960cb777248c63ce082f0d38ff1ac7",
+      "public_sha256": "8e1b9d371cf0a28f3f965922830435af2e1a19b762c745d37b1a07c2d04303e9",
+      "public_bytes": 23526,
+      "byte_identical": false,
+      "adaptations": [
+        "Changed only DIAMOND default executable from host-specific absolute path to diamond on PATH."
+      ],
+      "numeric_constants_order_preserved": true
+    },
+    {
+      "public_path": "trait_mapping/RULES.json",
+      "original_workspace_relative_path": "outputs/20261016_strain_nutrition/trait_mapping/RULES.json",
+      "original_sha256": "8fc86f4a3520f37e35226b1c52a0eac62ce25c7c730a399f159885cc7183d42a",
+      "public_sha256": "8fc86f4a3520f37e35226b1c52a0eac62ce25c7c730a399f159885cc7183d42a",
+      "public_bytes": 1479,
+      "byte_identical": true,
+      "adaptations": []
+    },
+    {
+      "public_path": "carrier_context/carrier_context.py",
+      "original_workspace_relative_path": "outputs/20261016_strain_nutrition/carrier_context/carrier_context.py",
+      "original_sha256": "99995a09554e42563a67ad345dedef4d0be03532bc015168887041ec036706d3",
+      "public_sha256": "99995a09554e42563a67ad345dedef4d0be03532bc015168887041ec036706d3",
+      "public_bytes": 24328,
+      "byte_identical": true,
+      "adaptations": [],
+      "numeric_constants_order_preserved": true
+    },
+    {
+      "public_path": "carrier_context/config.json",
+      "original_workspace_relative_path": "outputs/20261016_strain_nutrition/carrier_context/config.json",
+      "original_sha256": "b9e0c67ed1ddf7fb4f10d4ca7f393be3f2147f447360c43788e648fab9bf080c",
+      "public_sha256": "ebabc782561dd2d7456a1c2ed1d9ee0d7c1b2e2b2d72e7837c1f140e300c473d",
+      "public_bytes": 771,
+      "byte_identical": false,
+      "adaptations": [
+        "Changed only blastn/makeblastdb path strings to executable names. Numerical settings and interpretation constraints unchanged."
+      ]
+    }
+  ],
+  "new_files": [
+    {
+      "public_path": "CLI_CHECKS.json",
+      "public_sha256": "69e79994a4e472172b79cf1a644916ba8fb0248a42f51265de0ef68453557b57",
+      "public_bytes": 1237,
+      "origin": "new public documentation, test runner, or generated verification receipt"
+    },
+    {
+      "public_path": "INPUT_SCHEMA.md",
+      "public_sha256": "50b5f71ec82827fdf831b2b1cf3a11fadc0ee7d14e8d58424243751c220ffa2e",
+      "public_bytes": 5938,
+      "origin": "new public documentation, test runner, or generated verification receipt"
+    },
+    {
+      "public_path": "README.md",
+      "public_sha256": "9a02bdf11271f47c9a6f2efc05aae1a6e93c60d1047612e492a53be5b1d51f10",
+      "public_bytes": 7026,
+      "origin": "new public documentation, test runner, or generated verification receipt"
+    },
+    {
+      "public_path": "TEST_RESULTS.json",
+      "public_sha256": "c9cc071e96a0792cff96be2c9526fb2da4b088c994f77f393b87384bcc409de6",
+      "public_bytes": 2036,
+      "origin": "new public documentation, test runner, or generated verification receipt"
+    },
+    {
+      "public_path": "requirements-test.txt",
+      "public_sha256": "a90eeb2fa9f9f172d91fd1833a7f5725ea131abe166fcc7c0ca930e0e26f5e72",
+      "public_bytes": 103,
+      "origin": "new public documentation, test runner, or generated verification receipt"
+    },
+    {
+      "public_path": "run_synthetic_tests.py",
+      "public_sha256": "eacfbb65ae14070e7eedcad132e4c3c9287c91a22fb984fac0550d27c7b5a15c",
+      "public_bytes": 1103,
+      "origin": "new public documentation, test runner, or generated verification receipt"
+    }
+  ],
+  "excluded": {
+    "sequence_integrity/summarize_phase1.py": "Administrative join depends on private roster/inventory; not needed for the published algorithm modules.",
+    "production_manifests_and_fixtures": "No participant sequences, raw measurements, sample identity maps, true candidate/rules or HPC wrappers included."
+  },
+  "integrity_audit": {
+    "source_derived_files": 18,
+    "numeric_constants_preserved_in_all_non_test_python": true,
+    "assembly_rules_only_mapper_hash_changed": true,
+    "context_config_only_tool_paths_changed": true,
+    "public_hash_bindings_match": true,
+    "sensitive_scan": {
+      "status": "PASS",
+      "checked_files": 24,
+      "pattern_categories": [
+        "host_home_paths",
+        "server_paths",
+        "participant_sample_ids",
+        "private_key_blocks",
+        "github_token_shapes"
+      ],
+      "findings": []
+    },
+    "external_tools_end_to_end_tested": false,
+    "real_data_reanalysed": false
+  },
+  "total_package_files_including_this": 25
+}

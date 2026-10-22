@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-22",
+  "software_version": "0.1.0.dev10",
+  "core": {
+    "discovered": 383,
+    "passed": 368,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 15,
+    "skip_reasons": [
+      "Actual BAM fixtures require the structure extra (pysam)",
+      "Linux BLAST/Bowtie2/samtools/pysam integration fixture; not installed locally"
+    ],
+    "versions": {
+      "glycan-evidence": "0.1.0.dev10",
+      "numpy": "2.5.3",
+      "scipy": "1.18.1"
+    },
+    "cli_help": [
+      {
+        "command": [
+          "glycan-evidence",
+          "--help"
+        ],
+        "returncode": 0
+      },
+      {
+        "command": [
+          "glycan-evidence",
+          "structure-recover",
+          "--help"
+        ],
+        "returncode": 0
+      },
+      {
+        "command": [
+          "glycan-evidence",
+          "structure-infer",
+          "--help"
+        ],
+        "returncode": 0
+      },
+      {
+        "command": [
+          "glycan-evidence",
+          "structure-assign",
+          "--help"
+        ],
+        "returncode": 0
+      },
+      {
+        "command": [
+          "glycan-evidence",
+          "cds-replay",
+          "--help"
+        ],
+        "returncode": 0
+      }
+    ]
+  },
+  "structure_comparison": {
+    "command": "python -B -m unittest discover -s . -p test_evaluate_*.py -v",
+    "benchmark_tests": 13,
+    "assignment_tests": 8,
+    "total": 21,
+    "passed": 21,
+    "failed": 0,
+    "skipped": 0,
+    "returncode": 0
+  },
+  "sequence_and_population": {
+    "record": "methods/sequence-and-population/PROVENANCE.json",
+    "description": "See its embedded validation record and test runner."
+  },
+  "scope": "Local isolated installed-package tests and artificial fixtures. No cohort reanalysis or external tool production run. Linux CI is separately visible in GitHub Actions."
+}

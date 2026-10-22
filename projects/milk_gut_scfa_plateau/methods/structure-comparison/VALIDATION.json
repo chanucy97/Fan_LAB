@@ -1,0 +1,57 @@
+{
+  "schema": "public-adapter-validation.v1",
+  "checked_date": "2026-10-22",
+  "status": "PASS",
+  "adapter_version": "public-adapter.v1",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "glycan_evidence": "0.1.0.dev10",
+    "runtime_installation": "public sibling source built and installed as a wheel in an isolated validation environment"
+  },
+  "original_synthetic_tests": {
+    "command": "python -B -m unittest discover -s . -p test_evaluate_*.py -v",
+    "benchmark_tests": 13,
+    "assignment_tests": 8,
+    "total": 21,
+    "passed": 21,
+    "failed": 0,
+    "skipped": 0,
+    "returncode": 0
+  },
+  "cli_help": [
+    {"script": "evaluate_benchmark.py", "returncode": 0},
+    {"script": "evaluate_assignment.py", "returncode": 0},
+    {"script": "examples/make_synthetic_inputs.py", "returncode": 0}
+  ],
+  "full_v1_artificial_cli_smoke": {
+    "status": "COMPLETE",
+    "fixture_origin": "examples/make_synthetic_inputs.py; entirely constructed strings and identifiers",
+    "case_count": 1,
+    "positive_alleles": 1,
+    "method_rows": 16,
+    "exact_full": 1,
+    "exact_inner": 1,
+    "runtime_crosscheck": {"status": "PASS", "independently_equal_values": 42},
+    "existing_output_rejected": true,
+    "duplicate_history_ids_rejected": true,
+    "duplicate_history_failure_wrote_no_output_directory": true,
+    "temporary_fixture_removed": true,
+    "performance_claim": false
+  },
+  "no_original_data_or_HPC_run": true,
+  "remaining_external_inputs": [
+    "Caller-owned panel metadata and fixed calibration profiles",
+    "Complete runtime v1/v2 result dictionaries and accepted fragment ledgers",
+    "Caller-owned truth and ordinary assembly text archives, with SHA-256 bindings",
+    "An immutable complete v1 evaluation before the v2 CLI"
+  ],
+  "not_tested": [
+    "Historical real benchmark replay or the historical 23/35 result",
+    "Full original 82-case recovery workflow",
+    "Mapping, assembly, simulation, BAM readback or HPC runners",
+    "Full v2 CLI with historical inputs"
+  ],
+  "scope": "Original synthetic tests plus local artificial format integration; not independent external validation or a superiority benchmark"
+}

@@ -1,2 +1,10 @@
 # Preserve the bytes required by the registered engine and rule hashes.
 glycan-evidence/** -text
+methods/** -text
+.gitattributes -text
+.gitignore -text
+README.md -text
+METHODS_CODE_MAP.md -text
+CODE_AVAILABILITY.md -text
+PUBLIC_*.json -text
+docs/DATA_CODE_AVAILABILITY.md -text

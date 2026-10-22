@@ -1,0 +1,24 @@
+{
+  "samples_n": 50,
+  "calls_n": 100,
+  "compared_fields": [
+    "identity_state",
+    "reason",
+    "supported_markers",
+    "eligible_markers",
+    "metrics_available",
+    "flag_scope_panel",
+    "margin",
+    "marker_breadth",
+    "minimum_fragments_per_marker",
+    "supported_identity_markers"
+  ],
+  "mismatch_n": 0,
+  "mismatches": [],
+  "positive_calls": {
+    "infantis": 3,
+    "longum": 24
+  },
+  "scope": "Frozen cohort table regression only, not classifier validation",
+  "rule_sha256": "2c2f9650d932b7439873067caf3aad58d8066e6ea86f6228953e7573360dcd25"
+}

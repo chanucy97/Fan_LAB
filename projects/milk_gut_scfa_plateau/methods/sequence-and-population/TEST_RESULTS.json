@@ -1,0 +1,71 @@
+{
+  "schema": "public-adapter.v1",
+  "checked_utc": "2026-10-22T04:02:50.205352+00:00",
+  "scope": "synthetic tests only; no participant files, external alignments or HPC",
+  "python": "3.12.14",
+  "packages": {
+    "biopython": "1.88",
+    "h5py": "3.16.0",
+    "numpy": "2.5.3"
+  },
+  "suites": [
+    {
+      "suite": "comparison/test_compare_strains.py",
+      "sha256": "f9da5d119884685e557d067e08606654a030a4ee385ec09e7942e0d7ffbc3ab6",
+      "tests": 16,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "returncode": 0
+    },
+    {
+      "suite": "sequence_integrity/test_assembly_scan.py",
+      "sha256": "e436377702666cb694277e678e40683a2bb0358127ef682552283519c8a865e1",
+      "tests": 16,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "returncode": 0
+    },
+    {
+      "suite": "sequence_integrity/test_profile_sequence_audit.py",
+      "sha256": "87a8217cbad4bdf12b95a1b3fff36c9c3fef923e2763d0cf156dc9a540ba3aa7",
+      "tests": 26,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "returncode": 0
+    },
+    {
+      "suite": "sequence_integrity/enzyme_context/test_core.py",
+      "sha256": "7872542d94f2ba2bcba538bdb54f9f544467181a6e3cde30fc8485c876a54f84",
+      "tests": 13,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "returncode": 0
+    },
+    {
+      "suite": "sequence_integrity/readback_stage2_deploy_v1/test_core.py",
+      "sha256": "b4616c3d4854642f8ee2cfce4ca7992ddfffd847cc8ff3b34735ba34c1bcf95f",
+      "tests": 22,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "returncode": 0
+    },
+    {
+      "suite": "sequence_integrity/readback_stage2_deploy_v1/test_driver.py",
+      "sha256": "91f3d8aea25982ebf90343f0e9da4bb9f1eb83a1aaeaab5cd56860526710244f",
+      "tests": 9,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "returncode": 0
+    }
+  ],
+  "total_tests": 102,
+  "passed": 102,
+  "skipped": 0,
+  "status": "PASS"
+}

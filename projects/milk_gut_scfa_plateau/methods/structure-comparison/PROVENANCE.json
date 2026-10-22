@@ -1,0 +1,191 @@
+{
+  "schema": "public-adapter-provenance.v1",
+  "adapter_version": "public-adapter.v1",
+  "date": "2026-10-22",
+  "scope": "Portable structure-comparison evaluation core, not full historical cohort orchestration",
+  "original_workspace_paths_are_relative": true,
+  "original_sources_modified": false,
+  "manifest_self_excluded": true,
+  "published_files": [
+    {
+      "original_workspace_path": "outputs/20261015_structure_inference/analysis_support.py",
+      "original_sha256": "c693179240478441c6a546d76b05581fec0276e59255ba18e5dfb266829d8781",
+      "public_path": "analysis_support.py",
+      "public_sha256": "c693179240478441c6a546d76b05581fec0276e59255ba18e5dfb266829d8781",
+      "role": "source_derived_code_or_test",
+      "changes": [
+        "Line endings normalized to LF where applicable."
+      ]
+    },
+    {
+      "original_workspace_path": "outputs/20261015_structure_inference/assignment_support.py",
+      "original_sha256": "809cbd7fc68a791de9a9362ffab686c5a9db7732ddf2a94597b1ab6df443270b",
+      "public_path": "assignment_support.py",
+      "public_sha256": "809cbd7fc68a791de9a9362ffab686c5a9db7732ddf2a94597b1ab6df443270b",
+      "role": "source_derived_code_or_test",
+      "changes": [
+        "Line endings normalized to LF where applicable."
+      ]
+    },
+    {
+      "original_workspace_path": "outputs/20261015_structure_inference/evaluate_benchmark.py",
+      "original_sha256": "2b1cc8af4558c935f15a7081853e281dfb1d11e61154e0b788283efbd0ec4bf1",
+      "public_path": "evaluate_benchmark.py",
+      "public_sha256": "fdca4d713beaa3ef70eec47d203d0fb493e7148ec791a6d16a5af962f6e7ab85",
+      "role": "source_derived_code_or_test",
+      "changes": [
+        "Line endings normalized to LF where applicable.",
+        "Removed history_requests/fetch_history, base64/subprocess imports and --ssh-history. --history-json is required; no remote command is executed.",
+        "Reject duplicate history case IDs before dictionary normalization. Evaluation mathematics and shared scoring functions unchanged."
+      ]
+    },
+    {
+      "original_workspace_path": "outputs/20261015_structure_inference/evaluate_assignment.py",
+      "original_sha256": "2e4cc8580e204af337670ef2cdd8ffc301b96adbf3b3fab6bc6190ae04e8259a",
+      "public_path": "evaluate_assignment.py",
+      "public_sha256": "2e4cc8580e204af337670ef2cdd8ffc301b96adbf3b3fab6bc6190ae04e8259a",
+      "role": "source_derived_code_or_test",
+      "changes": [
+        "Line endings normalized to LF where applicable."
+      ]
+    },
+    {
+      "original_workspace_path": "outputs/20261015_structure_inference/test_evaluate_benchmark.py",
+      "original_sha256": "7faac85395a752654c4381b83bb8d3f9350b8611d65cb6f87a2f31c5f9f75058",
+      "public_path": "test_evaluate_benchmark.py",
+      "public_sha256": "7faac85395a752654c4381b83bb8d3f9350b8611d65cb6f87a2f31c5f9f75058",
+      "role": "source_derived_code_or_test",
+      "changes": [
+        "Line endings normalized to LF where applicable."
+      ]
+    },
+    {
+      "original_workspace_path": "outputs/20261015_structure_inference/test_evaluate_assignment.py",
+      "original_sha256": "8827a9f786519c1f6c555c56e5c2a32f2502a1ff20bacd32b5cd772a7c3dda06",
+      "public_path": "test_evaluate_assignment.py",
+      "public_sha256": "7a966506d6841ab7d8008e737963576642c71267c6e23ab4bccddfd8048dd962",
+      "role": "source_derived_code_or_test",
+      "changes": [
+        "Line endings normalized to LF where applicable.",
+        "Replaced workspace-relative importlib loading with import glycan_evidence.structure_assignment. Removed unused path/importlib imports. All eight test bodies retained."
+      ]
+    },
+    {
+      "original_workspace_path": "outputs/20261015_structure_inference/inputs/config.json",
+      "original_sha256": "597855546bb0bfa26a863cd6237cbffd2a3054ae560fe7421c8dca7b9c7ea261",
+      "public_path": "examples/gate_v1.json",
+      "public_sha256": "db12f90405db6e898bb74061ba02fc27a08aecc302012ccd352016377b984568",
+      "role": "source_derived_document_or_gate",
+      "changes": [
+        "Extracted only evaluation_gate; omitted study candidate memberships, mapping/calibration metadata and exclusions. Gate numbers unchanged."
+      ]
+    },
+    {
+      "original_workspace_path": "outputs/20261015_structure_inference/evaluate_assignment.py",
+      "original_sha256": "2e4cc8580e204af337670ef2cdd8ffc301b96adbf3b3fab6bc6190ae04e8259a",
+      "public_path": "examples/gate_v2.json",
+      "public_sha256": "df6815c1af7c420a6b1cc8d9024116ac0b2a43cfe182af5291cccdcfc98f7563",
+      "role": "source_derived_document_or_gate",
+      "changes": [
+        "Serialized source GATE dictionary only; no candidate roster."
+      ]
+    },
+    {
+      "original_workspace_path": "outputs/20261015_structure_inference/EVALUATOR_README.md",
+      "original_sha256": "3791ca7d7cb554ab375006731e2922497e77dd1af1e2966786466a2aecf6097a",
+      "public_path": "README.md",
+      "public_sha256": "bd573d3a483d53de459b2e028eaba1386a0dcfd17035e047eeacc0c2c44d8ee0",
+      "role": "source_derived_document_or_gate",
+      "changes": [
+        "Rewrote public scope/setup/local input documentation; added actual adapter validation limits and omitted-runner list; retained endpoint distinctions. Historical superiority is not claimed."
+      ]
+    },
+    {
+      "original_workspace_path": null,
+      "original_sha256": null,
+      "public_path": "INPUT_SCHEMA.md",
+      "public_sha256": "a125f81e85a49e2248676df3f10eb85043788e3b65202bec135a16a6c3529478",
+      "role": "new_public_adapter_document_or_synthetic_fixture",
+      "changes": [
+        "New public-adapter.v1 material; does not replace a historical research algorithm or contain cohort inputs."
+      ]
+    },
+    {
+      "original_workspace_path": null,
+      "original_sha256": null,
+      "public_path": "requirements.txt",
+      "public_sha256": "98d023f7048fbbb741f85763b9e792d5b56586c02f6889fc7795773f510d96f7",
+      "role": "new_public_adapter_document_or_synthetic_fixture",
+      "changes": [
+        "New public-adapter.v1 material; does not replace a historical research algorithm or contain cohort inputs."
+      ]
+    },
+    {
+      "original_workspace_path": null,
+      "original_sha256": null,
+      "public_path": "examples/make_synthetic_inputs.py",
+      "public_sha256": "38a55e4e49cad655682db1ff1c1317adc26fcf7e75b7f1cdb3bd13cd33f40ead",
+      "role": "new_public_adapter_document_or_synthetic_fixture",
+      "changes": [
+        "New public-adapter.v1 material; does not replace a historical research algorithm or contain cohort inputs."
+      ]
+    },
+    {
+      "original_workspace_path": null,
+      "original_sha256": null,
+      "public_path": "VALIDATION.json",
+      "public_sha256": "f7260b1a224a233e999046461d0372eebbd9442eab328cf9552750f1e87ce797",
+      "role": "new_public_adapter_document_or_synthetic_fixture",
+      "changes": [
+        "New public-adapter.v1 material; does not replace a historical research algorithm or contain cohort inputs."
+      ]
+    }
+  ],
+  "omitted_source_files": [
+    {
+      "original_workspace_path": "outputs/20261016_structure_recovery/evaluation/evaluate_recovery.py",
+      "original_sha256": "140a2c4669c3d1ddcfb85bc35639035447dcfbd698c567a3a09c706449903b77",
+      "published": false,
+      "reason": "Fixed82-case driver depends on private roster/runtime/cohort receipts and hard-coded project tree; not included. Existing benchmark geometry/exact-sequence functions remain public."
+    },
+    {
+      "original_workspace_path": "outputs/20261016_structure_recovery/evaluation/audit_position_evidence.py",
+      "original_sha256": "5823fb60b0b5da79d1ba837606be4d219269b3b52961450616483608798d61e9",
+      "published": false,
+      "reason": "Archived positional readback audit depends on study candidate roster and position tables; not included or recast as a new generic method."
+    },
+    {
+      "original_workspace_path": "outputs/20261016_structure_recovery/evaluation/verify_source_chain.py",
+      "original_sha256": "d7e5e82068d764a1f1bc2d7e48ac7271cfdb7fecd6018a292d1b92bb8e24f204",
+      "published": false,
+      "reason": "Single historical discrepancy-specific provenance checker; source files/case selection not included."
+    },
+    {
+      "original_workspace_path": "outputs/20261013_evidence_revision/computational/independent_test/run_independent_test.py",
+      "original_sha256": "af99e5748a0bff4dcd1375225040bca4fceaf068649230443719db3808ac5526",
+      "published": false,
+      "reason": "Simulation and compute orchestrator uses deployment paths, study manifests and external binaries; not needed to run the public evaluators."
+    },
+    {
+      "original_workspace_path": "outputs/20261013_evidence_revision/computational/independent_test/run_same_read_baseline.py",
+      "original_sha256": "de2e590fa276f8b03786c4d32dfcf6b3022b3264ca73c39cab379162951e6023",
+      "published": false,
+      "reason": "Historical mapping runner requires frozen study query/read layout and Bowtie2 binaries; evaluator breadth baselines do not claim to recreate that runner."
+    },
+    {
+      "original_workspace_path": "outputs/20261013_evidence_revision/computational/independent_test/verify_independent_test.py",
+      "original_sha256": "bf0f0e1513007ad94241ed5ec164c876e494c9695a8c2c9c76d763eeff04a6f5",
+      "published": false,
+      "reason": "Historical verification driver assumes archived study output layout and side effects at import; excluded from the portable evaluation core."
+    }
+  ],
+  "verification": {
+    "benchmark_shared_function_ASTs_unchanged": 23,
+    "assignment_evaluator_normalized_text_unchanged": true,
+    "support_summarizers_normalized_text_unchanged": true,
+    "benchmark_tests_normalized_text_unchanged": true,
+    "privacy_scan": "PASS",
+    "private_path_or_cohort_ID_matches": []
+  },
+  "data_policy": "No real cohort sample tables, FASTA, fit results, private case inventories, credentials or server addresses included. Artificial fixture generator only."
+}

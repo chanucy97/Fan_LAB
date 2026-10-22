@@ -1,0 +1,53 @@
+{
+  "schema": "public-adapter.v1",
+  "checks": [
+    {
+      "entry": "comparison/compare_strains.py",
+      "returncode": 0,
+      "help_found": true
+    },
+    {
+      "entry": "sequence_integrity/assembly_scan.py",
+      "returncode": 0,
+      "help_found": true
+    },
+    {
+      "entry": "sequence_integrity/profile_sequence_audit.py",
+      "returncode": 0,
+      "help_found": true
+    },
+    {
+      "entry": "sequence_integrity/enzyme_context/core.py",
+      "returncode": 0,
+      "help_found": true
+    },
+    {
+      "entry": "sequence_integrity/readback_stage2_deploy_v1/driver.py",
+      "returncode": 0,
+      "help_found": true
+    },
+    {
+      "entry": "trait_mapping/map_traits.py",
+      "returncode": 0,
+      "help_found": true
+    },
+    {
+      "entry": "carrier_context/carrier_context.py",
+      "returncode": 0,
+      "help_found": true
+    },
+    {
+      "entry": "run_synthetic_tests.py",
+      "returncode": 0,
+      "help_found": true
+    }
+  ],
+  "sensitive_scan_patterns": [
+    "host-home paths",
+    "original server paths",
+    "participant-style sample IDs",
+    "private-key blocks",
+    "GitHub token shapes"
+  ],
+  "sensitive_scan": "PASS"
+}

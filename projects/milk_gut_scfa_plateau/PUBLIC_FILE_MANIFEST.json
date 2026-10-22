@@ -1,0 +1,636 @@
+{
+  "schema": "public-method-source-manifest.v1",
+  "date": "2026-10-22",
+  "software_version": "0.1.0.dev10",
+  "public_adapter_version": "public-adapter.v1",
+  "scope": "Current method source, companion adapters, tests and current project documentation; historical scripts outside these paths are unchanged. Manifest excludes itself.",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 288,
+      "sha256": "4379d9d1411e7c95a4c5e1575a8a864e92d1ff3d1fc21e0c353c60b4dc3cd175"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 480,
+      "sha256": "de0a861c88c6804dcc4f75c12555509e269186826fee5249015b06cd2112446d"
+    },
+    {
+      "path": "CODE_AVAILABILITY.md",
+      "bytes": 1324,
+      "sha256": "31b94b143c1beee48513d79d061c44f82b8d621a5fa4c96ced07a30d30e6bd59"
+    },
+    {
+      "path": "docs/DATA_CODE_AVAILABILITY.md",
+      "bytes": 1894,
+      "sha256": "dddcc9aaeae66f24d9bcd0e407c67d1a6307dc32b937c6a8a69cac839506d7a6"
+    },
+    {
+      "path": "glycan-evidence/pyproject.toml",
+      "bytes": 839,
+      "sha256": "35828ef2cf325a321f645061b4a4b18a60eb797c76221a55976c71c636afc29b"
+    },
+    {
+      "path": "glycan-evidence/README.md",
+      "bytes": 6792,
+      "sha256": "05becf2616a17d134b4809909f678dd3445fc3857a2b89554bf9a794b86e2c2d"
+    },
+    {
+      "path": "glycan-evidence/README_ASSEMBLY.md",
+      "bytes": 3561,
+      "sha256": "407c349058c9e2ab17d727c8d031a66cf428f53b9b92ddd18b5b26a6d212ca9f"
+    },
+    {
+      "path": "glycan-evidence/README_BASES.md",
+      "bytes": 7280,
+      "sha256": "52cb5089851852054916ecf7f257207e40a945dc6c28458d85fc765ef492b78f"
+    },
+    {
+      "path": "glycan-evidence/README_CDS_REPLAY.md",
+      "bytes": 2230,
+      "sha256": "cba3cac713fd32d6a8d2a4feec9123aac2bb9aaacdea9737e03d4cdeb93f87e4"
+    },
+    {
+      "path": "glycan-evidence/README_COMPATIBILITY.md",
+      "bytes": 4837,
+      "sha256": "b9f241399d044d04df1481b10d57ad18946354657d60198cca6922cf83debc6e"
+    },
+    {
+      "path": "glycan-evidence/README_DISCREPANCY_VERIFY.md",
+      "bytes": 5532,
+      "sha256": "825d2c917c9765f6d66fbd7d7d763a80b1f85217e7a8ba12d43f98cf4dd7509a"
+    },
+    {
+      "path": "glycan-evidence/README_ENGINE.md",
+      "bytes": 8165,
+      "sha256": "314770c9024ad516a9ecc0f83720fff4bef9f280aacd620325a88e75e06a9e10"
+    },
+    {
+      "path": "glycan-evidence/README_LOCAL_SUPPORT.md",
+      "bytes": 3485,
+      "sha256": "a8c8dd5e173efe6e57c097aed969898411fdb2d72fea724b3833a2b725143662"
+    },
+    {
+      "path": "glycan-evidence/README_MIXTURE.md",
+      "bytes": 7074,
+      "sha256": "6e11d2607fd90f4a67af4395452ab2bcdeb4189f433d9b78141a850d48f82e01"
+    },
+    {
+      "path": "glycan-evidence/README_PROFILE.md",
+      "bytes": 10111,
+      "sha256": "37ae432780b1f14bba2a91a8caebabdf7385ed86113c5d91bbf1bf8333742d09"
+    },
+    {
+      "path": "glycan-evidence/README_STRUCTURE.md",
+      "bytes": 12254,
+      "sha256": "0847a88e8ee6725d2af514d99bfea8fed05cb91f22ae654269b29fd8f59e0090"
+    },
+    {
+      "path": "glycan-evidence/README_STRUCTURE_ASSIGNMENT.md",
+      "bytes": 3367,
+      "sha256": "20c8dfd342e5cc799f2ea37266f2da6b591fdc9c994241709247ddd0a511a0eb"
+    },
+    {
+      "path": "glycan-evidence/README_STRUCTURE_CONDITIONING.md",
+      "bytes": 7381,
+      "sha256": "a760eb6314eafdb8f8b9682f959d65da57cb2014b9d7f70861097e3ac3c65f7f"
+    },
+    {
+      "path": "glycan-evidence/README_STRUCTURE_INFERENCE.md",
+      "bytes": 2226,
+      "sha256": "0be3e30e85afdc699008aa867e6956a93280890731a61d5eb7cd2b922ccee942"
+    },
+    {
+      "path": "glycan-evidence/README_STRUCTURE_RECOVERY.md",
+      "bytes": 7470,
+      "sha256": "4b114f6f88463fc6cfcd129722288f4c13ab4dc5a78d85bdf6c3edd164d6f53e"
+    },
+    {
+      "path": "glycan-evidence/RELEASE_STATUS.md",
+      "bytes": 2001,
+      "sha256": "cbf3b043a6a7e7f1631f6aa616d113d2b563f0d3a974fdf22e9b24767d25cd14"
+    },
+    {
+      "path": "glycan-evidence/src/glycan_evidence/__init__.py",
+      "bytes": 115,
+      "sha256": "9cadfd2ba754045b2c53d276d42735187e38e736791078fabea196e73da2d2cf"
+    },
+    {
+      "path": "glycan-evidence/src/glycan_evidence/__main__.py",
+      "bytes": 48,
+      "sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d"
+    },
+    {
+      "path": "glycan-evidence/src/glycan_evidence/assembly.py",
+      "bytes": 12341,
+      "sha256": "a80c8adc4bcf82201ce54eee8e62da076024af57b2e331689d9d752ca64ff76b"
+    },
+    {
+      "path": "glycan-evidence/src/glycan_evidence/base_concordance.py",
+      "bytes": 20954,
+      "sha256": "7571368ff32ab15faefdf870831e20ffefaf711626b3f822cd89f7e5d63945f2"
+    },
+    {
+      "path": "glycan-evidence/src/glycan_evidence/benchmark.py",
+      "bytes": 6239,
+      "sha256": "5e2e38fe873bca7e028b922c5b8f0e39f71da3c7a4d41a101bda0bb3fba2610f"
+    },
+    {
+      "path": "glycan-evidence/src/glycan_evidence/cds.py",
+      "bytes": 21881,
+      "sha256": "63319d2b13e302537f7b1f98a9e11e5cc87054813f4809ce67de590c109852d4"
+    },
+    {
+      "path": "glycan-evidence/src/glycan_evidence/cli.py",
+      "bytes": 13360,
+      "sha256": "2b50bd5798ce4d897207ba69a3eb569c7cc91569bdf3b3967ab9756856cc77fd"
+    },
+    {
+      "path": "glycan-evidence/src/glycan_evidence/compatibility_io.py",
+      "bytes": 12585,
+      "sha256": "7e511b39eb4effc3b226134c0438b789d17e3128bb38fa4c1ad39dfad17c06c0"
+    },
+    {
+      "path": "glycan-evidence/src/glycan_evidence/discrepancy_verify.py",
+      "bytes": 36113,
+      "sha256": "ad1af295629ebb3e48c7f5908a83d9b046344fe3f341cd3c88cefc78c073ba33"
+    },
+    {
+      "path": "glycan-evidence/src/glycan_evidence/identity.py",
+      "bytes": 18619,
+      "sha256": "5bef03bccc42d5014ecaa0d2f907f81af7ce2480e9d9916efe2132e6d8065f7c"
+    },
+    {
+      "path": "glycan-evidence/src/glycan_evidence/integrity.py",
+      "bytes": 3151,
+      "sha256": "97361e43dfedda8aceafc8964f0d3f36c1c5931c109147f6b8fc9cc048c4f3d3"
+    },
+    {
+      "path": "glycan-evidence/src/glycan_evidence/legacy_v2/__init__.py",
+      "bytes": 82,
+      "sha256": "3c6861824d87b865d2619b0a8677eff7cdcbb7a3edd27432dd60d25a3b27804a"
+    },
+    {
+      "path": "glycan-evidence/src/glycan_evidence/legacy_v2/calibrate_calls.py",
+      "bytes": 31297,
+      "sha256": "92e6b871e173cfe91a5ac29481d50ec71fb5582834745e958242d9fcc255f3be"
+    },
+    {
+      "path": "glycan-evidence/src/glycan_evidence/legacy_v2/frozen_rules.json",
+      "bytes": 12877,
+      "sha256": "2c2f9650d932b7439873067caf3aad58d8066e6ea86f6228953e7573360dcd25"
+    },
+    {
+      "path": "glycan-evidence/src/glycan_evidence/legacy_v2/map_evidence.py",
+      "bytes": 19320,
+      "sha256": "ca081a202c66fefd0441ae0051c7d6d4fe11a0e8854ec66dddb2a9a696cb7afc"
+    },
+    {
+      "path": "glycan-evidence/src/glycan_evidence/legacy_v2/run_sample.py",
+      "bytes": 19870,
+      "sha256": "cc92ec525246f2447a734028068fad512af6203a85e528c04a18917f4f033c4c"
+    },
+    {
+      "path": "glycan-evidence/src/glycan_evidence/local_support_io.py",
+      "bytes": 7315,
+      "sha256": "ff2b13ff498b2c958310d66d6b8b88b1bf576604c4e253148557ebbea26fcf76"
+    },
+    {
+      "path": "glycan-evidence/src/glycan_evidence/mixture.py",
+      "bytes": 15798,
+      "sha256": "194661681138fd130308f39a24ba97d0fea1606868ff20d9de7461018cb88e3a"
+    },
+    {
+      "path": "glycan-evidence/src/glycan_evidence/position_evidence.py",
+      "bytes": 2567,
+      "sha256": "9779266196903a37f7530dfcf6f723cbd3485b16ecbadd8cf51c6a96f6f5d4e8"
+    },
+    {
+      "path": "glycan-evidence/src/glycan_evidence/presets/h5.json",
+      "bytes": 2051,
+      "sha256": "dc35dbff51fe9aeb392cbb840538d2c98e7d45a9492d90801d465d8194234aac"
+    },
+    {
+      "path": "glycan-evidence/src/glycan_evidence/presets/h5_k5_audit_v1.json",
+      "bytes": 1486,
+      "sha256": "118149fdfed34963fb8fd45a3e86e746f5a6918a84e64dd9951eb972e3fcc176"
+    },
+    {
+      "path": "glycan-evidence/src/glycan_evidence/profile.py",
+      "bytes": 15473,
+      "sha256": "56c24606e572de2450ecb808987c87527237d35d708168f8895535a7157bccd2"
+    },
+    {
+      "path": "glycan-evidence/src/glycan_evidence/profile_io.py",
+      "bytes": 7055,
+      "sha256": "54271a9bad1037f41ced1777bc6511e48cce7c2e5afc39f854534352e49ede9f"
+    },
+    {
+      "path": "glycan-evidence/src/glycan_evidence/readback.py",
+      "bytes": 28022,
+      "sha256": "e679396c6fe170f87728aba3f8cff9762c90ab8f5fe7aac5252e6baa09d531ca"
+    },
+    {
+      "path": "glycan-evidence/src/glycan_evidence/structure.py",
+      "bytes": 22522,
+      "sha256": "b48f3817afa796a250092e4bcbd9e446f3f68fc9d24cda0f9a8c8d7c68f55964"
+    },
+    {
+      "path": "glycan-evidence/src/glycan_evidence/structure_assignment.py",
+      "bytes": 18130,
+      "sha256": "47364d541bd035b86f4951ff2fa97cfbd97f5f7eff9ecb6ecf1117248a205846"
+    },
+    {
+      "path": "glycan-evidence/src/glycan_evidence/structure_conditioning.py",
+      "bytes": 11947,
+      "sha256": "d71fd77d849a2e0f00ba62c7c2295542605f8ce3bff6567c7f7adcf572fddbfb"
+    },
+    {
+      "path": "glycan-evidence/src/glycan_evidence/structure_inference.py",
+      "bytes": 24771,
+      "sha256": "2d6720857f374bc8c130f6b3e56decec858ed6c64637733ec3d8d59195f57453"
+    },
+    {
+      "path": "glycan-evidence/src/glycan_evidence/structure_inference_io.py",
+      "bytes": 2978,
+      "sha256": "535695f9f9f5ccd80455a30d681baf2255ab4bbc9a6e8a6b00704d9818cd4b7a"
+    },
+    {
+      "path": "glycan-evidence/src/glycan_evidence/structure_recovery.py",
+      "bytes": 11795,
+      "sha256": "5ebc4b137d6cac6f4ec0cf9a820f37bf493d3def647888c83ddb839e5cd92a1c"
+    },
+    {
+      "path": "glycan-evidence/src/glycan_evidence/structure_recovery_io.py",
+      "bytes": 4035,
+      "sha256": "657a42611e47dfb6e555df9e002b074745b4e290eec87f5b288fa702aca798a1"
+    },
+    {
+      "path": "glycan-evidence/tests/legacy_v2/__init__.py",
+      "bytes": 72,
+      "sha256": "839a09c2835ecca1b13122b7c80205900248e10e7ea454c5327c3781531e46b7"
+    },
+    {
+      "path": "glycan-evidence/tests/legacy_v2/COHORT_REGRESSION.json",
+      "bytes": 595,
+      "sha256": "2b0c0c969ac62d152d38cbd314bbdc02a2d8b01452b24ef36f99c8693d78690f"
+    },
+    {
+      "path": "glycan-evidence/tests/legacy_v2/feature_schema.json",
+      "bytes": 61700,
+      "sha256": "90e3a8ba3c66cd678861d26aba1a6fa9b7870e5afd1d344056d2c55010411253"
+    },
+    {
+      "path": "glycan-evidence/tests/legacy_v2/test_calibrate_calls.py",
+      "bytes": 18952,
+      "sha256": "eacbd7f868d609f0d03dcd81fd013bed80b6104494edd2393e7e850c5dfd8fe5"
+    },
+    {
+      "path": "glycan-evidence/tests/legacy_v2/test_map_evidence.py",
+      "bytes": 14966,
+      "sha256": "7f63ce26fd1c51aca3f3842ad7b53a47567bbf6ed2fe96768ca4a4c73214d064"
+    },
+    {
+      "path": "glycan-evidence/tests/legacy_v2/test_run_sample.py",
+      "bytes": 11866,
+      "sha256": "816f88680e06ec83ef02dfe4266b8de74b10e46b5404ac8ac563d2dd25aa98ce"
+    },
+    {
+      "path": "glycan-evidence/tests/test_assembly.py",
+      "bytes": 6626,
+      "sha256": "6bd4e2d408e3fb7660551b208fad942ff12ce570eb56628f9d741111bd3ed752"
+    },
+    {
+      "path": "glycan-evidence/tests/test_base_concordance.py",
+      "bytes": 18973,
+      "sha256": "65ea51b3fdea6d16d2901044cb291805844dafba0729278257d9e7bf333dd522"
+    },
+    {
+      "path": "glycan-evidence/tests/test_benchmark.py",
+      "bytes": 4571,
+      "sha256": "2413bd59c3446c8b2bae48560760835ed162fe6cf46e1a1350d32b7ec27e9e84"
+    },
+    {
+      "path": "glycan-evidence/tests/test_cds.py",
+      "bytes": 12131,
+      "sha256": "4d462ffa3eca996d806abef7e4351aac9d39be9c4f39fa83ae3ac6bdd2f85a1b"
+    },
+    {
+      "path": "glycan-evidence/tests/test_cli.py",
+      "bytes": 3831,
+      "sha256": "7eb09576ff82ca2766207fefa79af966154740f5a593e0a0955a0e3b4914bc5d"
+    },
+    {
+      "path": "glycan-evidence/tests/test_compatibility_io.py",
+      "bytes": 9504,
+      "sha256": "991451e9746ae2b10a824681ea8fbf86679763f3a2af0a66d29f0abb9833709b"
+    },
+    {
+      "path": "glycan-evidence/tests/test_discrepancy_cli.py",
+      "bytes": 2482,
+      "sha256": "652df27f9f1410e36b3896c56ff375c7faef5df4bc2157b26d855ce8de9a92b6"
+    },
+    {
+      "path": "glycan-evidence/tests/test_discrepancy_verify.py",
+      "bytes": 25698,
+      "sha256": "dd2d6289876431e28183a656119c774daffb7927712a6f3f817a71ad69bc4bce"
+    },
+    {
+      "path": "glycan-evidence/tests/test_identity.py",
+      "bytes": 13396,
+      "sha256": "ac4566bf0bf5bab0c592ec6772088fa08132f3b89f5452726f42ec2115591f0b"
+    },
+    {
+      "path": "glycan-evidence/tests/test_integrity.py",
+      "bytes": 2902,
+      "sha256": "fee196aef8dd94193fa227e0822260e9687421fdba20105a0722c3795708eee7"
+    },
+    {
+      "path": "glycan-evidence/tests/test_local_support_io.py",
+      "bytes": 6597,
+      "sha256": "0807ebe41ab54edc06cb18dfa904c523a86e9541524dfc4a380da4a2f979ce3b"
+    },
+    {
+      "path": "glycan-evidence/tests/test_mixture.py",
+      "bytes": 9059,
+      "sha256": "f7f04f4fa62e8e2417c9ac236e48fcfc0e4911a31a6088d6a5fcb6c8a32f94e6"
+    },
+    {
+      "path": "glycan-evidence/tests/test_position_evidence.py",
+      "bytes": 2328,
+      "sha256": "3917e135b7afb1d63d5a4f0a8d589887866682bf2d6169941a2d007f52cd93ad"
+    },
+    {
+      "path": "glycan-evidence/tests/test_profile.py",
+      "bytes": 9627,
+      "sha256": "6198d4fbc50394f38a289b3b80d57b878f3db541c987b545168f8c68e200fa25"
+    },
+    {
+      "path": "glycan-evidence/tests/test_profile_io.py",
+      "bytes": 2794,
+      "sha256": "4fddf159ba3e3ef8a06dfb1a39b1901ac5b80f1e446506efd341966ec2505963"
+    },
+    {
+      "path": "glycan-evidence/tests/test_readback.py",
+      "bytes": 11931,
+      "sha256": "98cfcd596ba82e2a5c2cd803bcc2a93f2b25bd0ef9f259b3a2fafb24bc7d6abf"
+    },
+    {
+      "path": "glycan-evidence/tests/test_sequence_integrity.py",
+      "bytes": 1260,
+      "sha256": "8bf40143f58e5ff127254d3d2aca6cb5ade6fc30e0fafefbcc2ae10c3ff4780f"
+    },
+    {
+      "path": "glycan-evidence/tests/test_structure.py",
+      "bytes": 11058,
+      "sha256": "3f4925a42c1d6317541df7640e17652fc88091ff755523242b1b35c3f3556bef"
+    },
+    {
+      "path": "glycan-evidence/tests/test_structure_assignment.py",
+      "bytes": 8345,
+      "sha256": "45157253ff1060703844c77babc0a8a340e9f083ac90bc6b9b4dfb207bc681f6"
+    },
+    {
+      "path": "glycan-evidence/tests/test_structure_assignment_io.py",
+      "bytes": 1284,
+      "sha256": "fd7957d2ec0f954e3521cb9e29c65370b00e147eeeb99d7ddb53496171ebe769"
+    },
+    {
+      "path": "glycan-evidence/tests/test_structure_conditioning.py",
+      "bytes": 7063,
+      "sha256": "3ad2f27990398bbea3311861b9eecb6565a15509fdeef28227a474f35e25bbf9"
+    },
+    {
+      "path": "glycan-evidence/tests/test_structure_inference.py",
+      "bytes": 9874,
+      "sha256": "ff6db47d14d042afb20f0c54d4c9d4e54c05ca59a4a2c5221060b2c7594a6894"
+    },
+    {
+      "path": "glycan-evidence/tests/test_structure_inference_io.py",
+      "bytes": 2496,
+      "sha256": "4764b845935e6d6555e5bb415791ac780aac029d9c2ec31295037b7777e132ea"
+    },
+    {
+      "path": "glycan-evidence/tests/test_structure_recovery.py",
+      "bytes": 8520,
+      "sha256": "86df018ee11b32353e7206814a03df89ca6b2a9358a92269348ef9a7ca5c5b10"
+    },
+    {
+      "path": "glycan-evidence/tests/test_structure_recovery_io.py",
+      "bytes": 4277,
+      "sha256": "0836b434d1f446429ef0796b4111a7405a559e4c35cea4fae390d0fe10ba191a"
+    },
+    {
+      "path": "methods/sequence-and-population/carrier_context/carrier_context.py",
+      "bytes": 24328,
+      "sha256": "99995a09554e42563a67ad345dedef4d0be03532bc015168887041ec036706d3"
+    },
+    {
+      "path": "methods/sequence-and-population/carrier_context/config.json",
+      "bytes": 771,
+      "sha256": "ebabc782561dd2d7456a1c2ed1d9ee0d7c1b2e2b2d72e7837c1f140e300c473d"
+    },
+    {
+      "path": "methods/sequence-and-population/CLI_CHECKS.json",
+      "bytes": 1237,
+      "sha256": "69e79994a4e472172b79cf1a644916ba8fb0248a42f51265de0ef68453557b57"
+    },
+    {
+      "path": "methods/sequence-and-population/comparison/compare_strains.py",
+      "bytes": 31728,
+      "sha256": "0b33778fe7eea740f1303e2a768b6f23079ff5782c38cdb9434df01b06b0d8cc"
+    },
+    {
+      "path": "methods/sequence-and-population/comparison/test_compare_strains.py",
+      "bytes": 7089,
+      "sha256": "f9da5d119884685e557d067e08606654a030a4ee385ec09e7942e0d7ffbc3ab6"
+    },
+    {
+      "path": "methods/sequence-and-population/INPUT_SCHEMA.md",
+      "bytes": 5938,
+      "sha256": "50b5f71ec82827fdf831b2b1cf3a11fadc0ee7d14e8d58424243751c220ffa2e"
+    },
+    {
+      "path": "methods/sequence-and-population/PROVENANCE.json",
+      "bytes": 13652,
+      "sha256": "a9977ee5fffe5a1679179e9d79f7d0e2e51d1cee3693f6dd017646a1537737a2"
+    },
+    {
+      "path": "methods/sequence-and-population/README.md",
+      "bytes": 7026,
+      "sha256": "9a02bdf11271f47c9a6f2efc05aae1a6e93c60d1047612e492a53be5b1d51f10"
+    },
+    {
+      "path": "methods/sequence-and-population/requirements-test.txt",
+      "bytes": 103,
+      "sha256": "a90eeb2fa9f9f172d91fd1833a7f5725ea131abe166fcc7c0ca930e0e26f5e72"
+    },
+    {
+      "path": "methods/sequence-and-population/run_synthetic_tests.py",
+      "bytes": 1103,
+      "sha256": "eacfbb65ae14070e7eedcad132e4c3c9287c91a22fb984fac0550d27c7b5a15c"
+    },
+    {
+      "path": "methods/sequence-and-population/sequence_integrity/ASSEMBLY_RULES.json",
+      "bytes": 1994,
+      "sha256": "2e8823921b154a623757f7e8d7178c9ff091c5744ddfa55ef06d9acfcd6fb8ca"
+    },
+    {
+      "path": "methods/sequence-and-population/sequence_integrity/assembly_scan.py",
+      "bytes": 38847,
+      "sha256": "300f96b130878a90901fe47733cd5fb6b309e4398b3ecc4d9702d5a351233b52"
+    },
+    {
+      "path": "methods/sequence-and-population/sequence_integrity/enzyme_context/core.py",
+      "bytes": 31867,
+      "sha256": "e995f6e7f2dabde3c777476360bc355f72160b25d40c37daa31e356fc3ce96d5"
+    },
+    {
+      "path": "methods/sequence-and-population/sequence_integrity/enzyme_context/test_core.py",
+      "bytes": 14387,
+      "sha256": "7872542d94f2ba2bcba538bdb54f9f544467181a6e3cde30fc8485c876a54f84"
+    },
+    {
+      "path": "methods/sequence-and-population/sequence_integrity/PROFILE_RULES.json",
+      "bytes": 1364,
+      "sha256": "516bf70f35e15b18abc86361a34c2d01b8c07a935182ce0431637551315e7e48"
+    },
+    {
+      "path": "methods/sequence-and-population/sequence_integrity/profile_sequence_audit.py",
+      "bytes": 45831,
+      "sha256": "1165db07370a6530610e7db55c96a039b529091212eb074da6c815f0cf95230e"
+    },
+    {
+      "path": "methods/sequence-and-population/sequence_integrity/readback_stage2_deploy_v1/core.py",
+      "bytes": 21629,
+      "sha256": "f5afaace56b712b61eb5e3ef54cbd606c5b3bd2585d1e24d42e2858ce137fb02"
+    },
+    {
+      "path": "methods/sequence-and-population/sequence_integrity/readback_stage2_deploy_v1/driver.py",
+      "bytes": 14961,
+      "sha256": "eaa32816dc39b8a86c55127a3e4610448c2d94ca3707074841de71e487560795"
+    },
+    {
+      "path": "methods/sequence-and-population/sequence_integrity/readback_stage2_deploy_v1/test_core.py",
+      "bytes": 9345,
+      "sha256": "b4616c3d4854642f8ee2cfce4ca7992ddfffd847cc8ff3b34735ba34c1bcf95f"
+    },
+    {
+      "path": "methods/sequence-and-population/sequence_integrity/readback_stage2_deploy_v1/test_driver.py",
+      "bytes": 4633,
+      "sha256": "91f3d8aea25982ebf90343f0e9da4bb9f1eb83a1aaeaab5cd56860526710244f"
+    },
+    {
+      "path": "methods/sequence-and-population/sequence_integrity/test_assembly_scan.py",
+      "bytes": 12885,
+      "sha256": "e436377702666cb694277e678e40683a2bb0358127ef682552283519c8a865e1"
+    },
+    {
+      "path": "methods/sequence-and-population/sequence_integrity/test_profile_sequence_audit.py",
+      "bytes": 15464,
+      "sha256": "87a8217cbad4bdf12b95a1b3fff36c9c3fef923e2763d0cf156dc9a540ba3aa7"
+    },
+    {
+      "path": "methods/sequence-and-population/TEST_RESULTS.json",
+      "bytes": 2036,
+      "sha256": "c9cc071e96a0792cff96be2c9526fb2da4b088c994f77f393b87384bcc409de6"
+    },
+    {
+      "path": "methods/sequence-and-population/trait_mapping/map_traits.py",
+      "bytes": 23526,
+      "sha256": "8e1b9d371cf0a28f3f965922830435af2e1a19b762c745d37b1a07c2d04303e9"
+    },
+    {
+      "path": "methods/sequence-and-population/trait_mapping/RULES.json",
+      "bytes": 1479,
+      "sha256": "8fc86f4a3520f37e35226b1c52a0eac62ce25c7c730a399f159885cc7183d42a"
+    },
+    {
+      "path": "methods/structure-comparison/analysis_support.py",
+      "bytes": 3368,
+      "sha256": "c693179240478441c6a546d76b05581fec0276e59255ba18e5dfb266829d8781"
+    },
+    {
+      "path": "methods/structure-comparison/assignment_support.py",
+      "bytes": 3133,
+      "sha256": "809cbd7fc68a791de9a9362ffab686c5a9db7732ddf2a94597b1ab6df443270b"
+    },
+    {
+      "path": "methods/structure-comparison/evaluate_assignment.py",
+      "bytes": 25077,
+      "sha256": "2e4cc8580e204af337670ef2cdd8ffc301b96adbf3b3fab6bc6190ae04e8259a"
+    },
+    {
+      "path": "methods/structure-comparison/evaluate_benchmark.py",
+      "bytes": 32878,
+      "sha256": "fdca4d713beaa3ef70eec47d203d0fb493e7148ec791a6d16a5af962f6e7ab85"
+    },
+    {
+      "path": "methods/structure-comparison/examples/gate_v1.json",
+      "bytes": 196,
+      "sha256": "db12f90405db6e898bb74061ba02fc27a08aecc302012ccd352016377b984568"
+    },
+    {
+      "path": "methods/structure-comparison/examples/gate_v2.json",
+      "bytes": 256,
+      "sha256": "df6815c1af7c420a6b1cc8d9024116ac0b2a43cfe182af5291cccdcfc98f7563"
+    },
+    {
+      "path": "methods/structure-comparison/examples/make_synthetic_inputs.py",
+      "bytes": 3919,
+      "sha256": "38a55e4e49cad655682db1ff1c1317adc26fcf7e75b7f1cdb3bd13cd33f40ead"
+    },
+    {
+      "path": "methods/structure-comparison/INPUT_SCHEMA.md",
+      "bytes": 6792,
+      "sha256": "a125f81e85a49e2248676df3f10eb85043788e3b65202bec135a16a6c3529478"
+    },
+    {
+      "path": "methods/structure-comparison/PROVENANCE.json",
+      "bytes": 10008,
+      "sha256": "fd9f51cbd5f5e601e7066037dced91527f8d6a58d1704206684f0bc637c04b33"
+    },
+    {
+      "path": "methods/structure-comparison/README.md",
+      "bytes": 7446,
+      "sha256": "bd573d3a483d53de459b2e028eaba1386a0dcfd17035e047eeacc0c2c44d8ee0"
+    },
+    {
+      "path": "methods/structure-comparison/requirements.txt",
+      "bytes": 386,
+      "sha256": "98d023f7048fbbb741f85763b9e792d5b56586c02f6889fc7795773f510d96f7"
+    },
+    {
+      "path": "methods/structure-comparison/test_evaluate_assignment.py",
+      "bytes": 6161,
+      "sha256": "7a966506d6841ab7d8008e737963576642c71267c6e23ab4bccddfd8048dd962"
+    },
+    {
+      "path": "methods/structure-comparison/test_evaluate_benchmark.py",
+      "bytes": 10564,
+      "sha256": "7faac85395a752654c4381b83bb8d3f9350b8611d65cb6f87a2f31c5f9f75058"
+    },
+    {
+      "path": "methods/structure-comparison/VALIDATION.json",
+      "bytes": 2204,
+      "sha256": "f7260b1a224a233e999046461d0372eebbd9442eab328cf9552750f1e87ce797"
+    },
+    {
+      "path": "METHODS_CODE_MAP.md",
+      "bytes": 3822,
+      "sha256": "56475253f02fc0ae861657e921be512a232f67c0f9dbcc3102a8a8de190a6004"
+    },
+    {
+      "path": "PUBLIC_VALIDATION.json",
+      "bytes": 1899,
+      "sha256": "fc2a86aa1526cc63e315f893c394f8bf979e30f54c922935516b7a6136d9ff07"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3756,
+      "sha256": "ae9745ad25f29471a710bb77e5ac2ce814a65b128161bb313bf6724e02d6271f"
+    }
+  ],
+  "count": 125,
+  "bytes": 1263254
+}

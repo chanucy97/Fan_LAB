@@ -1,0 +1,25 @@
+{
+  "schema": "nutrient-trait-reference-mapping.v1",
+  "dictionary_frozen_sha256": "81951ed2caea1e3c17566b078f7e29aacce5efff5552fd7eeb9b143f56b29c59",
+  "minimum_identity_percent": 90.0,
+  "minimum_query_coverage_percent": 90.0,
+  "minimum_subject_coverage_percent": 90.0,
+  "maximum_evalue": 1e-10,
+  "near_best_bitscore_fraction": 0.95,
+  "alignment": {
+    "sensitivity": "very-sensitive",
+    "search_evalue": 0.001,
+    "max_target_seqs": 0,
+    "max_hsps": 0,
+    "classification_hsp": "single highest-bitscore HSP per pair; do not stitch partial HSPs",
+    "fields": ["qseqid", "sseqid", "pident", "length", "qstart", "qend", "sstart", "send", "evalue", "bitscore", "qlen", "slen"]
+  },
+  "exact_match_definition": "identical complete peptide bytes and length; not inferred from rounded alignment identity",
+  "competitor_definition": "all nine positive and comparator seeds, plus all exported proteins within each reference genome in the reciprocal search",
+  "high_similarity_definition": "both search directions pass identity, both coverages and evalue; unique best seed and unique within-genome reciprocal protein outside 5 percent near-best range",
+  "nanH2_rescue": "exact historical CDS on either reference strand only; preserve current overlapping annotation conflict; no imputed intact cohort gene",
+  "complete_utilization_call_enabled": false,
+  "phenotype_input_allowed": false,
+  "negative_hit_is_absence": false,
+  "functional_equivalence_asserted": false
+}

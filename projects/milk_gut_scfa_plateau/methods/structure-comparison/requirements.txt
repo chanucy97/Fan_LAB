@@ -1,0 +1,5 @@
+# Evaluators and the v1 artificial example: Python >=3.11, standard library only.
+# For all 21 original tests, install the sibling runtime with its inference extra:
+# python -m pip install -e "../../glycan-evidence[inference]"
+# The runtime pyproject.toml owns its NumPy/SciPy pins. See VALIDATION.json for
+# the actual environment tested; this file does not silently relax those pins.

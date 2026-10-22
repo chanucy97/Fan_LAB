@@ -1,0 +1,22 @@
+{
+  "schema": "panel-relative-contig-context.v1",
+  "flank_length": 10000,
+  "outer_interval_buffer": 1000,
+  "minimum_region_coverage": 0.8,
+  "minimum_covered_identity": 0.95,
+  "unique_margin": 0.02,
+  "chain_max_query_gap": 1000,
+  "chain_max_subject_gap": 1000,
+  "chain_max_gap_discrepancy": 200,
+  "cross_flank_max_gap_discrepancy": 20000,
+  "blast_task": "blastn",
+  "blast_word_size": 11,
+  "blast_evalue": "1e-10",
+  "blast_max_target_seqs": 100000,
+  "threads": 4,
+  "blastn": "blastn",
+  "makeblastdb": "makeblastdb",
+  "interpretation": "descriptive panel-relative reference affinity, not a validated classifier, taxonomic assignment, carrier strain, gene transfer or enzyme activity",
+  "phenotype_inputs_allowed": false,
+  "readback_linkage_done": false
+}

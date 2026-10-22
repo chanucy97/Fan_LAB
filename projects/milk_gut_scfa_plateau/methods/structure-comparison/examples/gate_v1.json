@@ -1,0 +1,7 @@
+{
+  "min_accepted_fragments": 20,
+  "max_bestfit_tv": 0.2,
+  "min_group_lower_weight_exclusive": 0.02,
+  "min_class_exclusive_boundary_qnames": 3,
+  "baseline_breadth_cutoffs": [0.5, 0.8, 0.95]
+}
